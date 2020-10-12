@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>HEXO常用设置（next主题）</title>
+    <url>/2020/10/01/hexo01/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p><a href="https://hexo.io/zh-cn/">Hexo</a> 是一个高效、快速简洁且高效的静态博客框架。Hexo使用<a href="https://daringfireball.net/projects/markdown/">Markdown</a>(或其他渲染引擎)解析文章，在几秒之内，即可利用酷炫的主题生成静态网页。</p>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>安装参考中文官网的教程 <a href="https://hexo.io/zh-cn/。">https://hexo.io/zh-cn/。</a></p>
+<h1 id="themes"><a href="#themes" class="headerlink" title="themes"></a>themes</h1><p>本人常用的俩个主题为<a href="https://github.com/fi3ework/hexo-theme-archer">Archer</a>和<a href="https://github.com/theme-next/hexo-theme-next">next</a>，以下多数内容针对next主题为例。</p>
+<h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo new draft 文件名（新建草稿）</span><br><span class="line"></span><br><span class="line">hexo publish 文件名（把草稿发表到正式文档中）</span><br><span class="line"></span><br><span class="line">hexo server（启动hexo 服务）</span><br><span class="line"></span><br><span class="line">hexo clean（清除编译文件）</span><br><span class="line"></span><br><span class="line">hexo generate (编译静态文件)</span><br><span class="line"></span><br><span class="line">hexo deployer（上传github，需要安装hexo-deployer-git）</span><br></pre></td></tr></table></figure>
+<h1 id="上传github"><a href="#上传github" class="headerlink" title="上传github"></a>上传github</h1><p>（1）需要安装delpoyer插件</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>（2）在根目录的_config.yml文件中添加<br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> Deployment</span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># Docs: https://hexo.io/docs/one-command-deployment</span></span></span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: http://github.com/smartbra/blog.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure><br><a href="https://nathaniel.blog/tutorials/make-hexo-support-math-again">LaTeX</a></p>
+]]></content>
+      <categories>
+        <category>HEXO教程</category>
+      </categories>
+      <tags>
+        <tag>next themes</tag>
+        <tag>markdown</tag>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/08/05/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><a id="more"></a>
+<h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>$\lim_{h \rightarrow 0 } \frac{f(x+h)-f(x)}{h}$</p>
+<script type="math/tex; mode=display">
+\binom{n}{k} = \frac{n!}{k!(n-k)!}</script>]]></content>
+  </entry>
+  <entry>
+    <title>工作心得（FileZilla）</title>
+    <url>/2020/08/16/log1/</url>
+    <content><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>在Hx观测、CE观测中观测中心都使用FTP的方式分发观测纲要、轨道文件等。而且管理的电脑使用的是氢钟状态监测和监管所在的电脑（windows系统），为了避开软件上的限制使用开源且免费的软件是必须的。其实FTP的可视化操作软件有很多比如：windows平台下的WinSCP、MobaXterm等，Mac上的Transmit、Yummy等，但是结合现有请况（因为台站中电脑的系统多样）最终选择使用支持全平台且开源免费的FileZilla软件。<br><a id="more"></a></p>
+<h1 id="实际操作"><a href="#实际操作" class="headerlink" title="实际操作"></a>实际操作</h1><p>在日常观测中FileZilla软件是用来把制做好的观测文件传送到指定计算机的。比如把Hx、CE观测纲要文件传入对应的Fs计算机上。如下图，非常直观的可以发现左侧是本机文件目录，右侧是远程计算机的文件目录。只需要把所需要的文件目录拖拽的固定的文件夹中即可。</p>
+<p><img src="/2020/08/16/log1/FX.PNG" title="FileZilla界面" style="zoom:60%"></p>
+<h1 id="文件目录及站点"><a href="#文件目录及站点" class="headerlink" title="文件目录及站点"></a>文件目录及站点</h1><p>在FileZilla软件中把远程计算机成为站点，通常VLBI任务（起码在Hx探测中使用的Fs计算机为Hx主和CE-5做备用来执行任务）所以就要把当天VLBI中心下发的纲要在执行观测前传到指定计算机的指定目录上。分别是filename.prc后缀的传到../../proc目录下，还有filename.snp后缀的文件传到../../sched目录下。</p>
+<p>补充：还需在任务文件中找到轨道文件放入轨道文件服务器的对应文件夹下</p>
+<p><strong>tips</strong></p>
+<p>1.其中在VLBI中心下发纲要时，不要提前下载。最好在VLBI中心通知后再下载，因为纲要在实际观测前可能还有最后的调整。</p>
+<p>2.在纲要文件夹中有各个站点的观测纲要和轨道文件，一定要看清楚是否是此时值班台站的文件。</p>
+<p>3.在纲要文件夹中有一个filename.sum文件可以打印出来，这个文件是在观测中可以用于核对所在时间是否是对应的目标源。做检查、提前规划和存档用。（其中当时的观测源可以从监管软件中看到）</p>
+<p><img src="/2020/08/16/log1/Supervision.jpg" title="监管界面" style="zoom:60%"></p>
+]]></content>
+      <categories>
+        <category>观测工程师</category>
+      </categories>
+      <tags>
+        <tag>观测工程师日记01</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>工作心得（值班流程及注意事项）</title>
+    <url>/2020/08/12/log0/</url>
+    <content><![CDATA[<h1 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h1><h2 id="a-观测工程师主要职责"><a href="#a-观测工程师主要职责" class="headerlink" title="a.观测工程师主要职责"></a>a.观测工程师主要职责</h2><p>主要负责天马65米望远镜正常的运行和维保工作。日常主要工作是值班，每日交接班时间为早上8：00，值班时间为24小时。值班期间的任务是负责望远镜的馈源切换、65米射电望远镜指向调节、与PI的沟通提供所需的实验条件、每日对望远镜的运行状态巡查和对发生故障的简单处理与故障及时维修。</p>
+<h2 id="b-其它注意事项"><a href="#b-其它注意事项" class="headerlink" title="b.其它注意事项"></a>b.其它注意事项</h2><p>每日第一件事情需要同交接班的同事收集昨日天线故障、问题（接线的改动、设备的零时处理状态等）。在观测室内关注恒温空调与制冷系统的温度是否正常。上天线检查天线运行状态：观测楼一楼氢钟工作状态是否正常、天线一层平台恒温空调和冷水机组是否报警、天线电梯二层平台室外机是否工作正常（异响）、天线电梯4楼各波段压缩机是否工作正常及是否漏液、天线电梯5楼馈源舱内室内风机是否工作且空调管路是否有漏油（见图下位机）。<br><a id="more"></a></p>
+<h1 id="2-流程"><a href="#2-流程" class="headerlink" title="2.流程"></a>2.流程</h1><p>一次完整的观测包括观测前的设备状态检查（见b.其他注意事项），然后按照PI的要求在观测开始前切换到所需的馈源——下位机的检查及馈源的切换、接线的检查、微波开关的检查及切换、接收机状态的检查、指向模型的选择和指向的修正，如果有主动面和副面的要求也需要注意（一般ku以上的波段都默认打开主副面）。</p>
+<h2 id="2-1-检查天线下位机及馈源的切换"><a href="#2-1-检查天线下位机及馈源的切换" class="headerlink" title="2.1 检查天线下位机及馈源的切换"></a>2.1 检查天线下位机及馈源的切换</h2><p>检查天线下位机状态（图中右下角状态栏），并按需求给下位机设置。</p>
+<p><img src="/2020/08/12/log0/down_computer.jpg" title="下位机" style="zoom:60%"></p>
+<p><strong>tips:</strong></p>
+<p>1.在手动控制时要切换到<strong>本控</strong>（包括换馈源时）</p>
+<p>2.在Q波段时选用双频_Q、双频Ka使用Q、Q使用双频Q、Ka使用双频Ka。是不是很乱呢小盆友？？</p>
+<h2 id="2-2-接线的检查"><a href="#2-2-接线的检查" class="headerlink" title="2.2 接线的检查"></a>2.2 接线的检查</h2><p>因为天马望远镜的设备较多，且有的信号走光路有的走同轴，而且由于航天定轨观测是涉密的，所以部分设备是物理隔离的。导致S/X信号走的是同轴信号，在微波开关上无法切换需要手动接线。所以在切换观测时要<strong>特别注意接线问题</strong>！！！</p>
+<h2 id="2-3-切换微波开关"><a href="#2-3-切换微波开关" class="headerlink" title="2.3 切换微波开关"></a>2.3 切换微波开关</h2><p>其中左侧的接线图中横轴1、2对应右侧第一行，3、4对应了右侧第二行，5、6对应右侧第三行。左侧接线图中纵轴1、2表示bank1的左右旋，3、4表示 bank2，5、6表示bank3。<br><img src="/2020/08/12/log0/switch_screen.jpg" title="微波切换开关" style="zoom:60%"></p>
+<h2 id="2-4-接收机状态检查"><a href="#2-4-接收机状态检查" class="headerlink" title="2.4 接收机状态检查"></a>2.4 接收机状态检查</h2><p>在图中分别表示L、S、X、K、Ka、Q，其中C和Ku在上位机上也可以查看。需要查看的关键性数值是冷头的温度。</p>
+<p>下图为S/X接收机状态：<br><img src="/2020/08/12/log0/Antenna.jpg" title="接收机状态" style="zoom:20%"></p>
+<p>下图为Ku/C接收机的状态：<br><img src="/2020/08/12/log0/AntennaCKu.jpg" title="CKu接收机状态" style="zoom:20%"></p>
+<p>下图为L接收机的状态<br><img src="/2020/08/12/log0/AntennaL.jpg" title="L接收机状态" style="zoom:40%"></p>
+<h2 id="2-5-指向模型的选择和指向修正"><a href="#2-5-指向模型的选择和指向修正" class="headerlink" title="2.5 指向模型的选择和指向修正"></a>2.5 指向模型的选择和指向修正</h2><p>选取与馈源相同的指向模型后，去AIOS计算机进行指向扫描并按照拟合给出的数值进行偏量修正填入图中 dp1、dp2 。<br><img src="/2020/08/12/log0/AntennaPare.jpg" title="指向修正面板" style="zoom:20%"></p>
+<p>通常在高频也就是Ku之上的频率会选择主动面和副面开启工作。即勾选Enable ActiveFace 和 Sub-Surface中的Enable。当不使用副面的时候要勾选AZEClear，使得副面恢复初始状态。还有需要核对面板中上下俩组数值是否相同，即命令值和实际值（因为有可能存在六连杆机械故障，使得六连杆无法归位）。<br><img src="/2020/08/12/log0/active&sub-face.jpg" title="上位机主副控制面板" style="zoom:60%"></p>
+<h2 id="2-6-调节增益"><a href="#2-6-调节增益" class="headerlink" title="2.6 调节增益"></a>2.6 调节增益</h2><p>在观测开始后天线指向目标时，调节DibasPower（增益），一般谱线观测bankA、bnakB的增益都在-20dB，而脉冲星的观测bankA、bankB的增益分别为-25dB和-20dB。（其他观测的增益调节后续补充）</p>
+<p>下图为衰减状态查看面板。<br><img src="/2020/08/12/log0/DibasPower.jpg" title="Dibas功率计" style="zoom:20%"></p>
+<p>下图为走光纤传输的衰减调节面板。<br><img src="/2020/08/12/log0/UDC.jpg" title="UDC调节面板" style="zoom:50%"></p>
+<p>补充：因为S/X走同轴所以衰减调节面板略有不同，下图为调节面板。使用IFC、IFD来调节S/X的衰减。<br><img src="/2020/08/12/log0/IFPower.jpg" title="S/X同轴功率计" style="zoom:60%"></p>
+<h1 id="3-表格"><a href="#3-表格" class="headerlink" title="3.表格"></a>3.表格</h1><p>每次值班许填写相关表格<br><img src="/2020/08/12/log0/cooling_system.png" title="制冷系统日常巡检" style="zoom:60%"><br><img src="/2020/08/12/log0/observation_table.png" title="观测排班表" style="zoom:60%"><br><img src="/2020/08/12/log0/TMRT_log.png" title="天马观测日志" style="zoom:60%"><br><img src="/2020/08/12/log0/Inspection.png" title="天马望远镜园区每日巡检表" style="zoom:60%"></p>
+<h1 id="4-注意事项"><a href="#4-注意事项" class="headerlink" title="4.注意事项"></a>4.注意事项</h1><p>tips：<br>1.多数状态查看在查看完之后最好关掉——例如：DibasPower_Screen、上位机上的CReceiver等。</p>
+<p>2.在指向修正多次，填写dp1、dp2的时候需要删掉填写或者加累加填写。</p>
+]]></content>
+      <categories>
+        <category>观测工程师</category>
+      </categories>
+      <tags>
+        <tag>观测工程师日记00</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据分析（某小天线性能测试）</title>
+    <url>/2020/09/14/log10/</url>
+    <content><![CDATA[<h1 id="fits文件的头文件提取到excel"><a href="#fits文件的头文件提取到excel" class="headerlink" title="fits文件的头文件提取到excel"></a>fits文件的头文件提取到excel</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot  <span class="keyword">as</span> pl</span><br><span class="line"></span><br><span class="line"><span class="comment"># import pyfits</span></span><br><span class="line"><span class="comment"># from astropy.utils.data import get_pkg_data_filename</span></span><br><span class="line"><span class="keyword">from</span> astropy.table <span class="keyword">import</span> Table</span><br><span class="line"><span class="keyword">from</span> astropy.io <span class="keyword">import</span> fits</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span>  pd</span><br><span class="line"></span><br><span class="line">hdul=fits.open(<span class="string">&#x27;C:/Users/47459/Downloads/Dcr/2020_07_19_04_32_34.fits&#x27;</span>)</span><br><span class="line">events=Table.read(hdul,hdu=<span class="number">1</span>)</span><br><span class="line">df=events.to_pandas()</span><br><span class="line">df.to_excel(<span class="string">&#x27;C:/Users/47459/Downloads/Dcr/2020_07_19_04_32_34.excel&#x27;</span>)</span><br><span class="line">pd.read_excel(<span class="string">&#x27;C:/Users/47459/Downloads/Dcr/2020_07_19_04_32_34.xls&#x27;</span>,sheet_name=<span class="string">&quot;Sheet1&quot;</span>,index_col=<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>文件提取到excel后使用originlab软件进行画图和拟合操作，画出时间和方位/俯仰的平面图，后进行拟合。图例中给出拟合参数，对方位/俯仰做差与邻近时间做差进行相除，给出加速度图例图中使用Acc（acceleration）。<strong>其中要说明time（时间）是简化儒略日的数值给小数点前的取零，因为简化儒略日也是线性的对作图并不影响，所以没有进行转化。</strong></p>
+<h1 id="基本统计概念"><a href="#基本统计概念" class="headerlink" title="基本统计概念"></a>基本统计概念</h1><p>在展示数据之前提供的拟合参数做简略的解释：</p>
+<h2 id="残差（residual）"><a href="#残差（residual）" class="headerlink" title="残差（residual）"></a>残差（residual）</h2><p>   残差在数理统计中是指实际观察值与估计值（拟合值）之间的差。“残差”蕴含了有关模型基本假设的重要信息。如果回归模型正确的话， 我们可以将残差看作误差的观测值。</p>
+<h2 id="总离差平方和-总平方和（Total-Sum-of-Squares，TSS）"><a href="#总离差平方和-总平方和（Total-Sum-of-Squares，TSS）" class="headerlink" title="总离差平方和/总平方和（Total Sum of Squares，TSS）"></a>总离差平方和/总平方和（Total Sum of Squares，TSS）</h2><p><img src="/2020/09/14/log10/TSS.png" title="开始、运行" style="zoom:100%"></p>
+<h2 id="回归平方和-解释平方和-或者下文中的SSreg（Explained-Sum-of-Squars，ESS）"><a href="#回归平方和-解释平方和-或者下文中的SSreg（Explained-Sum-of-Squars，ESS）" class="headerlink" title="回归平方和/解释平方和 或者下文中的SSreg（Explained Sum of Squars，ESS）"></a>回归平方和/解释平方和 或者下文中的SSreg（Explained Sum of Squars，ESS）</h2><p><img src="/2020/09/14/log10/ESS.png" title="开始、运行" style="zoom:50%"></p>
+<p>其中需要解释TSS=RSS+ESS，图中的sst、sse、ssr就是TSS、ESS、RSS。</p>
+<p><img src="/2020/09/14/log10/tssessrss.png" title="开始、运行" style="zoom:80%"></p>
+<h2 id="拟合图片中给出的参数解释"><a href="#拟合图片中给出的参数解释" class="headerlink" title="拟合图片中给出的参数解释"></a>拟合图片中给出的参数解释</h2><ol>
+<li>残差平方和（Residual sum of squares，RSS）<br>为了明确变量和随机误差各自产生的效应是多少，统计学上把数据点与它在回归线（拟合线）上的位置差异称为残差，把每个残差平方后加起来称为残差平方和，表示了随机误差的效应。<strong>一组数据的残差平方和越小，其拟合度越好！</strong></li>
+</ol>
+<p><img src="/2020/09/14/log10/RSS.png" title="开始、运行" style="zoom:50%"></p>
+<ol>
+<li><p>皮尔森相关系数（Pearson’s R）<br>皮尔森相关系数可以衡量配对数据之间的线性关系。Pearson’s R的极限值在-1和1之间。在线性回归钟，Pearson’s R的正值表明变量x和变量之间存在线性正相关，而Pearson’s R的负值表示变量x和变量之间存在线性负相关。0则表示数据之间没有线性相关关系。而且，该值越接近-1或者1，线性相关关系越强。</p>
+</li>
+<li><p>R-Square（Coefficient of determination，COD）<br>也叫Coefficient of determination，是一种用于量化线性回归的统计量度。它是拟合的回归线所解释的响应量变化的百分比，例如R-Square表明该模型解释了响应变量中大约超过89％的变化。<strong>因此，R-Square始终在0到1之间。如果R平方为0，则表明拟合线不能解释响应数据均值附近的变化。如果R平方为1，则表示拟合线解释了响应数据均值附近的所有变化。</strong>通常，R-Square越大，拟合线越适合您的数据。再结合下面的公式可以看出，当使用良好拟合模型时，R-Square应在0 到1之间变化。<strong>接近1的值表示该拟合为良好的模型。</strong></p>
+</li>
+</ol>
+<p><img src="/2020/09/14/log10/COD.png" title="开始、运行" style="zoom:100%"></p>
+<ol>
+<li>Adj.R-Square<br>在R-Square已经讲到：R-Square可以用于量化模型对数据的拟合程度，当添加新的预测变量时，R-Square将始终增加。一个具有更多预测变量的模型具有更好的拟合度是一个误解。 Adj.R-Square 是对R-Square的一个修改版本，已针对拟合中的预测变量数进行调整。因此，它可以用于与具有不同数量预测变量的拟合线进行比较。如果预测变量大于1，则Adj.R-Square 始终小于R-Square。再结合下面的公式可以看出，当使用良好拟合模型时，Adj.R-Square应在0 到1之间变化。<strong>接近1的值表示该拟合为良好的模型。</strong></li>
+</ol>
+<p><img src="/2020/09/14/log10/Adj.png" title="开始、运行" style="zoom:100%"></p>
+<h1 id="2020-07-19-04-32-34"><a href="#2020-07-19-04-32-34" class="headerlink" title="2020_07_19_04_32_34"></a>2020_07_19_04_32_34</h1><p><img src="/2020/09/14/log10/2020_07_19_04_32_34_excel.png" title="开始、运行" style="zoom:100%"></p>
+<p><img src="/2020/09/14/log10/2020_07_19_04_32_34_V.png" title="开始、运行" style="zoom:100%"></p>
+<p><img src="/2020/09/14/log10/2020_07_19_04_32_34_A.png" title="开始、运行" style="zoom:100%"></p>
+<h1 id="2020-07-19-04-45-12"><a href="#2020-07-19-04-45-12" class="headerlink" title="2020_07_19_04_45_12"></a>2020_07_19_04_45_12</h1><p><img src="/2020/09/14/log10/2020_07_19_04_45_12_excel.png" title="Excel" style="zoom:100%"></p>
+<p><img src="/2020/09/14/log10/2020_07_19_04_45_12_V.png" title="速度" style="zoom:100%"></p>
+<p><img src="/2020/09/14/log10/2020_07_19_04_45_12_A.png" title="加速度" style="zoom:100%"></p>
+<h1 id="2020-07-19-04-51-08"><a href="#2020-07-19-04-51-08" class="headerlink" title="2020_07_19_04_51_08"></a>2020_07_19_04_51_08</h1><p><img src="/2020/09/14/log10/2020_07_19_04_51_08_excel.png" title="Excel" style="zoom:100%"></p>
+<p><img src="/2020/09/14/log10/2020_07_19_04_51_08_V.png" title="速度" style="zoom:100%"></p>
+<p><img src="/2020/09/14/log10/2020_07_19_04_51_08_A.png" title="加速度" style="zoom:100%"></p>
+<h1 id="2020-07-19-05-02-52"><a href="#2020-07-19-05-02-52" class="headerlink" title="2020_07_19_05_02_52"></a>2020_07_19_05_02_52</h1><p><img src="/2020/09/14/log10/2020_07_19_05_02_52_excel.png" title="Excel" style="zoom:100%"></p>
+<p><img src="/2020/09/14/log10/2020_07_19_05_02_52_V.png" title="速度" style="zoom:100%"></p>
+<p><img src="/2020/09/14/log10/2020_07_19_05_02_52_A.png" title="加速度" style="zoom:100%"></p>
+<h1 id="2020-07-19-05-17-28"><a href="#2020-07-19-05-17-28" class="headerlink" title="2020_07_19_05_17_28"></a>2020_07_19_05_17_28</h1><p><img src="/2020/09/14/log10/2020_07_19_05_17_28_excel.png" title="Excel" style="zoom:100%"></p>
+<p><img src="/2020/09/14/log10/2020_07_19_05_17_28_V.png" title="速度" style="zoom:100%"></p>
+<p><img src="/2020/09/14/log10/2020_07_19_05_17_28_A.png" title="加速度" style="zoom:100%"></p>
+<h1 id="2020-07-19-05-35-17"><a href="#2020-07-19-05-35-17" class="headerlink" title="2020_07_19_05_35_17"></a>2020_07_19_05_35_17</h1><p><img src="/2020/09/14/log10/2020_07_19_05_35_17_excel.png" title="Excel" style="zoom:100%"></p>
+<p><img src="/2020/09/14/log10/2020_07_19_05_35_17_V.png" title="速度" style="zoom:100%"></p>
+<p><img src="/2020/09/14/log10/2020_07_19_05_35_17_A.png" title="加速度" style="zoom:100%"></p>
+<h1 id="2020-07-19-05-37-05"><a href="#2020-07-19-05-37-05" class="headerlink" title="2020_07_19_05_37_05"></a>2020_07_19_05_37_05</h1><p><img src="/2020/09/14/log10/2020_07_19_05_37_05_excel.png" title="Excel" style="zoom:100%"></p>
+<p><img src="/2020/09/14/log10/2020_07_19_05_37_05_V.png" title="速度" style="zoom:100%"></p>
+<p><img src="/2020/09/14/log10/2020_07_19_05_37_05_A.png" title="加速度" style="zoom:100%"></p>
+<h1 id="2020-07-19-05-38-08"><a href="#2020-07-19-05-38-08" class="headerlink" title="2020_07_19_05_38_08"></a>2020_07_19_05_38_08</h1><p><img src="/2020/09/14/log10/2020_07_19_05_38_08_excel.png" title="Excel" style="zoom:100%"></p>
+<p><img src="/2020/09/14/log10/2020_07_19_05_38_08_V.png" title="速度" style="zoom:100%"></p>
+<p><img src="/2020/09/14/log10/2020_07_19_05_38_08_A.png" title="加速度" style="zoom:100%"></p>
+<h1 id="2020-07-19-05-39-38"><a href="#2020-07-19-05-39-38" class="headerlink" title="2020_07_19_05_39_38"></a>2020_07_19_05_39_38</h1><p><img src="/2020/09/14/log10/2020_07_19_05_39_38_excel.png" title="Excel" style="zoom:100%"></p>
+<p><img src="/2020/09/14/log10/2020_07_19_05_39_38_V.png" title="速度" style="zoom:100%"></p>
+<p><img src="/2020/09/14/log10/2020_07_19_05_39_38_A.png" title="加速度" style="zoom:100%"></p>
+<h1 id="2020-07-19-05-41-38"><a href="#2020-07-19-05-41-38" class="headerlink" title="2020_07_19_05_41_38"></a>2020_07_19_05_41_38</h1><p><img src="/2020/09/14/log10/2020_07_19_05_41_38_excel.png" title="Excel" style="zoom:100%"></p>
+<p><img src="/2020/09/14/log10/2020_07_19_05_41_38_V.png" title="速度" style="zoom:100%"></p>
+<p><img src="/2020/09/14/log10/2020_07_19_05_41_38_A.png" title="加速度" style="zoom:100%"></p>
+<h1 id="2020-07-19-05-58-38"><a href="#2020-07-19-05-58-38" class="headerlink" title="2020_07_19_05_58_38"></a>2020_07_19_05_58_38</h1><p><img src="/2020/09/14/log10/2020_07_19_05_58_38_excel.png" title="Excel" style="zoom:100%"></p>
+<p><img src="/2020/09/14/log10/2020_07_19_05_58_38_V.png" title="速度" style="zoom:100%"></p>
+<p><img src="/2020/09/14/log10/2020_07_19_05_58_38_A.png" title="加速度" style="zoom:100%"></p>
+<h1 id="2020-07-19-06-27-56"><a href="#2020-07-19-06-27-56" class="headerlink" title="2020_07_19_06_27_56"></a>2020_07_19_06_27_56</h1><p><img src="/2020/09/14/log10/2020_07_19_06_27_56_excel.png" title="Excel" style="zoom:100%"></p>
+<p><img src="/2020/09/14/log10/2020_07_19_06_27_56_V.png" title="速度" style="zoom:100%"></p>
+<p><img src="/2020/09/14/log10/2020_07_19_06_27_56_A.png" title="加速度" style="zoom:100%"></p>
+<h1 id="2020-07-19-06-29-34"><a href="#2020-07-19-06-29-34" class="headerlink" title="2020_07_19_06_29_34"></a>2020_07_19_06_29_34</h1><p><img src="/2020/09/14/log10/2020_07_19_06_29_34_excel.png" title="Excel" style="zoom:100%"></p>
+<p><img src="/2020/09/14/log10/2020_07_19_06_29_34_V.png" title="速度" style="zoom:100%"></p>
+<p><img src="/2020/09/14/log10/2020_07_19_06_29_34_A.png" title="加速度" style="zoom:100%"></p>
+<h1 id="2020-07-19-06-32-09"><a href="#2020-07-19-06-32-09" class="headerlink" title="2020_07_19_06_32_09"></a>2020_07_19_06_32_09</h1><p><img src="/2020/09/14/log10/2020_07_19_06_32_09_excel.png" title="Excel" style="zoom:100%"></p>
+<p><img src="/2020/09/14/log10/2020_07_19_06_32_09_V.png" title="速度" style="zoom:100%"></p>
+<p><img src="/2020/09/14/log10/2020_07_19_06_32_09_A.png" title="加速度" style="zoom:100%"></p>
+<h1 id="2020-07-19-06-34-09"><a href="#2020-07-19-06-34-09" class="headerlink" title="2020_07_19_06_34_09"></a>2020_07_19_06_34_09</h1><p><img src="/2020/09/14/log10/2020_07_19_06_34_09_excel.png" title="Excel" style="zoom:100%"></p>
+<p><img src="/2020/09/14/log10/2020_07_19_06_34_09_V.png" title="速度" style="zoom:100%"></p>
+<p><img src="/2020/09/14/log10/2020_07_19_06_34_09_A.png" title="加速度" style="zoom:100%"></p>
+<h1 id="2020-07-19-06-51-09"><a href="#2020-07-19-06-51-09" class="headerlink" title="2020_07_19_06_51_09"></a>2020_07_19_06_51_09</h1><p><img src="/2020/09/14/log10/2020_07_19_06_51_09_excel.png" title="Excel" style="zoom:100%"></p>
+<p><img src="/2020/09/14/log10/2020_07_19_06_51_09_V.png" title="速度" style="zoom:100%"></p>
+<p><img src="/2020/09/14/log10/2020_07_19_06_51_09_A.png" title="加速度" style="zoom:100%"></p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>可以看到几乎所有的拟合参数都显示一个非常好的线性的拟合，且速度的波动都集中在非常小的范围内。除了在天线启动、停止时造成的速度变化较大（例如：2020_07_19_05_37_05、2020_07_19_05_38_08），和数据点较少时看上去的“速度波动”（例如：2020_07_19_05_35_17）外，多数速度波动都在较小的范围内波动。</p>
+]]></content>
+      <categories>
+        <category>观测工程师</category>
+      </categories>
+      <tags>
+        <tag>观测工程师日记10</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>接收机测试（Qband）</title>
+    <url>/2020/08/17/log2/</url>
+    <content><![CDATA[<h1 id="测试任务介绍"><a href="#测试任务介绍" class="headerlink" title="测试任务介绍"></a>测试任务介绍</h1><p>在2020年8月11日上午测试Qband接收机点噪功能是否正常。因为本次测试主要是对针对点噪功能能否在科学观测中正常开启，并不涉及流量校准、系统温度（后续会解释）、接收机性能评价等。所以在选源和制作纲要时就比较随意，选源时只要满足射电源在该波段上的流量够强（提高测试效率），处理后的结果与文献中信号源的视向速度对的上即可。<br><a id="more"></a></p>
+<h1 id="选源"><a href="#选源" class="headerlink" title="选源"></a>选源</h1><p>在Qband（ 35-50GHz）上的谱线信号常见的为 SiO maser、 NH_3、 36GHz -CH_3OH等，但是鉴于此次测试使用流量较强的源对测试成功、提高测试效率都有正向作用。所以选用SiO maser源作为观测目标，SiO maser的特性是示踪较为靠近晚型星中最靠经光球层的部分且与恒星脉动有强烈相关（对谱轮廓的对比有困难，脉动使得谱型轮廓会变化），但是因为SiO maser脉泽流量强度较强易于观测。所以此次测试选取了非常知名SiO maser信号源。源表如下：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>sources</th>
+<th style="text-align:center">R.A.</th>
+<th style="text-align:center">D.c.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WXPsc</td>
+<td style="text-align:center">01:06:25.99</td>
+<td style="text-align:center">+12:35:53.4</td>
+</tr>
+<tr>
+<td>U_Ori</td>
+<td style="text-align:center">05:55:49.17</td>
+<td style="text-align:center">+20:10:30.7</td>
+</tr>
+<tr>
+<td>APLyn</td>
+<td style="text-align:center">06:34:34.88</td>
+<td style="text-align:center">+60:56:33.2</td>
+</tr>
+<tr>
+<td>VYCMa</td>
+<td style="text-align:center">07:22:58.32</td>
+<td style="text-align:center">-25:46:03.0</td>
+</tr>
+<tr>
+<td>RLeo</td>
+<td style="text-align:center">09:47:33.48</td>
+<td style="text-align:center">+11:25:14.2</td>
+</tr>
+<tr>
+<td>WHya</td>
+<td style="text-align:center">13:49:01.93</td>
+<td style="text-align:center">-28:22:04.6</td>
+</tr>
+<tr>
+<td>RSVir</td>
+<td style="text-align:center">14:27:16.39</td>
+<td style="text-align:center">+4:40:41.1</td>
+</tr>
+<tr>
+<td>RUHer</td>
+<td style="text-align:center">16:10:14.52</td>
+<td style="text-align:center">+12:04:14.3</td>
+</tr>
+<tr>
+<td>UHer</td>
+<td style="text-align:center">16:25:47.47</td>
+<td style="text-align:center">+18:53:32.9</td>
+</tr>
+<tr>
+<td>V4120Sgr</td>
+<td style="text-align:center">18:03:56.53</td>
+<td style="text-align:center">-20:19:00.5</td>
+</tr>
+<tr>
+<td>V1111Oph</td>
+<td style="text-align:center">18:37:19.26</td>
+<td style="text-align:center">+10:25:42.2</td>
+</tr>
+<tr>
+<td>TCep</td>
+<td style="text-align:center">21:09:31.78</td>
+<td style="text-align:center">+68:29:27.2</td>
+</tr>
+<tr>
+<td>V627Cas</td>
+<td style="text-align:center">22:57:40.97</td>
+<td style="text-align:center">+58:49:12.6</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="观测"><a href="#观测" class="headerlink" title="观测"></a>观测</h1><h2 id="频率选取"><a href="#频率选取" class="headerlink" title="频率选取"></a>频率选取</h2><p>因为Qband的波段频率在 35-50GHz之内所以选择了在这个频率范围内最强的  SiO maser v=1 J=1-0 43.112 GHz来测试。</p>
+<h2 id="纲要"><a href="#纲要" class="headerlink" title="纲要"></a>纲要</h2><p>按照源在测试期间起落的顺序进行观测</p>
+<p>下图为目标源在观测时间内的最佳观测俯仰上的持续时间图。</p>
+<p><img src="/2020/08/17/log2/astro.png" title="观测顺序" style="zoom:60%"></p>
+<p>观测纲要如下：<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">from</span> aioslib.rpcpython.proc.Trace_new <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> aioslib.rpcpython.proc.Trace <span class="keyword">import</span> AZEL</span><br><span class="line"><span class="keyword">from</span> source_WISE_2degree <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> TcalCPeriod <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">import</span> time </span><br><span class="line"></span><br><span class="line">staticfreql=[<span class="number">43726.2</span>,<span class="number">43728.2</span>,<span class="number">43971.0</span>,<span class="number">43973.0</span>,<span class="number">44077.3</span>,<span class="number">44079.3</span>,<span class="number">44963.8</span>,<span class="number">44965.8</span>,</span><br><span class="line">             <span class="number">45746.3</span>,<span class="number">45851.6</span>,<span class="number">45853.6</span>,<span class="number">46255.6</span>,<span class="number">46372.3</span>,<span class="number">46390.7</span>,<span class="number">46566.0</span>,<span class="number">46568.0</span>,</span><br><span class="line">             <span class="number">47542.8</span>,<span class="number">48214.9</span>,<span class="number">48255.5</span>,<span class="number">48265.3</span>,<span class="number">48380.5</span>,<span class="number">48384.8</span>,<span class="number">48720.0</span>,<span class="number">48998.0</span>]</span><br><span class="line"></span><br><span class="line">Configure(observer=<span class="string">&quot;chenxi&quot;</span>,receiver=<span class="string">&#x27;rcvr_q&#x27;</span>,backend=<span class="string">&#x27;dibas&#x27;</span>,  </span><br><span class="line">          projectID=<span class="string">&#x27;zz_test_Qband_20200811&#x27;</span>,mode=<span class="string">&#x27;MODE20&#x27;</span>,</span><br><span class="line">          skyfre=staticfreql,noisecal=<span class="string">&#x27;hi_switch&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">off1=offset(<span class="string">&quot;J2000&quot;</span>,<span class="number">0</span>,<span class="number">-0.1</span>) </span><br><span class="line">Balance(<span class="string">&#x27;rcvr_q&#x27;</span>)</span><br><span class="line"></span><br><span class="line">sourcelist_1=[<span class="string">&quot;source_name1&quot;</span>,<span class="string">&quot;source_name1&quot;</span>]</span><br><span class="line"><span class="keyword">for</span> sourcename <span class="keyword">in</span> sourcelist_1:</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">8</span>):</span><br><span class="line">      <span class="keyword">print</span> i,sourcename</span><br><span class="line">      az,el = AZEL(findLocation(sourcename))</span><br><span class="line">      <span class="keyword">if</span> el &lt;<span class="number">12</span>:</span><br><span class="line">          <span class="keyword">print</span> <span class="string">&#x27;Warning El below 15&#x27;</span>,sourcename,<span class="string">&quot;pass it&quot;</span></span><br><span class="line">          <span class="keyword">continue</span>       </span><br><span class="line">      DIBAS_OnOff(sourcename,findLocation(sourcename),offset=off1,ontime=<span class="number">60.</span>,offtime=<span class="number">60.</span>)</span><br><span class="line">     </span><br><span class="line">StopTrack()</span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+<h1 id="测试结果"><a href="#测试结果" class="headerlink" title="测试结果"></a>测试结果</h1><p>VYCMa晚型星上的 v=1  J=1-0 43.112GHz SiO maser信号如下图。</p>
+<p><img src="/2020/08/17/log2/VYCMA.png" title="VYMa" style="zoom:50%"></p>
+<p>文献中的VYMa信号（图中v=1的谱线轮廓）</p>
+<p><img src="/2020/08/17/log2/vycm.png" title="VYMa文献" style="zoom:60%"></p>
+<p>噪声成功加载</p>
+<p><img src="/2020/08/17/log2/noise.jpg" title="点噪成功" style="zoom:50%"></p>
+<p>介于点噪功能成功实现，再对比文献中的信号和本次实验的信号在视向速度上都在 20 km/s^-1，谱型的变化可以前面解释过，我们认为此次测试是<strong>成功</strong>的。</p>
+<h1 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h1><p>1.由于后续还有别的实验进行本次实验只观测了俩个源，其中第二个源的信号与文献中的谱型有较大不同，但是视向速度是相同的。结合 SiO maser随光度的变化而变化的特性，在晚型星中光度有较大变化是正常现象。另一中解释可能是off点选取不当的原因，由于on和off观测后减去背景的处理使得背景（off点）上的发射信号与目标源（on）的发射型号做差叠加形成，本人更偏向于第二种解释。</p>
+<p>综上认为是合理的，对此次实验检验点噪功能不会造成困扰。</p>
+<p>下图是源RLEo的信号和文献中的谱型。</p>
+<p><img src="/2020/08/17/log2/RLE.png" title="RLEo" style="zoom:50%"></p>
+<p>文献中的RLEo信号（图中v=1的谱线轮廓）</p>
+<p><img src="/2020/08/17/log2/RLEO1.png" title="RLEo文献" style="zoom:60%"></p>
+<p>2.观测中200K左右的系统温度是因为没有及时跟新<strong>噪声定标值</strong>，现已更行。后盖黑体测试系统温度100K左右符合正常Qband的系统温度。</p>
+<h1 id="测试人员"><a href="#测试人员" class="headerlink" title="测试人员"></a>测试人员</h1><p>赵融冰、蒋甬斌、赵漳</p>
+]]></content>
+      <categories>
+        <category>观测工程师</category>
+      </categories>
+      <tags>
+        <tag>观测工程师日记02</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>工作心得（温度监测）</title>
+    <url>/2020/08/20/log3/</url>
+    <content><![CDATA[<h1 id="温度监测"><a href="#温度监测" class="headerlink" title="温度监测"></a>温度监测</h1><p>温度监测在CGLT电脑桌面，要检测的温度分别是氢钟房的温度湿度、馈源舱的温度湿度、还有氦气管路供回压力。<br><a id="more"></a></p>
+<h2 id="氢钟房温度湿度监测面板"><a href="#氢钟房温度湿度监测面板" class="headerlink" title="氢钟房温度湿度监测面板"></a>氢钟房温度湿度监测面板</h2><p>氢钟房温度湿度正常范围在23±0.5℃/45-70%<br><img src="/2020/08/20/log3/Hydrogen_Temp.jpg" title="氢钟房温度湿度" style="zoom:60%"></p>
+<h2 id="馈源舱温度湿度监测面板"><a href="#馈源舱温度湿度监测面板" class="headerlink" title="馈源舱温度湿度监测面板"></a>馈源舱温度湿度监测面板</h2><p>馈源舱温度较为特殊需要手动点击获取，点击如图的“连接TCP modbus”。馈源舱温度在23±1℃。<br><img src="/2020/08/20/log3/FeedBin.jpg" title="馈源舱温度湿度" style="zoom:60%"></p>
+<h2 id="氦气管路供回压力"><a href="#氦气管路供回压力" class="headerlink" title="氦气管路供回压力"></a>氦气管路供回压力</h2><p>正常供气压力范围为2.0-2.5Mpa，回气压力范围0.5-0.9Mpa。<br><img src="/2020/08/20/log3/HeliumPiping.jpg" title="氦气管路供回压力" style="zoom:60%"></p>
+<h1 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h1><p>在监管电脑上氢钟状态现实面板也有钟房温度，此处还可以查看室外温度湿度做观测参考用。</p>
+<p><img src="/2020/08/20/log3/Hydrogen_clock.png" title="氢钟状态监控面板" style="zoom:80%"></p>
+]]></content>
+      <categories>
+        <category>观测工程师</category>
+      </categories>
+      <tags>
+        <tag>观测工程师日记03</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>工作心得（HX-VLBA观测）</title>
+    <url>/2020/08/28/log4/</url>
+    <content><![CDATA[<h1 id="HX-VLBA观测简介"><a href="#HX-VLBA观测简介" class="headerlink" title="HX-VLBA观测简介"></a>HX-VLBA观测简介</h1><p>观测使用S/X接收机、DBBC2终端<br><a id="more"></a></p>
+<h1 id="观测准备步骤"><a href="#观测准备步骤" class="headerlink" title="观测准备步骤"></a>观测准备步骤</h1><h2 id="下载观测纲要"><a href="#下载观测纲要" class="headerlink" title="下载观测纲要"></a>下载观测纲要</h2><p>参考观测工程师日志01中FileZilla的使用。</p>
+<h2 id="观测前时间查看"><a href="#观测前时间查看" class="headerlink" title="观测前时间查看"></a>观测前时间查看</h2><p>每次HX任务准确的起始、结束时间可以参考监管计算机下载的纲要，在纲要文件中有一个“任务名”.sum文件，其中有详细的源名、观测时间、结束时间、参加台站等。通常打印以备观测时与天马台站监管采集的信息进行核对和任务结束后存档。</p>
+<p><strong>查看sum，了解任务的开始结束时间。为观测准备留足提前量。</strong></p>
+<p>纲要文件目录结构（红圈内为任务的概要文件）</p>
+<p><img src="/2020/08/28/log4/sum_position.png" title="HX纲要文件目录" style="zoom:80%"></p>
+<p>sum文件内容</p>
+<p><img src="/2020/08/28/log4/sum.png" title="sum文件" style="zoom:80%"></p>
+<h2 id="观测前设备检查"><a href="#观测前设备检查" class="headerlink" title="观测前设备检查"></a>观测前设备检查</h2><p>通常提前一小时进入观测室，检查所有与观测相关的设备、线路是否正常。</p>
+<h3 id="1-接收机是否切换到位"><a href="#1-接收机是否切换到位" class="headerlink" title="(1)接收机是否切换到位"></a>(1)接收机是否切换到位</h3><h3 id="2-同轴线是否接线正常"><a href="#2-同轴线是否接线正常" class="headerlink" title="(2)同轴线是否接线正常"></a>(2)同轴线是否接线正常</h3><h3 id="3-微波开关是否切换到正确的位置"><a href="#3-微波开关是否切换到正确的位置" class="headerlink" title="(3)微波开关是否切换到正确的位置"></a>(3)微波开关是否切换到正确的位置</h3><h3 id="4-接收机工作状态是否正常"><a href="#4-接收机工作状态是否正常" class="headerlink" title="(4)接收机工作状态是否正常"></a>(4)接收机工作状态是否正常</h3><h3 id="5-指向模型是否切换到观测所需的模型（附面随动按观测要求开关）"><a href="#5-指向模型是否切换到观测所需的模型（附面随动按观测要求开关）" class="headerlink" title="(5)指向模型是否切换到观测所需的模型（附面随动按观测要求开关）"></a>(5)指向模型是否切换到观测所需的模型（附面随动按观测要求开关）</h3><h3 id="6-开始进行下指向操作"><a href="#6-开始进行下指向操作" class="headerlink" title="(6)开始进行下指向操作"></a>(6)开始进行下指向操作</h3><h2 id="指向"><a href="#指向" class="headerlink" title="指向"></a>指向</h2><p>因为S/X接收机俩个波段在同一个波导喇叭口后方，所以使用高频的X做指向的精度更高，而且Hx任务都使用Xband的左旋。指向纲要使用pinging_X，指向源可以选用sum文件中的第一个射电源做指向，之后观测可以节省天线移动俯仰和方位的时间，已达到顺利观测的目的。</p>
+<p>X指向纲要（当指向发现功率计谱型呈非高斯的致宽的形态时，可以尝试修改更大的offset值，使得可以偏开源顺利拟合指向参数。）</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#-*- coding: utf-8 -*-</span></span><br><span class="line"><span class="comment"># author Zhao Rongbing @2012 11 23</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> aioslib.rpcpython.proc.Trace <span class="keyword">import</span>  *</span><br><span class="line"><span class="keyword">from</span> aioslib.rpcpython.proc.Trace_sat <span class="keyword">import</span>  CrossSat</span><br><span class="line"><span class="keyword">from</span> aioslib.rpcpython.proc.Trace_holo <span class="keyword">import</span>  Holo</span><br><span class="line"><span class="keyword">from</span> aioslib.rpcpython.mc.Catalog <span class="keyword">import</span>  *</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="comment">#################################################### </span></span><br><span class="line">c =Catalog(<span class="string">&#x27;pointing.cat&#x27;</span>)</span><br><span class="line"><span class="comment">#############################################################################</span></span><br><span class="line">off1 = Offset(<span class="string">&quot;AZEL&quot;</span>,<span class="number">0.</span>,<span class="number">0.000</span>)</span><br><span class="line"><span class="comment">####</span></span><br><span class="line"><span class="comment">#sourcenamel=[&quot;NRAO530&quot;]    </span></span><br><span class="line">sourcenamel=[<span class="string">&quot;dr21&quot;</span>] </span><br><span class="line"><span class="comment">#####</span></span><br><span class="line">nobsnum=<span class="number">2</span>  </span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(nobsnum):</span><br><span class="line"><span class="comment">###   ourcename,c.Locate(sourcename),offset=0.15,cos v=True,period=50) :</span></span><br><span class="line">    <span class="keyword">for</span> sourcename <span class="keyword">in</span> sourcenamel:</span><br><span class="line"><span class="comment">##        Sweep(sourcename,c.Locate(sourcename),offset=0.12,cosv=True,period=50)</span></span><br><span class="line"><span class="comment">###         Track(sourcename,c.Locate(sourcename),off1,block=True,period=1500)  </span></span><br><span class="line">         SweepSingle(sourcename,c.Locate(sourcename),offset=<span class="number">0.2</span>,cosv=<span class="literal">True</span>,period=<span class="number">50</span>)</span><br><span class="line">StopTrack()</span><br><span class="line"><span class="comment">#</span></span><br></pre></td></tr></table></figure>
+<p><strong>方位俯仰的精确度</strong>：</p>
+<p>**Cband 10arc以内</p>
+<p>S/X 12~13arc以内</p>
+<p>Ku 8arc以内**</p>
+<h2 id="FS加载纲要"><a href="#FS加载纲要" class="headerlink" title="FS加载纲要"></a>FS加载纲要</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mk5=dot_set=:force</span><br><span class="line">proc=实验名+站点名</span><br><span class="line">setup01</span><br><span class="line">bread1  #dbbc 通道</span><br><span class="line">preob   #系统温度</span><br><span class="line">clock</span><br><span class="line">cdas2status #衰减</span><br><span class="line">schedule=实验名+站点名</span><br><span class="line">cont</span><br><span class="line">send20s→getstatus</span><br><span class="line">mk5=record=on:实验名</span><br><span class="line">mk5=rtime?</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mk5=record=off</span><br><span class="line">terminate</span><br><span class="line">sxdb=xx,xx,xx,xx</span><br></pre></td></tr></table></figure>
+<p>备用机只需要加载<br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">proc=实验名+站点名</span><br><span class="line">setup01</span><br><span class="line">cdas2status</span><br><span class="line">mk5=record=on:实验名</span><br><span class="line">mk5=rtime?</span><br></pre></td></tr></table></figure></p>
+<h1 id="任务执行期间"><a href="#任务执行期间" class="headerlink" title="任务执行期间"></a>任务执行期间</h1><p>在任务期间需要关注台站监管电脑上的监控信息是否正确，做好与VLBA中心的及时沟通。一般在第一个射电源观测结束中心会报告后处理结果，在射电源切换卫星、探测器时需要注意是否切换正常（偶发有轨道文件有问题、或者FTP文件传输没到位等使得换源时不正常）。</p>
+<p>偶有卫星、探测器信号较强需要调节衰减的，可以在CGLT中调节、也可以在fs中使用SXdb=aa,bb,cc,dd来调节。</p>
+<p>tips：</p>
+<p>在监管中当跟踪卫星、探测器时，跟踪源名会是红色POS是正常的</p>
+<p><img src="/2020/08/28/log4/supervise.jpg" title="sum文件" style="zoom:70%"></p>
+<h1 id="任务结束"><a href="#任务结束" class="headerlink" title="任务结束"></a>任务结束</h1><p><strong>需要注意fs会一直记录垃圾数据，在任务结束后需要手动关闭。使用mk5=record=off、terminate 来结束实验。</strong></p>
+]]></content>
+      <categories>
+        <category>观测工程师</category>
+      </categories>
+      <tags>
+        <tag>观测工程师日记04</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Booked使用说明（1）</title>
+    <url>/2020/09/03/log5/</url>
+    <content><![CDATA[<h1 id="Booked简介"><a href="#Booked简介" class="headerlink" title="Booked简介"></a>Booked简介</h1><p>一个基于php语言的在线时间预约平台，使用<strong><em>开源代码构建</em></strong>。拥有多资源管理、<strong><em>时间审批</em></strong>、邮件提醒、时间表查看、历史查询和汇总报告生成等功能。现上线TMRT65M时间预约、SHESHAN25M时间预约、微波实验室时间预约。<br><a id="more"></a></p>
+<h1 id="注册"><a href="#注册" class="headerlink" title="注册"></a>注册</h1><h2 id="Booked首页"><a href="#Booked首页" class="headerlink" title="Booked首页"></a>Booked首页</h2><p><img src="/2020/09/03/log5/start_page.png" title="Booked首页" style="zoom:70%"></p>
+<p>在图中右上角<font color="#fef31e">黄色椭圆框</font>内有可以跳转时间表和日历（无需注册、登录）的选项，<font color="red">红色方框点</font>击跳转注册页面。</p>
+<p><strong>Booked首页细节</strong><br><img src="/2020/09/03/log5/comb.png" title="Booked首页细节" style="zoom:70%"></p>
+<h2 id="Booked注册页"><a href="#Booked注册页" class="headerlink" title="Booked注册页"></a>Booked注册页</h2><p><img src="/2020/09/03/log5/login.png" title="Booked注册页" style="zoom:60%"></p>
+<p>按要求填写注册信息，其中电话、组织、位置<strong>不是</strong>必填项目，但是为了方便管理<strong>建议填写</strong>。其中上海天文台本单位人员填写组织为SHAO即可，外单位统一使用中文填写单位全称以方便管理。</p>
+<p><strong>下图示例</strong>：</p>
+<p><img src="/2020/09/03/log5/login_image.png" title="Booked注册示例" style="zoom:60%"></p>
+<h1 id="时间预约"><a href="#时间预约" class="headerlink" title="时间预约"></a>时间预约</h1><p>当在注册好账号后进入到booked预约系统，界面如下。</p>
+<p><strong>（当无法预约时可以发邮件给管理员提升权限，管理员Email：zhaozhang@shao.ac.cn）</strong></p>
+<p><img src="/2020/09/03/log5/booking.png" title="时间表预约" style="zoom:60%"></p>
+<p><img src="/2020/09/03/log5/remind.png" title="预约页面" style="zoom:70%"></p>
+<h1 id="时间添加"><a href="#时间添加" class="headerlink" title="时间添加"></a>时间添加</h1><p>当预约成功后，会给参与者、受邀者发送邮件。邮件示例如下：</p>
+<p><img src="/2020/09/03/log5/email.png" title="邮件" style="zoom:80%"></p>
+<p><font color="red">红色框 </font>为在booked中添加预约的账户、<font color="green">绿色框 </font>为所预约的时间段，<font color="orange">橘黄色框 </font>为预约实验的细节，<strong>拥有管理权限的使用者可以点击<font color="brwon">深红棕色 </font>可以跳转Booked预约界面对预约进行删除或者Check in、Check out操作</strong>，点击<font color="blue">蓝色框 </font>内容可以添加到日历。</p>
+<h2 id="对预约进check-in和check-out"><a href="#对预约进check-in和check-out" class="headerlink" title="对预约进check in和check out"></a>对预约进check in和check out</h2><p><strong>介绍（Check in和Check out）</strong></p>
+<p><strong>Check in和Check out——将使预订所有者有机会记录他们实际开始和结束预订的时间。如果用户没有在给定的时间内签入，可以选择自动释放保留的时间。要自动释放预约，必须配置自动释放作业。参考<a href="https://www.bookedscheduler.com/help/administration/">bookedscheduler用户手册</a>。</strong></p>
+<p>翻译成人话就是时间开始签到，结束签离。默认设置300分钟的自动释放时间，需要修改联系管理员Email：zhaozhang@shao.ac.cn.</p>
+<p>点击邮件中<font color="brown">深红棕色椭圆</font>内的内容（查看此预约）拥有时间管理权限的使用者可跳转如下见面，可以进行进一步的操作。界面如下：</p>
+<p><img src="/2020/09/03/log5/checking.png" title="checkin" style="zoom:80%"></p>
+<p>或者登录booked页面在控制台页面下查看（下图中<font color="brown">棕色的椭圆框</font>内）</p>
+<p><img src="/2020/09/03/log5/checking_detail.png" title="checkin" style="zoom:80%"></p>
+<h2 id="将预约添加到日历"><a href="#将预约添加到日历" class="headerlink" title="将预约添加到日历"></a>将预约添加到日历</h2><p>点击提醒邮件中<font color="blue">蓝色椭圆框</font>内的内容（添加到日历）可跳转如下界面，可进行下一步操作。界面如下：</p>
+<p><img src="/2020/09/03/log5/calendar1.png" title="添加到日历1" style="zoom:80%"></p>
+<p>保存后在日历中可以看到对应的提醒。</p>
+<p><img src="/2020/09/03/log5/calendar_detail.png" title="添加到日历2" style="zoom:80%"></p>
+<h1 id="时间审核"><a href="#时间审核" class="headerlink" title="时间审核"></a>时间审核</h1><p>拥有审核权限的使用者可以登录Booked进行时间审核。<br>操作步骤总共分四个步骤：</p>
+<h2 id="第一步：在时间表上选取要驳回的预约申请。"><a href="#第一步：在时间表上选取要驳回的预约申请。" class="headerlink" title="第一步：在时间表上选取要驳回的预约申请。"></a>第一步：在时间表上选取要驳回的预约申请。</h2><p><img src="/2020/09/03/log5/第一.png" title="第一步" style="zoom:80%"></p>
+<h2 id="第二步、第三步：在编辑页面“More”标签中打开隐藏选项。"><a href="#第二步、第三步：在编辑页面“More”标签中打开隐藏选项。" class="headerlink" title="第二步、第三步：在编辑页面“More”标签中打开隐藏选项。"></a>第二步、第三步：在编辑页面“More”标签中打开隐藏选项。</h2><p><img src="/2020/09/03/log5/第二第三.png" title="第二步第三步" style="zoom:80%"></p>
+<h2 id="第四步：删除预约，并填写驳回理由。之后将以邮件的形式告知时间申请者预约被驳回，及理由。"><a href="#第四步：删除预约，并填写驳回理由。之后将以邮件的形式告知时间申请者预约被驳回，及理由。" class="headerlink" title="第四步：删除预约，并填写驳回理由。之后将以邮件的形式告知时间申请者预约被驳回，及理由。"></a>第四步：删除预约，并填写驳回理由。之后将以邮件的形式告知时间申请者预约被驳回，及理由。</h2><p><img src="/2020/09/03/log5/第四.png" title="第四步" style="zoom:80%"></p>
+<h1 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h1><h2 id="针对找不到微波实验室时间表的解决方法"><a href="#针对找不到微波实验室时间表的解决方法" class="headerlink" title="针对找不到微波实验室时间表的解决方法"></a>针对找不到微波实验室时间表的解决方法</h2><p><img src="/2020/09/03/log5/Laboratory_timetable.png" title="切换时间表" style="zoom:80%"></p>
+<h2 id="针对预约有误，想删除的或者想重新预约的"><a href="#针对预约有误，想删除的或者想重新预约的" class="headerlink" title="针对预约有误，想删除的或者想重新预约的"></a>针对预约有误，想删除的或者想重新预约的</h2><p>参考“时间审核”</p>
+<h2 id="针对微波实验室添加实验仪器"><a href="#针对微波实验室添加实验仪器" class="headerlink" title="针对微波实验室添加实验仪器"></a>针对微波实验室添加实验仪器</h2><p><strong>此操作需要管理员操作，请联系管理员添加实验仪器，预约时在编辑页面添加仪器即可。</strong><br><img src="/2020/09/03/log5/equipment.png" title="添加是设备" style="zoom:80%"></p>
+<h2 id="针对微波实验室对实验仪器进行预约"><a href="#针对微波实验室对实验仪器进行预约" class="headerlink" title="针对微波实验室对实验仪器进行预约"></a>针对微波实验室对实验仪器进行预约</h2><p>仪器预约加分两步：</p>
+<h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h3><p><img src="/2020/09/03/log5/equipment_booked_0.png" title="仪器预约第一步" style="zoom:80%"></p>
+<h3 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h3><p><img src="/2020/09/03/log5/equipment_booked_1.png" title="仪器预约第二步" style="zoom:80%"></p>
+<p><img src="/2020/09/03/log5/equipment_booked_2.png" title="仪器预约第三步" style="zoom:80%"></p>
+]]></content>
+      <categories>
+        <category>观测工程师</category>
+      </categories>
+      <tags>
+        <tag>观测工程师日记05</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>OpManger使用（1）</title>
+    <url>/2020/09/05/log6/</url>
+    <content><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>OpManager是一个用于企业设备监控、管理企业网络的监控工具。同时较强的可扩展性为未来设备的扩容和更新留出较多的冗余。基于天马望远镜的多设备、多责任人的现实情况而选择的。<br><a id="more"></a></p>
+<h1 id="添加设备"><a href="#添加设备" class="headerlink" title="添加设备"></a>添加设备</h1><p>OpManager使用的检测协议有俩种Snmp（Simple Network Management Protocol）和Wmi（Microsoft Windows Management Instrumentation）。从名字看就知道Wmi 对windows的支持要好一点！</p>
+<p>以下是俩种区别</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">监测项</th>
+<th style="text-align:center">Snmp</th>
+<th style="text-align:center">Wmi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">系统信息主机名称</td>
+<td style="text-align:center">有</td>
+<td style="text-align:center">无（手动添加）</td>
+</tr>
+<tr>
+<td style="text-align:center">接口</td>
+<td style="text-align:center">有</td>
+<td style="text-align:center">有</td>
+</tr>
+<tr>
+<td style="text-align:center">CPU</td>
+<td style="text-align:center">有</td>
+<td style="text-align:center">有</td>
+</tr>
+<tr>
+<td style="text-align:center">内存</td>
+<td style="text-align:center">有</td>
+<td style="text-align:center">有</td>
+</tr>
+<tr>
+<td style="text-align:center">进程</td>
+<td style="text-align:center">有</td>
+<td style="text-align:center">有</td>
+</tr>
+<tr>
+<td style="text-align:center">服务</td>
+<td style="text-align:center">有</td>
+<td style="text-align:center">有</td>
+</tr>
+<tr>
+<td style="text-align:center">TCP端口</td>
+<td style="text-align:center">有，自动扫描</td>
+<td style="text-align:center">无，手动添加</td>
+</tr>
+<tr>
+<td style="text-align:center">监控准确程度</td>
+<td style="text-align:center">准确</td>
+<td style="text-align:center">准确</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>也没太大区别，windows 推荐使用Wmi 而linux 用Snmp 就好了（因为在windows SP2 下没找到Snmp，后查证发现要安装独立安装包），虽然也有在Linux上开启Wmi的骚操作，但是不太推荐。</p>
+<p>附上骚操作（本人没实践过）：</p>
+<p>1.安装存储库（CentOS6或者更高版本）</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">[nando @ localhost主页] $ rpm -Uvh http://www6.atomicorp.com/channels/atomic/centos/6/x86_64/RPMS/atomic-release-1.0-19.el6.art.noarch.rpm</span><br></pre></td></tr></table></figure>
+<p>2.从资源库安装WMIC。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">[nando @ localhost主页] $ yum –y安装wmi</span><br></pre></td></tr></table></figure>
+<p>下面是一些常见的查询和要领。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wmic -U admin％admin1234 //192.168.2.2“从Win32_Process中选择命令行，名称，ProcessId”</span><br><span class="line"></span><br><span class="line">wmic -U admin％admin1234 //192.168.2.2“选择*来自Win32_ComputerSystem”</span><br></pre></td></tr></table></figure>
+<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><p>由于台里的设备系统多样版本新旧不同列举三个例子</p>
+<h2 id="上古系统（以下位机、主动面服务器为代表的Windows-SP2系统的电脑）"><a href="#上古系统（以下位机、主动面服务器为代表的Windows-SP2系统的电脑）" class="headerlink" title="上古系统（以下位机、主动面服务器为代表的Windows SP2系统的电脑）"></a>上古系统（以下位机、主动面服务器为代表的Windows SP2系统的电脑）</h2><h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><p><img src="/2020/09/05/log6/p1.png" title="开始、运行" style="zoom:100%"></p>
+<p><img src="/2020/09/05/log6/p2.png" title="管理工具" style="zoom:100%"></p>
+<p><img src="/2020/09/05/log6/p3.png" title="服务" style="zoom:100%"></p>
+<p><img src="/2020/09/05/log6/p4.png" title="WMI " style="zoom:100%"></p>
+<p><img src="/2020/09/05/log6/p5.png" title="启动服务" style="zoom:100%"></p>
+<h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><p>使用命令打开WMI服务</p>
+<p>运行 cmd</p>
+<p>输入</p>
+<p><img src="/2020/09/05/log6/p1.1.png" title="运行CMD" style="zoom:100%"></p>
+<p>再输入</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sc</span> config wmiApSrv <span class="built_in">start</span>= auto </span><br></pre></td></tr></table></figure>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sc</span> <span class="built_in">start</span> wmiSpSrv</span><br></pre></td></tr></table></figure>
+<h2 id="以制冷监控服务器为代表（windows-7）"><a href="#以制冷监控服务器为代表（windows-7）" class="headerlink" title="以制冷监控服务器为代表（windows 7）"></a>以制冷监控服务器为代表（windows 7）</h2><h2 id="以上位机为代表（一票Linux）"><a href="#以上位机为代表（一票Linux）" class="headerlink" title="以上位机为代表（一票Linux）"></a>以上位机为代表（一票Linux）</h2><h4 id="a-更新yum源"><a href="#a-更新yum源" class="headerlink" title="a.更新yum源"></a>a.更新yum源</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">yum clean all</span><br><span class="line"></span><br><span class="line">yum makecache</span><br><span class="line"></span><br><span class="line">yum repolist</span><br></pre></td></tr></table></figure>
+<h4 id="b-安装snmp-服务"><a href="#b-安装snmp-服务" class="headerlink" title="b.安装snmp 服务"></a>b.安装snmp 服务</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">yum -y install net-snmp net-snmp-utils</span><br></pre></td></tr></table></figure>
+<h4 id="c-check-安装是否成功"><a href="#c-check-安装是否成功" class="headerlink" title="c.check 安装是否成功"></a>c.check 安装是否成功</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">snmpd -v		</span><br></pre></td></tr></table></figure>
+<h4 id="d-更改团体名"><a href="#d-更改团体名" class="headerlink" title="d.更改团体名"></a>d.更改团体名</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vim /etc/snmp/snmpd.conf</span><br><span class="line"></span><br><span class="line">com2sec notConfigUser default public</span><br><span class="line">改为</span><br><span class="line">com2sec nontconfigUser default +要验证的团体名</span><br></pre></td></tr></table></figure>
+<h4 id="e-重启并设置开机启动"><a href="#e-重启并设置开机启动" class="headerlink" title="e.重启并设置开机启动"></a>e.重启并设置开机启动</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">systemctl start snmpd.service</span><br><span class="line">systemctl enable snmpd.service</span><br></pre></td></tr></table></figure>
+<h4 id="f-添加防火墙端口"><a href="#f-添加防火墙端口" class="headerlink" title="f.添加防火墙端口"></a>f.添加防火墙端口</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">firewall-cmd --state</span><br><span class="line"></span><br><span class="line">firewall-cmd --list-all</span><br><span class="line"></span><br><span class="line">vim /etc/firewalld/zones/public.xml</span><br><span class="line">修改为&lt;port protocol=&quot;udp&quot;port=&quot;161&quot;&gt;</span><br><span class="line"></span><br><span class="line">systemctl restart firewalld.service</span><br><span class="line"></span><br><span class="line">firewall-cmd --list-all</span><br><span class="line"></span><br><span class="line">systemctl restart snmpd.service</span><br></pre></td></tr></table></figure>
+<p>至此就差不多了。</p>
+<h1 id="OpManager-添加凭证"><a href="#OpManager-添加凭证" class="headerlink" title="OpManager 添加凭证"></a>OpManager 添加凭证</h1><p>设置——点击凭证管理——添加凭证</p>
+<p><img src="/2020/09/05/log6/q1.jpg" title="添加凭证1" style="zoom:40%"></p>
+<p><img src="/2020/09/05/log6/q2.jpg" title="添加凭证2" style="zoom:40%"></p>
+<p><img src="/2020/09/05/log6/q3.jpg" title="添加凭证3" style="zoom:40%"></p>
+<h1 id="设备导入"><a href="#设备导入" class="headerlink" title="设备导入"></a>设备导入</h1><p>设备导入有四种方法，为便于测试和分组我已经制作好了CSV文件只要条件允许就可以导入了。</p>
+<p><img src="/2020/09/05/log6/r1.jpg" title="网络发现-从CSV导入" style="zoom:40%"></p>
+<h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><p><strong>鉴于执行任务期间，等8月6号后</strong></p>
+<p><strong>补充1：对IP做了分组，只需要任务结束上传csv文件即可</strong></p>
+<p><strong>补充2：CSV文件展示</strong><br><img src="/2020/09/05/log6/CSV.PNG" title="CSV文件" style="zoom:80%"></p>
+]]></content>
+      <categories>
+        <category>观测工程师</category>
+      </categories>
+      <tags>
+        <tag>观测工程师日记06</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>零件保养（轨道轮减速器）</title>
+    <url>/2020/09/05/log7/</url>
+    <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>为保证HX任务期间天马望远镜的正常工作，准备了备用件。以备任务期间设备损坏可以及时维修替换，本人于2020年9月1日，对轨道轮组电机减速器进行了保养。使备件可以保存较长时间，以避免在存放过程中发生锈蚀损坏。<br><a id="more"></a></p>
+<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><h2 id="材料：润滑脂-、润滑油"><a href="#材料：润滑脂-、润滑油" class="headerlink" title="材料：润滑脂 、润滑油"></a>材料：润滑脂 、润滑油</h2><h2 id="辅助设备：手摇抽油器、油桶、手推车、油漏斗、橡胶手套"><a href="#辅助设备：手摇抽油器、油桶、手推车、油漏斗、橡胶手套" class="headerlink" title="辅助设备：手摇抽油器、油桶、手推车、油漏斗、橡胶手套"></a>辅助设备：手摇抽油器、油桶、手推车、油漏斗、橡胶手套</h2><p><strong>tips：</strong></p>
+<ol>
+<li>辅助设备中的手摇抽油器和油桶位于望远镜底座中心轴承内的小门内，手推车在观测室一楼107或者106内。</li>
+<li>润滑脂型号：二硫化钼锂基润滑脂。润滑油型号：320#低温重负荷齿轮油。</li>
+<li>减速器换油要求</li>
+</ol>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">工作温度</th>
+<th style="text-align:center">运行时间</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">90℃</td>
+<td style="text-align:center">4000h</td>
+</tr>
+<tr>
+<td style="text-align:center">80℃</td>
+<td style="text-align:center">6000h</td>
+</tr>
+<tr>
+<td style="text-align:center">小于70℃</td>
+<td style="text-align:center">8000h</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ol>
+<li>减速器换油要求：减速器壳体应采用与减速器所用的相同等级的油进行冲洗，高粘度油可以先进行预热再清洗。<font color="red"> 清洗必须绝对洁净，绝对不允许外部杂质进入减速器 </font>。</li>
+</ol>
+<h1 id="维护细节"><a href="#维护细节" class="headerlink" title="维护细节"></a>维护细节</h1><h2 id="涂润滑脂"><a href="#涂润滑脂" class="headerlink" title="涂润滑脂"></a>涂润滑脂</h2><p>第一步：使用<font color="red"> <strong>油污清洁剂</strong> </font> 清洗电机减速器的内花键的齿和表面银白色金属光泽的部分——去除油污、灰尘。</p>
+<p>第二步：需要在电机减速器的内花键均匀涂满二硫化钼锂基润滑脂，防止水汽对花键的锈蚀。</p>
+<p>第三步：用塑料布遮盖内花键表面，防止外界灰尘、脏污的侵入。</p>
+<p><strong>tips：在用 <font color="red"> 油污清洁剂 </font> 清洗配件表面时，需要佩戴较厚的橡胶手套。因为<font color="red"> 油污清洁剂 </font>中的溶剂对皮肤都有很强的腐蚀效果。</strong></p>
+<p><strong>部分细节如下图：</strong></p>
+<p><img src="/2020/09/05/log7/huang.jpg" title="黄伟彬涂润滑脂" style="zoom:50%"></p>
+<p><img src="/2020/09/05/log7/spline.jpg" title="覆盖塑料袋" style="zoom:50%"></p>
+<h2 id="加注齿轮润滑油"><a href="#加注齿轮润滑油" class="headerlink" title="加注齿轮润滑油"></a>加注齿轮润滑油</h2><p>在减速器的顶部有俩个注油空，使用大号活动扳手或者套筒旋开，然后通过漏斗注油。需要注意，减速器在天线上正常工作时，才用飞溅润滑。所以润滑油液位只需要高过减速器侧边视窗即可，但是此次保养是贮存保养。为了避免内部行星齿轮组被水汽锈蚀，选择把润滑油注满。使用30L油桶大约3桶就可以注满。</p>
+<p><img src="/2020/09/05/log7/oil.jpg" title="!加油！" style="zoom:50%"></p>
+<h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><ol>
+<li>需要在维护前准备好需要的所需的工具，例如：润滑油的油桶打开需要借助锤子和改锥、减速器的润滑油加注口需要较大的扳手等</li>
+<li>记得干活要早点开始，不然夏天很晒。</li>
+<li>做好与同事的分工可以事半功倍！！</li>
+</ol>
+]]></content>
+      <categories>
+        <category>观测工程师</category>
+      </categories>
+      <tags>
+        <tag>观测工程师日记07</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>工作汇报（25米观测室更换移门与加装纱门）</title>
+    <url>/2020/09/13/log8/</url>
+    <content><![CDATA[<h1 id="一-工作概况："><a href="#一-工作概况：" class="headerlink" title="一. 工作概况："></a>一. 工作概况：</h1><ol>
+<li><p>地点：佘山25米观测站观测室</p>
+</li>
+<li><p>工作时间：2020年9月12日 星期六 上午7：45-下午3：25</p>
+</li>
+<li><p>参与人员：夏博 赵漳 基建施工人员3名</p>
+</li>
+<li><p>工作目的：</p>
+<p>25米观测室内压<strong>缩机房</strong>、<strong>氢钟房</strong>、<strong>终端室</strong>的移门因为老化原因气密性和保温性能（单层玻璃）下降，对设备要求的恒温环境造成不利影响，现进行更换保温（双层玻璃）气密性能更好的移门。针对25米台站周边自然环境较好，昆虫多的情况，增加<strong>控制室</strong>、<strong>操作间</strong>的纱门。为提高观测室整体气密性和保温性对<strong>入户大门</strong>也进行更换和加装沙门。共计4扇沙门、3组平移门、1组入户大门。</p>
+<a id="more"></a>
+<h1 id="二-具体工作内容："><a href="#二-具体工作内容：" class="headerlink" title="二. 具体工作内容："></a>二. 具体工作内容：</h1></li>
+<li><p>首先是对老移门的拆除，拆除后的移门和垃圾在观测室外进行临时堆放。其中因为氢钟房对温度的恒定要求较为严格，采取了拆换同时进行的施工方式，并调低空调的温度（18℃）加大风量。整个氢钟房移门的拆除和安装时间在20分钟左右，如<strong>图1</strong>所示。基本所有沙门安装、移门的拆除和安装在上午11点左右完成，如<strong>图2</strong>所示。</p>
+</li>
+</ol>
+<p><img src="/2020/09/13/log8/p1.jpg" title="氢钟房" style="zoom:20%"></p>
+<center>图1</center>
+
+<p><img src="/2020/09/13/log8/p2_comb.png" title="安装完成集合" style="zoom:20%"> </p>
+<center>图2</center>
+
+<ol>
+<li>下午对观测室入户大门进行更换，为了避免入户玻璃门和纱门的干涉采取了玻璃门向外开启、纱门向内开启的结构，如<strong>图3</strong>所示。最后对安装过程造成的墙面所损坏，还进行了补腻子和刷涂料的工作，如<strong>图4</strong>所示。</li>
+</ol>
+<p><img src="/2020/09/13/log8/p3.jpg" title="沙门和大门对向开启" style="zoom:20%"></p>
+<center>图3</center>
+
+<p><img src="/2020/09/13/log8/p4.jpg" title="腻子找平、涂料补色" style="zoom:20%"></p>
+<center>图4</center>
+
+
+<ol>
+<li>在施工结束后，进行施工现场的打扫。并对拆除下来的旧门进行处理（由施工人员拉走，如<strong>图5</strong>所示）。</li>
+</ol>
+<p><img src="/2020/09/13/log8/p5.jpg" title="旧门装车" style="zoom:20%"></p>
+<center>图5</center>]]></content>
+      <categories>
+        <category>观测工程师</category>
+      </categories>
+      <tags>
+        <tag>观测工程师日记08</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>夏令营</title>
+    <url>/2020/07/28/%E5%A4%8F%E5%88%A9%E8%90%A5/</url>
+    <content><![CDATA[<h1 id="广州夏令营——天马望远镜介绍"><a href="#广州夏令营——天马望远镜介绍" class="headerlink" title="广州夏令营——天马望远镜介绍"></a>广州夏令营——天马望远镜介绍</h1><h2 id="开场白"><a href="#开场白" class="headerlink" title="开场白"></a>开场白</h2><p>​    大家好，这里是广州大学驻上海天马望远镜记者赵漳为您带来的报道。我是今年毕业的广大学生赵漳，刚入职上海天文台。今天就由我给大家介绍一下天马望远镜。</p>
+<h2 id="天马介绍"><a href="#天马介绍" class="headerlink" title="天马介绍"></a>天马介绍</h2><h3 id="1-概述"><a href="#1-概述" class="headerlink" title="1.概述"></a>1.概述</h3><p>​    望远镜呢是座落在上海松江区天马山旁，其直径为65米而的名的。目前应该式亚洲最大 的单天线射电望远镜。这个望远镜在收纳状态下，高度为70米。总重量为2700吨，是一个拥有八波段的卡塞格林式的射电望远镜。这八个波段分别式L、S、C、X、Ku、K、Ka、Q。覆盖了从1.25GHz——50GHz的频率范围，主要承担了2012年嫦娥二号、2013年嫦娥五号飞行试验器的定轨侧轨任务。同时也成功展开了谱线、脉冲星和VLBI的射电天问观测。产出了一些重大的科研成果，比如我老师最近在自然科学杂志发表的关于在年轻大质量恒星中发现3种新的分子脉泽，有兴趣的可以去了解一下。这个时候各位手机电脑前的老铁们，就可以点波关注，双击666走一波了。</p>
+<h3 id="2-火星探测"><a href="#2-火星探测" class="headerlink" title="2.火星探测"></a>2.火星探测</h3><p>​    再讲讲最近天马望远镜在干的工作，大家都知道。在北京时间2020年7月23日，海南文昌航天发射场，使用长征五号遥四运载火箭将我国第一颗火星探测器“天问一号”发射升空。就发射到目前还是比较顺令，而在其中呢。天马望远镜、包括南山、昆明、密云的台站组成VLBI网，对天问火星探测器进行测轨，以确保探测器到达预定的轨道位置。之后“绕着巡”，及“环绕”、“着陆”、“巡视”火星这3项任务，提供准确的为位置保证。</p>
+<h3 id="3-谱线"><a href="#3-谱线" class="headerlink" title="3.谱线"></a>3.谱线</h3><p>​    在不执行任务的时候呢，因为天马望远镜式全年无休的，空余时间就会开放给国内的科研工作，用于做谱线观测、脉冲星的观测、还加入了EVN - european VLBI Network ，还参与一些VLBI的联测，其主要目的也是对谱线脉冲星大的观测。</p>
+<h3 id="4-环境介绍"><a href="#4-环境介绍" class="headerlink" title="4.环境介绍"></a>4.环境介绍</h3><p>​    左边的是终端室、右边的室观测室。左边这些机架上就是放着天马望远镜的一些终端，包括谱线和脉冲星的记录设备DIBAS、VLBI的记录设备、DBBC3、mak6、还有一些控制设备和主动面、水汽辐射计、全系测量、信息监控等设备。观测室呢，就是主要进行观测、天线控制、信息监控的地方。在执行任务，我就不进去了。</p>
+<h2 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h2><p>欢乐的时光总是短暂，我的天马望远镜介绍要告一段落了。此情此景，作为天文圈的灵魂诗人我准备赋诗一首。</p>
+<p>天问升空很成功，</p>
+<p>天马测轨进行中。</p>
+<p>师弟师妹勤努力，</p>
+<p>未来建设中国梦。</p>
+<p>好了，把话筒交还主持人。我就先撤了！</p>
+]]></content>
+      <categories>
+        <category>杂事</category>
+      </categories>
+      <tags>
+        <tag>演讲</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>主动面启动、重启操作手册</title>
+    <url>/2020/10/12/log9/</url>
+    <content><![CDATA[<h1 id="1-介绍"><a href="#1-介绍" class="headerlink" title="1. 介绍"></a>1. 介绍</h1><p>本手册<strong>抄袭</strong>自虞林峰于2018年11月11日的《主动面系统手册V1.2》，感谢原作者的手册支持与陆雪江无私分享。</p>
+<h1 id="2-内容"><a href="#2-内容" class="headerlink" title="2. 内容"></a>2. 内容</h1><h2 id="2-1-主动面系统的使用策略"><a href="#2-1-主动面系统的使用策略" class="headerlink" title="2.1 主动面系统的使用策略"></a>2.1 主动面系统的使用策略</h2><p>​    在Ku、K、Ka和Q波段的观测时，开启主动面以提<strong>高效率</strong>，其他波段观测请将主动面至于OFF状态。注意：<strong>主动面不使用时，需要关闭主动面软件。有问题时，重启后，主动面软件仍然不正常，不要再使用主动面（可以联系软件负责人）。断电时，关闭主动面软件。</strong></p>
+<h2 id="2-2-主动面系统控制软件重启"><a href="#2-2-主动面系统控制软件重启" class="headerlink" title="2.2 主动面系统控制软件重启"></a>2.2 主动面系统控制软件重启</h2><p>（1）双击桌面上的快捷图标“s65rt.exe-快捷方式”，将图中1中界面。<strong>（注意：启动后，如果立刻点击软件右上角的叉号后，软件将跳出“是否将当前促动器的使能状态和系统IP地址设为存盘并推出？”对话框，点击“否”，将软件关闭）</strong></p>
+<p><img src="/2020/10/12/log9/1.png" alt="1" style="zoom:50%;"></p>
+<center>图1.主动面控制软件</center>
+
+<a id="more"></a>
+<p>（2）点击界面左侧的“总线-促动器工作状态”标签页后，软件将会跳出”是否将最近一次软件推出时保存的促动器当前的位置写回到促动器？“对话框（图2），点击”是“后，软件将会进行连接，耗时为5分钟。</p>
+<p><img src="/2020/10/12/log9/2.png" alt="2" style="zoom:50%;"></p>
+<center>图2.主动面控制软件2</center>
+
+<p>（3）再点击“启动全局巡查”按钮。点击界面左上“启动监听”按钮，去掉“禁止”的勾选。主动面系统软件启动完毕（图3）。</p>
+<p><img src="/2020/10/12/log9/3.png" alt="3" style="zoom:50%;"></p>
+<center>图3.主动面控制软件3</center>
+
+<p>（4）主动面可根据仰角自动调整。在促动器第一次运动后，可全变为绿色。</p>
+<h2 id="2-3-主动面系统控制软件关闭"><a href="#2-3-主动面系统控制软件关闭" class="headerlink" title="2.3 主动面系统控制软件关闭"></a>2.3 主动面系统控制软件关闭</h2><p>（1）在观测控制软件上，取消主动面使能状态，再将主动面置于OFF状态。</p>
+<p>（2）点击界面左上部分“停止监听”按钮。选择“禁止”勾选。</p>
+<p>（3）点击见面右上部分的“总线-促动器工作状态”标签后，按照顺序点击“停止全局巡查”按钮，点击“关闭所有连接”按钮后，软件将会跳出“促动器当前位置不全为零，去定要关闭所有连接吗？”对话框，点击“是”。如图4所示。</p>
+<p><img src="/2020/10/12/log9/4.png" alt="4" style="zoom: 50%;"></p>
+<center>图3.主动面控制软件3</center>
+
+<p>（4）点击软件右上角叉号后，软件将跳出对话框“是否将当前促动器的使能状态和系统IP地址设定为促盘并退出？”对话框（图5），点击“是”后，将软件关闭。</p>
+<p><img src="/2020/10/12/log9/5.png" alt="5" style="zoom: 50%;"></p>
+<center>图3.主动面控制软件3</center>
+
+<h2 id="2-4-主动面系统控制软件死机时的重启"><a href="#2-4-主动面系统控制软件死机时的重启" class="headerlink" title="2.4 主动面系统控制软件死机时的重启"></a>2.4 主动面系统控制软件死机时的重启</h2><p>主动面系统控制软件在死机时，见面无响应，此时的重启过程如下：</p>
+<p>（1）在观测控制软件上，取消主动面使能状态，再将主动面置于OFF状态。</p>
+<p>（2）在主动面计算机上敢比桌面下方的图标或者Windows任务管理器，关闭程序。</p>
+<p>（3）启动主动面系统的控制软件，可参考第2.2的内容。</p>
+<h2 id="2-5-主动面系统启动"><a href="#2-5-主动面系统启动" class="headerlink" title="2.5 主动面系统启动"></a>2.5 主动面系统启动</h2><p>主动面系统的重启包括软件和硬件电源部分，步骤如下：</p>
+<p><strong>顺序要注意！</strong></p>
+<p>（1）关闭主动面系统的控制软件，参考2.3的内容。</p>
+<p>（2）在天线4层的压缩机房，关闭主动面的电源，等待5分钟后，再打开主动面电源。</p>
+<p>（3）启动主动面系统控制软件，可参考第2节内容。</p>
+<h1 id="3-软件重启和关闭的技术总结"><a href="#3-软件重启和关闭的技术总结" class="headerlink" title="3. 软件重启和关闭的技术总结"></a>3. 软件重启和关闭的技术总结</h1><h1 id="3-1-开启软件"><a href="#3-1-开启软件" class="headerlink" title="3.1 开启软件"></a>3.1 开启软件</h1><p>（1）开启软件</p>
+<p><strong>（2）总线-促动器工作状态——建立网络连接</strong></p>
+<p><strong>（3）分控箱-电源工作状态——建立所有连接</strong></p>
+<p>以上两步都是在软件出现故障发生重启时才采取的措施。</p>
+<p>当有这个出现选择“否”</p>
+<p><img src="/2020/10/12/log9/IMG_0948.jpeg" alt="IMG_0948" style="zoom: 33%;"></p>
+<p>（4）总线-促动器工作状态——启动全局巡查</p>
+<p>（5）左上角“启动监听”，把”禁止“勾掉</p>
+<h1 id="3-2-未完待续！"><a href="#3-2-未完待续！" class="headerlink" title="3.2 未完待续！"></a>3.2 未完待续！</h1>]]></content>
+      <categories>
+        <category>观测工程师</category>
+      </categories>
+      <tags>
+        <tag>观测工程师日记9</tag>
+      </tags>
+  </entry>
+</search>
