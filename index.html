@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.2.0">
+<meta name="generator" content="Hexo 5.4.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
   <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="baidu-site-verification" content="<meta name="baidu-site-verification" content="code-Q8gQSltHy1" />">
 
 <link rel="stylesheet" href="/css/main.css">
 
@@ -123,17 +124,22 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">15</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">20</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">3</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">14</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">14</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">24</span></a>
+
+  </li>
+        <li class="menu-item menu-item-dowland">
+
+    <a href="/dowland/" rel="section"><i class="fa fa-arrow-down fa-fw"></i>下载</a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -192,7 +198,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://smartbra.top/2020/10/12/log9/">
+    <link itemprop="mainEntityOfPage" href="http://smartbra.top/2021/08/29/log69_mac05/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/Misaka.jpg">
@@ -206,7 +212,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/10/12/log9/" class="post-title-link" itemprop="url">主动面启动、重启操作手册</a>
+            <a href="/2021/08/29/log69_mac05/" class="post-title-link" itemprop="url">Mac中安装Wget</a>
         </h2>
 
         <div class="post-meta">
@@ -216,7 +222,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-10-12 14:51:59" itemprop="dateCreated datePublished" datetime="2020-10-12T14:51:59+08:00">2020-10-12</time>
+              <time title="创建时间：2021-08-29 23:57:43" itemprop="dateCreated datePublished" datetime="2021-08-29T23:57:43+08:00">2021-08-29</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -224,7 +230,11 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%A7%82%E6%B5%8B%E5%B7%A5%E7%A8%8B%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">观测工程师</span></a>
+                  <a href="/categories/%E6%B4%BB%E5%88%B0%E8%80%81%E5%AD%A6%E5%88%B0%E8%80%81/" itemprop="url" rel="index"><span itemprop="name">活到老学到老</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%B4%BB%E5%88%B0%E8%80%81%E5%AD%A6%E5%88%B0%E8%80%81/Mac/" itemprop="url" rel="index"><span itemprop="name">Mac</span></a>
                 </span>
             </span>
 
@@ -234,7 +244,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.3k</span>
+              <span>682</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -253,14 +263,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="1-介绍"><a href="#1-介绍" class="headerlink" title="1. 介绍"></a>1. 介绍</h1><p>本手册<strong>抄袭</strong>自虞林峰于2018年11月11日的《主动面系统手册V1.2》，感谢原作者的手册支持与陆雪江无私分享。</p>
-<h1 id="2-内容"><a href="#2-内容" class="headerlink" title="2. 内容"></a>2. 内容</h1><h2 id="2-1-主动面系统的使用策略"><a href="#2-1-主动面系统的使用策略" class="headerlink" title="2.1 主动面系统的使用策略"></a>2.1 主动面系统的使用策略</h2><p>​    在Ku、K、Ka和Q波段的观测时，开启主动面以提<strong>高效率</strong>，其他波段观测请将主动面至于OFF状态。注意：<strong>主动面不使用时，需要关闭主动面软件。有问题时，重启后，主动面软件仍然不正常，不要再使用主动面（可以联系软件负责人）。断电时，关闭主动面软件。</strong></p>
-<h2 id="2-2-主动面系统控制软件重启"><a href="#2-2-主动面系统控制软件重启" class="headerlink" title="2.2 主动面系统控制软件重启"></a>2.2 主动面系统控制软件重启</h2><p>（1）双击桌面上的快捷图标“s65rt.exe-快捷方式”，将图中1中界面。<strong>（注意：启动后，如果立刻点击软件右上角的叉号后，软件将跳出“是否将当前促动器的使能状态和系统IP地址设为存盘并推出？”对话框，点击“否”，将软件关闭）</strong></p>
-<p><img src="/2020/10/12/log9/1.png" alt="1" style="zoom:50%;"></p>
-<center>图1.主动面控制软件</center>
+          <p>在制作AWTRIX像素灯的时候在搭建后台服务的时候，需要使用到Wget下载MCU的固件。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2020/10/12/log9/#more" rel="contents">
+              <a class="btn" href="/2021/08/29/log69_mac05/">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -284,7 +290,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://smartbra.top/2020/10/01/hexo01/">
+    <link itemprop="mainEntityOfPage" href="http://smartbra.top/2021/08/24/log26_git01/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/Misaka.jpg">
@@ -298,7 +304,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/10/01/hexo01/" class="post-title-link" itemprop="url">HEXO常用设置（next主题）</a>
+            <a href="/2021/08/24/log26_git01/" class="post-title-link" itemprop="url">Git学习</a>
         </h2>
 
         <div class="post-meta">
@@ -308,7 +314,651 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-10-01 15:04:23" itemprop="dateCreated datePublished" datetime="2020-10-01T15:04:23+08:00">2020-10-01</time>
+              <time title="创建时间：2021-08-24 17:08:07" itemprop="dateCreated datePublished" datetime="2021-08-24T17:08:07+08:00">2021-08-24</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%B4%BB%E5%88%B0%E8%80%81%E5%AD%A6%E5%88%B0%E8%80%81/" itemprop="url" rel="index"><span itemprop="name">活到老学到老</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%B4%BB%E5%88%B0%E8%80%81%E5%AD%A6%E5%88%B0%E8%80%81/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>3.6k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>虽然没正经写过什么代码，github也只限于git别人代码。但是在部署于GitHub上的hexo网页时，遇到了breach和master冲突的问题。所以有了如下的git学习，并贴在这里为以后学习和回顾做准备。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/08/24/log26_git01/">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://smartbra.top/2021/08/24/log58_Mac03/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/Misaka.jpg">
+      <meta itemprop="name" content="赵英俊">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="杰宝大王的藏宝阁">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/08/24/log58_Mac03/" class="post-title-link" itemprop="url">在Mac中包管理器MacPorts的使用</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-08-24 17:07:19" itemprop="dateCreated datePublished" datetime="2021-08-24T17:07:19+08:00">2021-08-24</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%B4%BB%E5%88%B0%E8%80%81%E5%AD%A6%E5%88%B0%E8%80%81/" itemprop="url" rel="index"><span itemprop="name">活到老学到老</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%B4%BB%E5%88%B0%E8%80%81%E5%AD%A6%E5%88%B0%E8%80%81/Mac/" itemprop="url" rel="index"><span itemprop="name">Mac</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.1k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>在Mac中常用的包管理软件有两个分别为Homebrew和Macports，对于很多老牌资源多数在Macports的支持更好，例如天文数据处理的Gildas包，在Macports中就没有。本文介绍一些常用指令和心得！</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/08/24/log58_Mac03/">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://smartbra.top/2021/08/24/log48_network01/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/Misaka.jpg">
+      <meta itemprop="name" content="赵英俊">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="杰宝大王的藏宝阁">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/08/24/log48_network01/" class="post-title-link" itemprop="url">网络学习之开头</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-08-24 16:58:32" itemprop="dateCreated datePublished" datetime="2021-08-24T16:58:32+08:00">2021-08-24</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%B4%BB%E5%88%B0%E8%80%81%E5%AD%A6%E5%88%B0%E8%80%81/" itemprop="url" rel="index"><span itemprop="name">活到老学到老</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%B4%BB%E5%88%B0%E8%80%81%E5%AD%A6%E5%88%B0%E8%80%81/network/" itemprop="url" rel="index"><span itemprop="name">network</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>31</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>网络为计算机互联网的互相通信的基础，在多设备数据交换就要涉及到网络。为了更好理解网络的原理有必要学习一下必备的基础知识，这也是开始学习计算机网络的初衷。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/08/24/log48_network01/">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://smartbra.top/2021/08/24/log32_Mac02/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/Misaka.jpg">
+      <meta itemprop="name" content="赵英俊">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="杰宝大王的藏宝阁">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/08/24/log32_Mac02/" class="post-title-link" itemprop="url">在Mac中ssh连接linux启用图新界面</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-08-24 16:44:18" itemprop="dateCreated datePublished" datetime="2021-08-24T16:44:18+08:00">2021-08-24</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%B4%BB%E5%88%B0%E8%80%81%E5%AD%A6%E5%88%B0%E8%80%81/" itemprop="url" rel="index"><span itemprop="name">活到老学到老</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%B4%BB%E5%88%B0%E8%80%81%E5%AD%A6%E5%88%B0%E8%80%81/Mac/" itemprop="url" rel="index"><span itemprop="name">Mac</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>4.3k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>4 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>继续完善在Mac下没有远程调试工具集合，在连接服务器若要调用图形窗口时。需要在Mac端安装x11客户端，下面是使用自带Terminal调用服务器端图形界面的方法。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/08/24/log32_Mac02/">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://smartbra.top/2021/08/24/log36_linux01/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/Misaka.jpg">
+      <meta itemprop="name" content="赵英俊">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="杰宝大王的藏宝阁">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/08/24/log36_linux01/" class="post-title-link" itemprop="url">Ubuntu安装ssh并开启服务</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-08-24 16:13:44" itemprop="dateCreated datePublished" datetime="2021-08-24T16:13:44+08:00">2021-08-24</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%B4%BB%E5%88%B0%E8%80%81%E5%AD%A6%E5%88%B0%E8%80%81/" itemprop="url" rel="index"><span itemprop="name">活到老学到老</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%B4%BB%E5%88%B0%E8%80%81%E5%AD%A6%E5%88%B0%E8%80%81/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>561</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Ubuntu多数不同版本中，有的可能没有安装或启用ssh。本文介绍如何安装或check是否启用ssh服务。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/08/24/log36_linux01/">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://smartbra.top/2021/08/24/log22_Mac01/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/Misaka.jpg">
+      <meta itemprop="name" content="赵英俊">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="杰宝大王的藏宝阁">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/08/24/log22_Mac01/" class="post-title-link" itemprop="url">在Mac中添加快速ssh</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-08-24 16:10:31" itemprop="dateCreated datePublished" datetime="2021-08-24T16:10:31+08:00">2021-08-24</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%B4%BB%E5%88%B0%E8%80%81%E5%AD%A6%E5%88%B0%E8%80%81/" itemprop="url" rel="index"><span itemprop="name">活到老学到老</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%B4%BB%E5%88%B0%E8%80%81%E5%AD%A6%E5%88%B0%E8%80%81/Mac/" itemprop="url" rel="index"><span itemprop="name">Mac</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>254</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>因为在mac中暂时没有找全能、免费且好用的远程工具（例如Win下的Mobaxterm），所以暂时有很多服务器需要链接，记忆IP就变成了非常反人类的做法。发现只需要在mac中添加一个文件就可以做到简单的使用代号就可以做到快速ssh访问。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/08/24/log22_Mac01/">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://smartbra.top/2021/08/24/log16/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/Misaka.jpg">
+      <meta itemprop="name" content="赵英俊">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="杰宝大王的藏宝阁">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/08/24/log16/" class="post-title-link" itemprop="url">服务器科普</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-08-24 15:50:21" itemprop="dateCreated datePublished" datetime="2021-08-24T15:50:21+08:00">2021-08-24</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%B4%BB%E5%88%B0%E8%80%81%E5%AD%A6%E5%88%B0%E8%80%81/" itemprop="url" rel="index"><span itemprop="name">活到老学到老</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%B4%BB%E5%88%B0%E8%80%81%E5%AD%A6%E5%88%B0%E8%80%81/%E5%85%B6%E4%BB%96/" itemprop="url" rel="index"><span itemprop="name">其他</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>2 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>采购服务器时进行查阅整理，简单对常见服务器品牌、结构和一些标准进行介绍。以备自己后续工作中的回顾和整理！</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/08/24/log16/">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://smartbra.top/2021/08/24/hexo01/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/Misaka.jpg">
+      <meta itemprop="name" content="赵英俊">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="杰宝大王的藏宝阁">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/08/24/hexo01/" class="post-title-link" itemprop="url">HEXO常用设置（next主题）</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-08-24 15:42:33" itemprop="dateCreated datePublished" datetime="2021-08-24T15:42:33+08:00">2021-08-24</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -326,7 +976,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>547</span>
+              <span>839</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -348,94 +998,9 @@
           <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo</a> 是一个高效、快速简洁且高效的静态博客框架。Hexo使用<a target="_blank" rel="noopener" href="https://daringfireball.net/projects/markdown/">Markdown</a>(或其他渲染引擎)解析文章，在几秒之内，即可利用酷炫的主题生成静态网页。</p>
 <h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>安装参考中文官网的教程 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/。">https://hexo.io/zh-cn/。</a></p>
 <h1 id="themes"><a href="#themes" class="headerlink" title="themes"></a>themes</h1><p>本人常用的俩个主题为<a target="_blank" rel="noopener" href="https://github.com/fi3ework/hexo-theme-archer">Archer</a>和<a target="_blank" rel="noopener" href="https://github.com/theme-next/hexo-theme-next">next</a>，以下多数内容针对next主题为例。</p>
-<h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">hexo new draft 文件名（新建草稿）</span><br><span class="line"></span><br><span class="line">hexo publish 文件名（把草稿发表到正式文档中）</span><br><span class="line"></span><br><span class="line">hexo server（启动hexo 服务）</span><br><span class="line"></span><br><span class="line">hexo clean（清除编译文件）</span><br><span class="line"></span><br><span class="line">hexo generate (编译静态文件)</span><br><span class="line"></span><br><span class="line">hexo deployer（上传github，需要安装hexo-deployer-git）</span><br></pre></td></tr></table></figure>
-<h1 id="上传github"><a href="#上传github" class="headerlink" title="上传github"></a>上传github</h1><p>（1）需要安装delpoyer插件</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-<p>（2）在根目录的_config.yml文件中添加<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> Deployment</span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># Docs: https://hexo.io/docs/one-command-deployment</span></span></span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: http://github.com/smartbra/blog.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure><br><a target="_blank" rel="noopener" href="https://nathaniel.blog/tutorials/make-hexo-support-math-again">LaTeX</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://smartbra.top/2020/09/14/log10/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/Misaka.jpg">
-      <meta itemprop="name" content="赵英俊">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="杰宝大王的藏宝阁">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/09/14/log10/" class="post-title-link" itemprop="url">数据分析（某小天线性能测试）</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-09-14 21:13:21" itemprop="dateCreated datePublished" datetime="2020-09-14T21:13:21+08:00">2020-09-14</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%A7%82%E6%B5%8B%E5%B7%A5%E7%A8%8B%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">观测工程师</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>2.3k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="fits文件的头文件提取到excel"><a href="#fits文件的头文件提取到excel" class="headerlink" title="fits文件的头文件提取到excel"></a>fits文件的头文件提取到excel</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot  <span class="keyword">as</span> pl</span><br><span class="line"></span><br><span class="line"><span class="comment"># import pyfits</span></span><br><span class="line"><span class="comment"># from astropy.utils.data import get_pkg_data_filename</span></span><br><span class="line"><span class="keyword">from</span> astropy.table <span class="keyword">import</span> Table</span><br><span class="line"><span class="keyword">from</span> astropy.io <span class="keyword">import</span> fits</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span>  pd</span><br><span class="line"></span><br><span class="line">hdul=fits.open(<span class="string">&#x27;C:/Users/47459/Downloads/Dcr/2020_07_19_04_32_34.fits&#x27;</span>)</span><br><span class="line">events=Table.read(hdul,hdu=<span class="number">1</span>)</span><br><span class="line">df=events.to_pandas()</span><br><span class="line">df.to_excel(<span class="string">&#x27;C:/Users/47459/Downloads/Dcr/2020_07_19_04_32_34.excel&#x27;</span>)</span><br><span class="line">pd.read_excel(<span class="string">&#x27;C:/Users/47459/Downloads/Dcr/2020_07_19_04_32_34.xls&#x27;</span>,sheet_name=<span class="string">&quot;Sheet1&quot;</span>,index_col=<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2020/09/14/log10/#more" rel="contents">
+              <a class="btn" href="/2021/08/24/hexo01/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -459,7 +1024,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://smartbra.top/2020/09/13/log8/">
+    <link itemprop="mainEntityOfPage" href="http://smartbra.top/2020/11/09/log11/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/Misaka.jpg">
@@ -473,7 +1038,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/09/13/log8/" class="post-title-link" itemprop="url">工作汇报（25米观测室更换移门与加装纱门）</a>
+            <a href="/2020/11/09/log11/" class="post-title-link" itemprop="url">VLBI联测操作流程</a>
         </h2>
 
         <div class="post-meta">
@@ -483,7 +1048,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-09-13 19:34:20" itemprop="dateCreated datePublished" datetime="2020-09-13T19:34:20+08:00">2020-09-13</time>
+              <time title="创建时间：2020-11-09 16:56:47" itemprop="dateCreated datePublished" datetime="2020-11-09T16:56:47+08:00">2020-11-09</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -493,6 +1058,10 @@
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/%E8%A7%82%E6%B5%8B%E5%B7%A5%E7%A8%8B%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">观测工程师</span></a>
                 </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%A7%82%E6%B5%8B%E5%B7%A5%E7%A8%8B%E5%B8%88/%E5%80%BC%E7%8F%AD%E5%B7%A5%E4%BD%9C/" itemprop="url" rel="index"><span itemprop="name">值班工作</span></a>
+                </span>
             </span>
 
           <br>
@@ -501,7 +1070,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>553</span>
+              <span>1.5k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -520,546 +1089,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="一-工作概况："><a href="#一-工作概况：" class="headerlink" title="一. 工作概况："></a>一. 工作概况：</h1><ol>
-<li><p>地点：佘山25米观测站观测室</p>
-</li>
-<li><p>工作时间：2020年9月12日 星期六 上午7：45-下午3：25</p>
-</li>
-<li><p>参与人员：夏博 赵漳 基建施工人员3名</p>
-</li>
-<li><p>工作目的：</p>
-<p>25米观测室内压<strong>缩机房</strong>、<strong>氢钟房</strong>、<strong>终端室</strong>的移门因为老化原因气密性和保温性能（单层玻璃）下降，对设备要求的恒温环境造成不利影响，现进行更换保温（双层玻璃）气密性能更好的移门。针对25米台站周边自然环境较好，昆虫多的情况，增加<strong>控制室</strong>、<strong>操作间</strong>的纱门。为提高观测室整体气密性和保温性对<strong>入户大门</strong>也进行更换和加装沙门。共计4扇沙门、3组平移门、1组入户大门。</p></li></ol>
+          <p>对VLBI联测流程的总结和梳理。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2020/09/13/log8/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://smartbra.top/2020/09/05/log6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/Misaka.jpg">
-      <meta itemprop="name" content="赵英俊">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="杰宝大王的藏宝阁">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/09/05/log6/" class="post-title-link" itemprop="url">OpManger使用（1）</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-09-05 17:25:01" itemprop="dateCreated datePublished" datetime="2020-09-05T17:25:01+08:00">2020-09-05</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%A7%82%E6%B5%8B%E5%B7%A5%E7%A8%8B%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">观测工程师</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.6k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>OpManager是一个用于企业设备监控、管理企业网络的监控工具。同时较强的可扩展性为未来设备的扩容和更新留出较多的冗余。基于天马望远镜的多设备、多责任人的现实情况而选择的。<br></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/09/05/log6/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://smartbra.top/2020/09/05/log7/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/Misaka.jpg">
-      <meta itemprop="name" content="赵英俊">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="杰宝大王的藏宝阁">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/09/05/log7/" class="post-title-link" itemprop="url">零件保养（轨道轮减速器）</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-09-05 17:10:36" itemprop="dateCreated datePublished" datetime="2020-09-05T17:10:36+08:00">2020-09-05</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%A7%82%E6%B5%8B%E5%B7%A5%E7%A8%8B%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">观测工程师</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>777</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>为保证HX任务期间天马望远镜的正常工作，准备了备用件。以备任务期间设备损坏可以及时维修替换，本人于2020年9月1日，对轨道轮组电机减速器进行了保养。使备件可以保存较长时间，以避免在存放过程中发生锈蚀损坏。<br></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/09/05/log7/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://smartbra.top/2020/09/03/log5/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/Misaka.jpg">
-      <meta itemprop="name" content="赵英俊">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="杰宝大王的藏宝阁">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/09/03/log5/" class="post-title-link" itemprop="url">Booked使用说明（1）</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-09-03 20:57:15" itemprop="dateCreated datePublished" datetime="2020-09-03T20:57:15+08:00">2020-09-03</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%A7%82%E6%B5%8B%E5%B7%A5%E7%A8%8B%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">观测工程师</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.2k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Booked简介"><a href="#Booked简介" class="headerlink" title="Booked简介"></a>Booked简介</h1><p>一个基于php语言的在线时间预约平台，使用<strong><em>开源代码构建</em></strong>。拥有多资源管理、<strong><em>时间审批</em></strong>、邮件提醒、时间表查看、历史查询和汇总报告生成等功能。现上线TMRT65M时间预约、SHESHAN25M时间预约、微波实验室时间预约。<br></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/09/03/log5/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://smartbra.top/2020/08/28/log4/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/Misaka.jpg">
-      <meta itemprop="name" content="赵英俊">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="杰宝大王的藏宝阁">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/08/28/log4/" class="post-title-link" itemprop="url">工作心得（HX-VLBA观测）</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-08-28 10:41:24" itemprop="dateCreated datePublished" datetime="2020-08-28T10:41:24+08:00">2020-08-28</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%A7%82%E6%B5%8B%E5%B7%A5%E7%A8%8B%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">观测工程师</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>2.1k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="HX-VLBA观测简介"><a href="#HX-VLBA观测简介" class="headerlink" title="HX-VLBA观测简介"></a>HX-VLBA观测简介</h1><p>观测使用S/X接收机、DBBC2终端<br></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/08/28/log4/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://smartbra.top/2020/08/20/log3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/Misaka.jpg">
-      <meta itemprop="name" content="赵英俊">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="杰宝大王的藏宝阁">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/08/20/log3/" class="post-title-link" itemprop="url">工作心得（温度监测）</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-08-20 12:34:04" itemprop="dateCreated datePublished" datetime="2020-08-20T12:34:04+08:00">2020-08-20</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%A7%82%E6%B5%8B%E5%B7%A5%E7%A8%8B%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">观测工程师</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>241</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="温度监测"><a href="#温度监测" class="headerlink" title="温度监测"></a>温度监测</h1><p>温度监测在CGLT电脑桌面，要检测的温度分别是氢钟房的温度湿度、馈源舱的温度湿度、还有氦气管路供回压力。<br></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/08/20/log3/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://smartbra.top/2020/08/17/log2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/Misaka.jpg">
-      <meta itemprop="name" content="赵英俊">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="杰宝大王的藏宝阁">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/08/17/log2/" class="post-title-link" itemprop="url">接收机测试（Qband）</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-08-17 14:04:59" itemprop="dateCreated datePublished" datetime="2020-08-17T14:04:59+08:00">2020-08-17</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%A7%82%E6%B5%8B%E5%B7%A5%E7%A8%8B%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">观测工程师</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>2.4k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="测试任务介绍"><a href="#测试任务介绍" class="headerlink" title="测试任务介绍"></a>测试任务介绍</h1><p>在2020年8月11日上午测试Qband接收机点噪功能是否正常。因为本次测试主要是对针对点噪功能能否在科学观测中正常开启，并不涉及流量校准、系统温度（后续会解释）、接收机性能评价等。所以在选源和制作纲要时就比较随意，选源时只要满足射电源在该波段上的流量够强（提高测试效率），处理后的结果与文献中信号源的视向速度对的上即可。<br></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/08/17/log2/#more" rel="contents">
+              <a class="btn" href="/2020/11/09/log11/">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1082,7 +1115,7 @@
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1150,20 +1183,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-count">24</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">14</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-count">20</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -1207,8 +1240,8 @@
 
 <div class="copyright">
   
-  &copy; 
-  <span itemprop="copyrightYear">2020</span>
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -1218,13 +1251,13 @@
       <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">17k</span>
+    <span title="站点总字数">31k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">15 分钟</span>
+    <span title="站点阅读时长">28 分钟</span>
 </div>
 
         

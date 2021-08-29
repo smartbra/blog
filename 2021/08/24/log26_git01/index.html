@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="baidu-site-verification" content="<meta name="baidu-site-verification" content="code-Q8gQSltHy1" />">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-barber-shop.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"smartbra.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":10,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="虽然没正经写过什么代码，github也只限于git别人代码。但是在部署于GitHub上的hexo网页时，遇到了breach和master冲突的问题。所以有了如下的git学习，并贴在这里为以后学习和回顾做准备。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git学习">
+<meta property="og:url" content="http://smartbra.top/2021/08/24/log26_git01/index.html">
+<meta property="og:site_name" content="杰宝大王的藏宝阁">
+<meta property="og:description" content="虽然没正经写过什么代码，github也只限于git别人代码。但是在部署于GitHub上的hexo网页时，遇到了breach和master冲突的问题。所以有了如下的git学习，并贴在这里为以后学习和回顾做准备。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://smartbra.top/2021/08/24/log26_git01/image-20201103142705381.png">
+<meta property="og:image" content="http://smartbra.top/2021/08/24/log26_git01/94e1299487ed33b762c382fa560e4bd3.png">
+<meta property="og:image" content="http://smartbra.top/2021/08/24/log26_git01/809218-20160604213832164-1203726937.png">
+<meta property="og:image" content="http://smartbra.top/2021/08/24/log26_git01/v2-e170c437b905730fa48be241609635d8_1440w.jpg">
+<meta property="article:published_time" content="2021-08-24T09:08:07.000Z">
+<meta property="article:modified_time" content="2021-08-24T13:46:35.079Z">
+<meta property="article:author" content="赵英俊">
+<meta property="article:tag" content="git01">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://smartbra.top/2021/08/24/log26_git01/image-20201103142705381.png">
+
+<link rel="canonical" href="http://smartbra.top/2021/08/24/log26_git01/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Git学习 | 杰宝大王的藏宝阁</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">杰宝大王的藏宝阁</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">20</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">14</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">24</span></a>
+
+  </li>
+        <li class="menu-item menu-item-dowland">
+
+    <a href="/dowland/" rel="section"><i class="fa fa-arrow-down fa-fw"></i>下载</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/smartbra" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://smartbra.top/2021/08/24/log26_git01/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/Misaka.jpg">
+      <meta itemprop="name" content="赵英俊">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="杰宝大王的藏宝阁">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Git学习
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-08-24 17:08:07" itemprop="dateCreated datePublished" datetime="2021-08-24T17:08:07+08:00">2021-08-24</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%B4%BB%E5%88%B0%E8%80%81%E5%AD%A6%E5%88%B0%E8%80%81/" itemprop="url" rel="index"><span itemprop="name">活到老学到老</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%B4%BB%E5%88%B0%E8%80%81%E5%AD%A6%E5%88%B0%E8%80%81/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>3.6k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+            <div class="post-description">虽然没正经写过什么代码，github也只限于git别人代码。但是在部署于GitHub上的hexo网页时，遇到了breach和master冲突的问题。所以有了如下的git学习，并贴在这里为以后学习和回顾做准备。</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="版本控制"><a href="#版本控制" class="headerlink" title="版本控制"></a>版本控制</h2><blockquote>
+<p>什么是版本控制——版本迭代、新的版本！</p>
+</blockquote>
+<p>版本控制（revison control），为满足多人开发必须使用版本控制。</p>
+<p>主流版本控制工具</p>
+<ul>
+<li>git</li>
+<li>svn</li>
+<li>cvs</li>
+<li>vss</li>
+<li>tfs</li>
+</ul>
+<p>其实还有一堆，但是学最主流的就可以了。</p>
+<ol>
+<li><p>本地版本控制</p>
+</li>
+<li><p>集中版本控制 SVN</p>
+</li>
+<li><p>分布式版本控制 Git</p>
+<p>每个人都拥有全部代码！安全隐患！不会因为网络、服务器原因造成不能工作！</p>
+</li>
+</ol>
+<h2 id="Git与SVN的区别"><a href="#Git与SVN的区别" class="headerlink" title="Git与SVN的区别"></a>Git与SVN的区别</h2><p>Git 分布式，本地和云端都有全部代码。</p>
+<p>SVN集中式，每次都需要拉去和上传到集中服务器。</p>
+<h2 id="Git历史"><a href="#Git历史" class="headerlink" title="Git历史"></a>Git历史</h2><p>linux和Git之父（Linus Benedic Torvalds）1969</p>
+<p>东西来源于BitKeeper来管理和维护代码。后来开发Git替换BitKeeper这个收费软件。</p>
+<p>Git环境配置</p>
+<p>Git Bash： Unix与Linux风格的命令行，使用最多，推荐最多。 例如：清屏幕 clear</p>
+<p>Git CMD：Windows风格的命令行 例如：清屏幕 cls</p>
+<p>Git GUI：图形界面的Git，不建议初学者使用，尽力先熟悉常用命令。</p>
+<p>Git基本命令</p>
+<ol>
+<li>cd：改变目录</li>
+<li>cd ..：回到上一个目录，直接cd进入默认目录</li>
+<li>pwd：显示当前所在的路径。</li>
+<li>ls（ll）：都是列出当前目录中的所有文件，只不过ll列出的内容更为详细</li>
+<li>touch： 新建一个文件 如：touch index.js 就会在当前目录下新建一个index.js文件。</li>
+<li>rm：删除一个文件，rm index.js 就会把index.js删除</li>
+<li>mkdir：新建一个目录，就是新建一个文件夹</li>
+<li>rm -r：删除一个文件夹，rm -r src 删除src目录。 （<strong>rm -rf /） 牛逼！！！！</strong></li>
+<li>mv ：移动文件，mv index.html src ，index.html 是我们要移动的文件，src是目标文件夹，当然</li>
+<li>reset：重新初始化终端/清屏</li>
+<li>clear：清屏。 windows对应的为cls</li>
+<li>history：产看命令历史</li>
+<li>help：帮助</li>
+<li>exit：退出</li>
+<li><h1 id="表示注释"><a href="#表示注释" class="headerlink" title="表示注释"></a>表示注释</h1></li>
+</ol>
+<p>Git 配置</p>
+<p>所有的配置文件，其实都保存在本地。</p>
+<p>Git 相关配置文件：</p>
+<ol>
+<li>Git\etc\gitconfig :Git 安装目录下的 gitconfig — system 系统及</li>
+<li>C:\Users\Administrator\ .gitconfig 只适用于当前登陆用户的配置。—global 全局</li>
+</ol>
+<p>这里可以直接编辑配置文件，通过命令设置后回响应到这里。</p>
+<p>查看配置</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">git config -l</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">查看系统config</span></span><br><span class="line">git config --system --list</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">查看当前用户（global）配置</span></span><br><span class="line">git config --global --list</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>GIt 设置</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">名称</span></span><br><span class="line"></span><br><span class="line">git config --global usr.name “name”</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">邮箱</span></span><br><span class="line"></span><br><span class="line">git config --global user.email  xxxxx@gmail.com  </span><br></pre></td></tr></table></figure>
+<h2 id="Git-基本理论（核心）"><a href="#Git-基本理论（核心）" class="headerlink" title="Git 基本理论（核心）"></a>Git 基本理论（核心）</h2><p>Git本地有三个工作区域：工作目录（Working Directory）、暂存区（Stage/Index）、资源库（Repository）或者叫（Git Directroy）。如果在加上远程git 仓库（Remote Directory）就可以分为四个工作区域。文件在这四个区域之间的转换关系如下：</p>
+<p><img src="/2021/08/24/log26_git01/image-20201103142705381.png" alt="image-20201103142705381" style="zoom:50%;"></p>
+<ul>
+<li>workspace：工作区，就是你平时存放项目代码的地方</li>
+<li>index/stage：暂存区，用于临时存放你的改动，事实上它只是一个文件，保存即将提交到文件列表的信息。</li>
+<li>Repository：仓库（或者叫本地仓库），就是安全存放数据的位置，这里面有你提交的所有版本的数据。其中HEAD指向最新放入仓库的版本。</li>
+<li>Remote：远程仓库，代码托管的服务器，可以简单的认为是你项目组中的一台电脑用于远程数据交换。</li>
+</ul>
+<p>本地的三个区域确切的说应该是git仓库中HEAD指向的版本：</p>
+<p><img src="/2021/08/24/log26_git01/94e1299487ed33b762c382fa560e4bd3.png" alt="94e1299487ed33b762c382fa560e4bd3" style="zoom:80%;"></p>
+<p>git的工作流程一般是这样：</p>
+<ol>
+<li>在工作目录中添加、修改文件；</li>
+<li>将需要进行版本管理的文件放入暂存区域；  git add</li>
+<li>将暂存区域的我文件提交到git 仓库； git commit</li>
+</ol>
+<p>因此，git 管理的文件有三种状态：已修改（modified）、已暂存（staged）、已提交（committed）。</p>
+<p><img src="/2021/08/24/log26_git01/809218-20160604213832164-1203726937.png" alt="809218-20160604213832164-1203726937" style="zoom:48%;"></p>
+<h2 id="Git项目搭建"><a href="#Git项目搭建" class="headerlink" title="Git项目搭建"></a>Git项目搭建</h2><p>工作目录（workspace）一般就是你希望Git 帮助你管理的文件夹，可以是你项目的目录，也可以是一个空目录，建议不要有中文。</p>
+<p>日常使用只要记住6个命令：</p>
+<p><img src="/2021/08/24/log26_git01/v2-e170c437b905730fa48be241609635d8_1440w.jpg" alt="v2-e170c437b905730fa48be241609635d8_1440w" style="zoom:80%;"></p>
+<p><strong>在本地搭建一个仓库</strong></p>
+<p>方法一：创建全新的仓库</p>
+<ol>
+<li>创建全新的仓库，需要用git 管理的项目的根目录执行：</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">当前目录新建一个Git代码库</span></span><br><span class="line"><span class="meta">~$</span><span class="bash"> git init</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li>执行后可以看到，仅仅在项目目录多出一个.git目录，关于版本等的所有信息都在这个目录里面。</li>
+</ol>
+<p>方法二：克隆远程仓库</p>
+<p>由远程服务器上的仓库完全镜像到本地一份</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~$ git <span class="built_in">clone</span> [url]</span><br></pre></td></tr></table></figure>
+<h2 id="Git文件操作"><a href="#Git文件操作" class="headerlink" title="Git文件操作"></a>Git文件操作</h2><h3 id="文件的4种状态"><a href="#文件的4种状态" class="headerlink" title="文件的4种状态"></a>文件的4种状态</h3><p>版本控制就是对文件的版本进行控制，要对文件进行修改、提交等操作，首先要知道文件当前在什么状态，不然可能会提交下载还不想提交的文件，或者要提交的问价没提交上。</p>
+<ul>
+<li>Untracked：未跟踪，此文件在文件夹中，但没有加入到git 库，不参加版本控制，通过 <code>git add .</code>状态变为<code>stage</code>。</li>
+<li>Unmodify：文件已经入库，未修改，即版本库中的文件快照内容与文件夹中完全一致，这种类型的文件两种去处，如果它被修改，而变为<code>Modified</code>。如果使用<code>git rm</code>移出版本库，则成为<code>Untracked</code>文件。</li>
+<li>Modified：文件已经修改，仅仅是修改，并没有进行其他操作。这个文件也有两个去处，通过 <code>git add</code>可以进入暂存<code>staged状态</code>，使用<code>git checkout</code>则丢弃修改过，返回到<code>unmodify</code>状态，这个<code>git checkout</code>即从库中取出文件，覆盖当前修改！</li>
+<li>Staged：暂存状态，执行<code>git commit</code>则将修改同步到库中，这个时候库中的文件和本地的文件又变为一致，文件为<code>Unmodify</code>状态。执行<code>git reset HEAD filename</code>取消暂存，文件状态为<code>Modified</code>。</li>
+</ul>
+<h3 id="查看文件状态"><a href="#查看文件状态" class="headerlink" title="查看文件状态"></a>查看文件状态</h3><p>上面手文件有4中状态，通过一下命令可以查看到文件的状态：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#查看文件的状态</span></span><br><span class="line">~$ git status [filename]</span><br><span class="line"></span><br><span class="line"><span class="comment">#查看所有文件的状态</span></span><br><span class="line">~$ git status </span><br><span class="line"></span><br><span class="line"><span class="comment">#添加所有文件到暂存区</span></span><br><span class="line">~$ git add .</span><br><span class="line"></span><br><span class="line"><span class="comment">#提交暂存区中的内容到本地仓库 -m 提交信息</span></span><br><span class="line">~$ git commit -m “消息内容”</span><br><span class="line"> </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="忽略文件"><a href="#忽略文件" class="headerlink" title="忽略文件"></a>忽略文件</h3><p>有些时候我们不想把某些文件纳入版本控制中，比如数据库文件，临时文件，设计文件等</p>
+<p>在主目录下建立一个“.gitignore”文件，此文件有如下规则：</p>
+<ol>
+<li>忽略文件中的空行或以井号（#）开始的行将会被忽略。</li>
+<li>可以使用Linux通配符。例如：星号（*）代表任意多个字符，问好（？）代表一个字符，方括号（[abc]）代表可选字符范围，打括号（{string1,string2,……}）代表可选的字符</li>
+<li>如果名称前有一个感叹号（！），则表示例外，将不被忽略。</li>
+<li>如果名称的最前面有一个路径分隔符（/），表示要忽略的文件在此目录下，而子目录的文件不忽略。</li>
+<li>如果名称的最后面是一个路径分隔符（/），表示要忽略的是此目录下该名称的子目录，而非文件（默认文件或目录都忽略）。</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">为注释</span></span><br><span class="line">*.txt			#忽略所有 .txt结尾的文件</span><br><span class="line">!lib.txt	#但lib.txt除外</span><br><span class="line">/temp			#仅忽略项目根目录下的TODO文件，不包括其他目录temp</span><br><span class="line">build/    #忽略build/目录下的所有文件</span><br><span class="line">doc/*.txt #忽略 doc/notes.txt 但不包括 doc/server/arch.txt</span><br></pre></td></tr></table></figure>
+<h2 id="Git的分支"><a href="#Git的分支" class="headerlink" title="Git的分支"></a>Git的分支</h2><p>分支在git中国相对较难，分支就是科幻电影里的平行宇宙，如果俩个品行宇宙互不干扰，那对你现在也没啥影响。不过在某个时间点，俩个平行宇宙合并了，我们就需要处理一些问题了！</p>
+<p>git 分支中常用的命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">列出所有本地分支</span></span><br><span class="line"><span class="meta">~$</span><span class="bash"> git branch</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">列出所有远程分支</span></span><br><span class="line"><span class="meta">~$</span><span class="bash"> git branch -r</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">新建一个分支，但仍停留在当前分支</span></span><br><span class="line"><span class="meta">~$</span><span class="bash"> git branch [branch-name]</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">新建一个分支，并切换到该分支</span></span><br><span class="line"><span class="meta">~$</span><span class="bash"> git checkout -b [branch]</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">合并指定分支到当前分支</span></span><br><span class="line"><span class="meta">~$</span><span class="bash"> git merge [branch]</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">删除分支</span></span><br><span class="line"><span class="meta">~$</span><span class="bash"> git branch -d [branch-name]</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">删除分支</span></span><br><span class="line"><span class="meta">~$</span><span class="bash"> git push origin --delete [branch-name]</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">删除远程分支</span></span><br><span class="line"><span class="meta">~$</span><span class="bash"> git branch -dr [remote/branch]</span></span><br></pre></td></tr></table></figure>
+<p>多个分支如果并行，就会导致我们代码<strong>冲突</strong>，也就是同时存在多个版本！</p>
+<p>如果同一个文件在合并分支是都被修改了则会引起冲突：解决办法就是我们可以修改冲突文件重新提交！</p>
+<p>master 分支应该非常稳定，用来分布新版本，一般情况下不允许在上面工作，工作一个班情况下在新建的dev分支工作，工作完后，比如要发布，或者说dev分支代码稳定后可以合并到主分支master上来。</p>
+
+    </div>
+
+    
+    
+    
+      
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>赵英俊
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://smartbra.top/2021/08/24/log26_git01/" title="Git学习">http://smartbra.top/2021/08/24/log26_git01/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/git01/" rel="tag"># git01</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/08/24/log58_Mac03/" rel="prev" title="在Mac中包管理器MacPorts的使用">
+      <i class="fa fa-chevron-left"></i> 在Mac中包管理器MacPorts的使用
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/08/29/log69_mac05/" rel="next" title="Mac中安装Wget">
+      Mac中安装Wget <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6"><span class="nav-number">1.</span> <span class="nav-text">版本控制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git%E4%B8%8ESVN%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">2.</span> <span class="nav-text">Git与SVN的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git%E5%8E%86%E5%8F%B2"><span class="nav-number">3.</span> <span class="nav-text">Git历史</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A1%A8%E7%A4%BA%E6%B3%A8%E9%87%8A"><span class="nav-number"></span> <span class="nav-text">表示注释</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Git-%E5%9F%BA%E6%9C%AC%E7%90%86%E8%AE%BA%EF%BC%88%E6%A0%B8%E5%BF%83%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">Git 基本理论（核心）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA"><span class="nav-number">2.</span> <span class="nav-text">Git项目搭建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C"><span class="nav-number">3.</span> <span class="nav-text">Git文件操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E7%9A%844%E7%A7%8D%E7%8A%B6%E6%80%81"><span class="nav-number">3.1.</span> <span class="nav-text">文件的4种状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E7%8A%B6%E6%80%81"><span class="nav-number">3.2.</span> <span class="nav-text">查看文件状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BF%BD%E7%95%A5%E6%96%87%E4%BB%B6"><span class="nav-number">3.3.</span> <span class="nav-text">忽略文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git%E7%9A%84%E5%88%86%E6%94%AF"><span class="nav-number">4.</span> <span class="nav-text">Git的分支</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="赵英俊"
+      src="/images/Misaka.jpg">
+  <p class="site-author-name" itemprop="name">赵英俊</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">24</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/smartbra" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;smartbra" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:wojiaozhaozhang@gmail.com" title="E-Mail → mailto:wojiaozhaozhang@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="http://smartbra.top/" title="http:&#x2F;&#x2F;smartbra.top">Title</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">赵英俊</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">31k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">28 分钟</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>

@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.2.0">
+<meta name="generator" content="Hexo 5.4.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
   <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="baidu-site-verification" content="<meta name="baidu-site-verification" content="code-Q8gQSltHy1" />">
 
 <link rel="stylesheet" href="/css/main.css">
 
@@ -22,12 +23,12 @@
     var CONFIG = {"hostname":"smartbra.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":10,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="fits文件的头文件提取到excel12345678910111213import matplotlib.pyplot  as pl# import pyfits# from astropy.utils.data import get_pkg_data_filenamefrom astropy.table import Tablefrom astropy.io import fitsimport">
+  <meta name="description" content="对某小天线的俯仰、方位运动性能做评估。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数据分析（某小天线性能测试）">
+<meta property="og:title" content="某小天线性能测试">
 <meta property="og:url" content="http://smartbra.top/2020/09/14/log10/index.html">
 <meta property="og:site_name" content="杰宝大王的藏宝阁">
-<meta property="og:description" content="fits文件的头文件提取到excel12345678910111213import matplotlib.pyplot  as pl# import pyfits# from astropy.utils.data import get_pkg_data_filenamefrom astropy.table import Tablefrom astropy.io import fitsimport">
+<meta property="og:description" content="对某小天线的俯仰、方位运动性能做评估。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://smartbra.top/2020/09/14/log10/TSS.png">
 <meta property="og:image" content="http://smartbra.top/2020/09/14/log10/ESS.png">
@@ -84,9 +85,9 @@
 <meta property="og:image" content="http://smartbra.top/2020/09/14/log10/2020_07_19_06_51_09_V.png">
 <meta property="og:image" content="http://smartbra.top/2020/09/14/log10/2020_07_19_06_51_09_A.png">
 <meta property="article:published_time" content="2020-09-14T13:13:21.000Z">
-<meta property="article:modified_time" content="2020-10-01T07:24:38.194Z">
+<meta property="article:modified_time" content="2021-08-25T08:54:47.402Z">
 <meta property="article:author" content="赵英俊">
-<meta property="article:tag" content="观测工程师日记10">
+<meta property="article:tag" content="数据分析">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://smartbra.top/2020/09/14/log10/TSS.png">
 
@@ -103,7 +104,7 @@
   };
 </script>
 
-  <title>数据分析（某小天线性能测试） | 杰宝大王的藏宝阁</title>
+  <title>某小天线性能测试 | 杰宝大王的藏宝阁</title>
   
 
 
@@ -183,17 +184,22 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">15</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">20</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">3</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">14</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">14</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">24</span></a>
+
+  </li>
+        <li class="menu-item menu-item-dowland">
+
+    <a href="/dowland/" rel="section"><i class="fa fa-arrow-down fa-fw"></i>下载</a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -266,7 +272,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          数据分析（某小天线性能测试）
+          某小天线性能测试
         </h1>
 
         <div class="post-meta">
@@ -285,6 +291,10 @@
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/%E8%A7%82%E6%B5%8B%E5%B7%A5%E7%A8%8B%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">观测工程师</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%A7%82%E6%B5%8B%E5%B7%A5%E7%A8%8B%E5%B8%88/%E6%9D%82%E4%BA%8B/" itemprop="url" rel="index"><span itemprop="name">杂事</span></a>
                 </span>
             </span>
 
@@ -310,6 +320,7 @@
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               <span>2 分钟</span>
             </span>
+            <div class="post-description">对某小天线的俯仰、方位运动性能做评估。</div>
 
         </div>
       </header>
@@ -320,8 +331,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="fits文件的头文件提取到excel"><a href="#fits文件的头文件提取到excel" class="headerlink" title="fits文件的头文件提取到excel"></a>fits文件的头文件提取到excel</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot  <span class="keyword">as</span> pl</span><br><span class="line"></span><br><span class="line"><span class="comment"># import pyfits</span></span><br><span class="line"><span class="comment"># from astropy.utils.data import get_pkg_data_filename</span></span><br><span class="line"><span class="keyword">from</span> astropy.table <span class="keyword">import</span> Table</span><br><span class="line"><span class="keyword">from</span> astropy.io <span class="keyword">import</span> fits</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span>  pd</span><br><span class="line"></span><br><span class="line">hdul=fits.open(<span class="string">&#x27;C:/Users/47459/Downloads/Dcr/2020_07_19_04_32_34.fits&#x27;</span>)</span><br><span class="line">events=Table.read(hdul,hdu=<span class="number">1</span>)</span><br><span class="line">df=events.to_pandas()</span><br><span class="line">df.to_excel(<span class="string">&#x27;C:/Users/47459/Downloads/Dcr/2020_07_19_04_32_34.excel&#x27;</span>)</span><br><span class="line">pd.read_excel(<span class="string">&#x27;C:/Users/47459/Downloads/Dcr/2020_07_19_04_32_34.xls&#x27;</span>,sheet_name=<span class="string">&quot;Sheet1&quot;</span>,index_col=<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
+        <h1 id="fits文件的头文件提取到excel"><a href="#fits文件的头文件提取到excel" class="headerlink" title="fits文件的头文件提取到excel"></a>fits文件的头文件提取到excel</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot  <span class="keyword">as</span> pl</span><br><span class="line"></span><br><span class="line"><span class="comment"># import pyfits</span></span><br><span class="line"><span class="comment"># from astropy.utils.data import get_pkg_data_filename</span></span><br><span class="line"><span class="keyword">from</span> astropy.table <span class="keyword">import</span> Table</span><br><span class="line"><span class="keyword">from</span> astropy.io <span class="keyword">import</span> fits</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span>  pd</span><br><span class="line"></span><br><span class="line">hdul=fits.<span class="built_in">open</span>(<span class="string">&#x27;C:/Users/47459/Downloads/Dcr/2020_07_19_04_32_34.fits&#x27;</span>)</span><br><span class="line">events=Table.read(hdul,hdu=<span class="number">1</span>)</span><br><span class="line">df=events.to_pandas()</span><br><span class="line">df.to_excel(<span class="string">&#x27;C:/Users/47459/Downloads/Dcr/2020_07_19_04_32_34.excel&#x27;</span>)</span><br><span class="line">pd.read_excel(<span class="string">&#x27;C:/Users/47459/Downloads/Dcr/2020_07_19_04_32_34.xls&#x27;</span>,sheet_name=<span class="string">&quot;Sheet1&quot;</span>,index_col=<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
 <p>文件提取到excel后使用originlab软件进行画图和拟合操作，画出时间和方位/俯仰的平面图，后进行拟合。图例中给出拟合参数，对方位/俯仰做差与邻近时间做差进行相除，给出加速度图例图中使用Acc（acceleration）。<strong>其中要说明time（时间）是简化儒略日的数值给小数点前的取零，因为简化儒略日也是线性的对作图并不影响，所以没有进行转化。</strong></p>
 <h1 id="基本统计概念"><a href="#基本统计概念" class="headerlink" title="基本统计概念"></a>基本统计概念</h1><p>在展示数据之前提供的拟合参数做简略的解释：</p>
 <h2 id="残差（residual）"><a href="#残差（residual）" class="headerlink" title="残差（residual）"></a>残差（residual）</h2><p>   残差在数理统计中是指实际观察值与估计值（拟合值）之间的差。“残差”蕴含了有关模型基本假设的重要信息。如果回归模型正确的话， 我们可以将残差看作误差的观测值。</p>
@@ -410,7 +421,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://smartbra.top/2020/09/14/log10/" title="数据分析（某小天线性能测试）">http://smartbra.top/2020/09/14/log10/</a>
+    <a href="http://smartbra.top/2020/09/14/log10/" title="某小天线性能测试">http://smartbra.top/2020/09/14/log10/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -421,7 +432,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E8%A7%82%E6%B5%8B%E5%B7%A5%E7%A8%8B%E5%B8%88%E6%97%A5%E8%AE%B010/" rel="tag"># 观测工程师日记10</a>
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" rel="tag"># 数据分析</a>
           </div>
 
         
@@ -430,12 +441,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/09/13/log8/" rel="prev" title="工作汇报（25米观测室更换移门与加装纱门）">
-      <i class="fa fa-chevron-left"></i> 工作汇报（25米观测室更换移门与加装纱门）
+    <a href="/2020/09/13/log8/" rel="prev" title="25米观测室更换移门与加装纱门">
+      <i class="fa fa-chevron-left"></i> 25米观测室更换移门与加装纱门
     </a></div>
       <div class="post-nav-item">
-    <a href="/2020/10/01/hexo01/" rel="next" title="HEXO常用设置（next主题）">
-      HEXO常用设置（next主题） <i class="fa fa-chevron-right"></i>
+    <a href="/2020/10/12/log9/" rel="next" title="主动面启动、重启操作手册">
+      主动面启动、重启操作手册 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -511,20 +522,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-count">24</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">14</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-count">20</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -568,8 +579,8 @@
 
 <div class="copyright">
   
-  &copy; 
-  <span itemprop="copyrightYear">2020</span>
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -579,13 +590,13 @@
       <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">17k</span>
+    <span title="站点总字数">31k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">15 分钟</span>
+    <span title="站点阅读时长">28 分钟</span>
 </div>
 
         

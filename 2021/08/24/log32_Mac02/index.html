@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="baidu-site-verification" content="<meta name="baidu-site-verification" content="code-Q8gQSltHy1" />">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-barber-shop.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"smartbra.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":10,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="继续完善在Mac下没有远程调试工具集合，在连接服务器若要调用图形窗口时。需要在Mac端安装x11客户端，下面是使用自带Terminal调用服务器端图形界面的方法。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在Mac中ssh连接linux启用图新界面">
+<meta property="og:url" content="http://smartbra.top/2021/08/24/log32_Mac02/index.html">
+<meta property="og:site_name" content="杰宝大王的藏宝阁">
+<meta property="og:description" content="继续完善在Mac下没有远程调试工具集合，在连接服务器若要调用图形窗口时。需要在Mac端安装x11客户端，下面是使用自带Terminal调用服务器端图形界面的方法。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://smartbra.top/2021/08/24/log32_Mac02/image-20210118164200908.png">
+<meta property="og:image" content="http://smartbra.top/2021/08/24/log32_Mac02/image-20210118224511993.png">
+<meta property="article:published_time" content="2021-08-24T08:44:18.000Z">
+<meta property="article:modified_time" content="2021-08-24T08:51:09.877Z">
+<meta property="article:author" content="赵英俊">
+<meta property="article:tag" content="Mac02">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://smartbra.top/2021/08/24/log32_Mac02/image-20210118164200908.png">
+
+<link rel="canonical" href="http://smartbra.top/2021/08/24/log32_Mac02/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>在Mac中ssh连接linux启用图新界面 | 杰宝大王的藏宝阁</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">杰宝大王的藏宝阁</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">20</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">14</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">24</span></a>
+
+  </li>
+        <li class="menu-item menu-item-dowland">
+
+    <a href="/dowland/" rel="section"><i class="fa fa-arrow-down fa-fw"></i>下载</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/smartbra" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://smartbra.top/2021/08/24/log32_Mac02/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/Misaka.jpg">
+      <meta itemprop="name" content="赵英俊">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="杰宝大王的藏宝阁">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          在Mac中ssh连接linux启用图新界面
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-08-24 16:44:18" itemprop="dateCreated datePublished" datetime="2021-08-24T16:44:18+08:00">2021-08-24</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%B4%BB%E5%88%B0%E8%80%81%E5%AD%A6%E5%88%B0%E8%80%81/" itemprop="url" rel="index"><span itemprop="name">活到老学到老</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%B4%BB%E5%88%B0%E8%80%81%E5%AD%A6%E5%88%B0%E8%80%81/Mac/" itemprop="url" rel="index"><span itemprop="name">Mac</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>4.3k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>4 分钟</span>
+            </span>
+            <div class="post-description">继续完善在Mac下没有远程调试工具集合，在连接服务器若要调用图形窗口时。需要在Mac端安装x11客户端，下面是使用自带Terminal调用服务器端图形界面的方法。</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="前情介绍"><a href="#前情介绍" class="headerlink" title="前情介绍"></a>前情介绍</h2><p>在windows使用MobaXterm，非常奥利给！界面如下：</p>
+<p><img src="/2021/08/24/log32_Mac02/image-20210118164200908.png" alt="image-20210118164200908" style="zoom:50%;"></p>
+<p>但是在mac下并没有集成环境需要安装x11客户端。</p>
+<p>这里提供一种可以在Mac中自带Terminal中打开图形界面的方法。</p>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ul>
+<li><p>安装Xquartz</p>
+<p>使用homebrew安装</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> brew install Xquartz</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p>配置Mac端的ssh用户设置</p>
+<p>使用root权限用vim打开/private/etc/ssh/ssh_config并编辑</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">       <span class="variable">$OpenBSD</span>: ssh_config,v 1.34 2019/02/04 02:39:42 dtucker Exp $</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> This is the ssh client system-wide configuration file.  See</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> ssh_config(5) <span class="keyword">for</span> more information.  This file provides defaults <span class="keyword">for</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> users, and the values can be changed <span class="keyword">in</span> per-user configuration files</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> or on the <span class="built_in">command</span> line.</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Configuration data is parsed as follows:</span></span><br><span class="line"><span class="meta">#</span><span class="bash">  1. <span class="built_in">command</span> line options</span></span><br><span class="line"><span class="meta">#</span><span class="bash">  2. user-specific file</span></span><br><span class="line"><span class="meta">#</span><span class="bash">  3. system-wide file</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Any configuration value is only changed the first time it is <span class="built_in">set</span>.</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Thus, host-specific definitions should be at the beginning of the</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> configuration file, and defaults at the end.</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Site-wide defaults <span class="keyword">for</span> some commonly used options.  For a comprehensive</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> list of available options, their meanings and defaults, please see the</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> ssh_config(5) man page.</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Host *</span></span><br><span class="line"><span class="meta">#</span><span class="bash">   ForwardAgent no</span></span><br><span class="line"><span class="meta">#</span><span class="bash">   ForwardX11 no</span></span><br><span class="line"><span class="meta">#</span><span class="bash">   PasswordAuthentication yes</span></span><br><span class="line"><span class="meta">#</span><span class="bash">   HostbasedAuthentication no</span></span><br><span class="line"><span class="meta">#</span><span class="bash">   GSSAPIAuthentication no</span></span><br><span class="line"><span class="meta">#</span><span class="bash">   GSSAPIDelegateCredentials no</span></span><br><span class="line"><span class="meta">#</span><span class="bash">   BatchMode no</span></span><br><span class="line"><span class="meta">#</span><span class="bash">   CheckHostIP yes</span></span><br><span class="line"><span class="meta">#</span><span class="bash">   AddressFamily any</span></span><br><span class="line"><span class="meta">#</span><span class="bash">   ConnectTimeout 0</span></span><br><span class="line"><span class="meta">#</span><span class="bash">   StrictHostKeyChecking ask</span></span><br><span class="line"><span class="meta">#</span><span class="bash">   IdentityFile ~/.ssh/id_rsa</span></span><br><span class="line"><span class="meta">#</span><span class="bash">   IdentityFile ~/.ssh/id_dsa</span></span><br><span class="line"><span class="meta">#</span><span class="bash">   IdentityFile ~/.ssh/id_ecdsa</span></span><br><span class="line"><span class="meta">#</span><span class="bash">   IdentityFile ~/.ssh/id_ed25519</span></span><br><span class="line"><span class="meta">#</span><span class="bash">   Port 22</span></span><br><span class="line"><span class="meta">#</span><span class="bash">   Ciphers aes128-ctr,aes192-ctr,aes256-ctr,aes128-cbc,3des-cbc</span></span><br><span class="line"><span class="meta">#</span><span class="bash">   MACs hmac-md5,hmac-sha1,umac-64@openssh.com</span></span><br><span class="line"><span class="meta">#</span><span class="bash">   EscapeChar ~</span></span><br><span class="line"><span class="meta">#</span><span class="bash">   Tunnel no</span></span><br><span class="line"><span class="meta">#</span><span class="bash">   TunnelDevice any:any</span></span><br><span class="line"><span class="meta">#</span><span class="bash">   PermitLocalCommand no</span></span><br><span class="line"><span class="meta">#</span><span class="bash">   VisualHostKey no</span></span><br><span class="line"><span class="meta">#</span><span class="bash">   ProxyCommand ssh -q -W %h:%p gateway.example.com</span></span><br><span class="line"><span class="meta">#</span><span class="bash">   RekeyLimit 1G 1h</span></span><br><span class="line"></span><br><span class="line">Host *</span><br><span class="line">        SendEnv LANG LC_*</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> XAuthLocation added by XQuartz (http://www.xquartz.org)</span></span><br><span class="line">Host *</span><br><span class="line">    XAuthLocation /opt/X11/bin/xauth</span><br><span class="line">    </span><br><span class="line">ForwardX11 yes 添加这一句</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p>配置linux端的ssh用户设置</p>
+<p>在linux端使用root权限vim编辑/etc/ssh/sshd_config</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">       <span class="variable">$OpenBSD</span>: sshd_config,v 1.101 2017/03/14 07:19:07 djm Exp $</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> This is the sshd server system-wide configuration file.  See</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> sshd_config(5) <span class="keyword">for</span> more information.</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> This sshd was compiled with PATH=/usr/bin:/bin:/usr/sbin:/sbin</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> The strategy used <span class="keyword">for</span> options <span class="keyword">in</span> the default sshd_config shipped with</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> OpenSSH is to specify options with their default value <span class="built_in">where</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> possible, but leave them commented.  Uncommented options override the</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> default value.</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">Port 22</span></span><br><span class="line"><span class="meta">#</span><span class="bash">AddressFamily any</span></span><br><span class="line"><span class="meta">#</span><span class="bash">ListenAddress 0.0.0.0</span></span><br><span class="line"><span class="meta">#</span><span class="bash">ListenAddress ::</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">HostKey /etc/ssh/ssh_host_rsa_key</span></span><br><span class="line"><span class="meta">#</span><span class="bash">HostKey /etc/ssh/ssh_host_ecdsa_key</span></span><br><span class="line"><span class="meta">#</span><span class="bash">HostKey /etc/ssh/ssh_host_ed25519_key</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Ciphers and keying</span></span><br><span class="line"><span class="meta">#</span><span class="bash">RekeyLimit default none</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Logging</span></span><br><span class="line"><span class="meta">#</span><span class="bash">SyslogFacility AUTH</span></span><br><span class="line"><span class="meta">#</span><span class="bash">LogLevel INFO</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Authentication:</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">LoginGraceTime 2m</span></span><br><span class="line"><span class="meta">#</span><span class="bash">PermitRootLogin prohibit-password</span></span><br><span class="line"><span class="meta">#</span><span class="bash">StrictModes yes</span></span><br><span class="line"><span class="meta">#</span><span class="bash">MaxAuthTries 6</span></span><br><span class="line"><span class="meta">#</span><span class="bash">MaxSessions 10</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">PubkeyAuthentication yes</span></span><br><span class="line"></span><br><span class="line"> Expect .ssh/authorized_keys2 to be disregarded by default in future.</span><br><span class="line"><span class="meta">#</span><span class="bash">AuthorizedKeysFile     .ssh/authorized_keys .ssh/authorized_keys2</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">AuthorizedPrincipalsFile none</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">AuthorizedKeysCommand none</span></span><br><span class="line"><span class="meta">#</span><span class="bash">AuthorizedKeysCommandUser nobody</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> For this to work you will also need host keys <span class="keyword">in</span> /etc/ssh/ssh_known_hosts</span></span><br><span class="line"><span class="meta">#</span><span class="bash">HostbasedAuthentication no</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Change to yes <span class="keyword">if</span> you don<span class="string">&#x27;t trust ~/.ssh/known_hosts for</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string"> HostbasedAuthentication</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string">IgnoreUserKnownHosts no</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string"> Don&#x27;</span>t <span class="built_in">read</span> the user<span class="string">&#x27;s ~/.rhosts and ~/.shosts files</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string">IgnoreRhosts yes</span></span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string"> To disable tunneled clear text passwords, change to no here!</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string">PasswordAuthentication yes</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string">PermitEmptyPasswords no</span></span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string"> Change to yes to enable challenge-response passwords (beware issues with</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string"> some PAM modules and threads)</span></span></span><br><span class="line">ChallengeResponseAuthentication no</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string"> Kerberos options</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string">KerberosAuthentication no</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string">KerberosOrLocalPasswd yes</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string">KerberosTicketCleanup yes</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string">KerberosGetAFSToken no</span></span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string"> GSSAPI options</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string">GSSAPIAuthentication no</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string">GSSAPICleanupCredentials yes</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string">GSSAPIKeyExchange no</span></span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string"> Set this to &#x27;</span>yes<span class="string">&#x27; to enable PAM authentication, account processing,</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string"> and session processing. If this is enabled, PAM authentication will</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string"> be allowed through the ChallengeResponseAuthentication and</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string"> PasswordAuthentication.  Depending on your PAM configuration,</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string"> PAM authentication via ChallengeResponseAuthentication may bypass</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string"> the setting of &quot;PermitRootLogin without-password&quot;.</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string"> If you just want the PAM account and session checks to run without</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string"> PAM authentication, then enable this but set PasswordAuthentication</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string"> and ChallengeResponseAuthentication to &#x27;</span>no<span class="string">&#x27;.</span></span></span><br><span class="line">UsePAM yes</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string">AllowAgentForwarding yes</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string">AllowTcpForwarding yes</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string">GatewayPorts no</span></span></span><br><span class="line">X11Forwarding yes     添加这一句</span><br><span class="line">X11DisplayOffset 10   添加这一句</span><br></pre></td></tr></table></figure>
+<p>重启ssh服务</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ service ssh restart</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="连接linux并验证"><a href="#连接linux并验证" class="headerlink" title="连接linux并验证"></a>连接linux并验证</h2><ol>
+<li><p>启动Xquartz</p>
+</li>
+<li><p>使用ssh加-X（注意大写）远程服务器</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ssh -X root@192.168.5.5</span>	</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用xclock验证</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">linux $ xclock</span><br></pre></td></tr></table></figure>
+<p><img src="/2021/08/24/log32_Mac02/image-20210118224511993.png" alt="image-20210118224511993" style="zoom:50%;"></p>
+</li>
+</ol>
+<h2 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h2><p>如果遇到</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">linux <span class="variable">$xauth</span> key data not generated</span><br></pre></td></tr></table></figure>
+<p>在mac下编辑～/.ssh/config，添加 ForwardX11Trusted yes</p>
+
+    </div>
+
+    
+    
+    
+      
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>赵英俊
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://smartbra.top/2021/08/24/log32_Mac02/" title="在Mac中ssh连接linux启用图新界面">http://smartbra.top/2021/08/24/log32_Mac02/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Mac02/" rel="tag"># Mac02</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/08/24/log36_linux01/" rel="prev" title="Ubuntu安装ssh并开启服务">
+      <i class="fa fa-chevron-left"></i> Ubuntu安装ssh并开启服务
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/08/24/log48_network01/" rel="next" title="网络学习之开头">
+      网络学习之开头 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E6%83%85%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.</span> <span class="nav-text">前情介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="nav-number">2.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9E%E6%8E%A5linux%E5%B9%B6%E9%AA%8C%E8%AF%81"><span class="nav-number">3.</span> <span class="nav-text">连接linux并验证</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A5%E5%85%85"><span class="nav-number">4.</span> <span class="nav-text">补充</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="赵英俊"
+      src="/images/Misaka.jpg">
+  <p class="site-author-name" itemprop="name">赵英俊</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">24</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/smartbra" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;smartbra" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:wojiaozhaozhang@gmail.com" title="E-Mail → mailto:wojiaozhaozhang@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="http://smartbra.top/" title="http:&#x2F;&#x2F;smartbra.top">Title</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">赵英俊</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">31k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">28 分钟</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>

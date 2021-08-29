@@ -1,30 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>HEXO常用设置（next主题）</title>
-    <url>/2020/10/01/hexo01/</url>
-    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p><a href="https://hexo.io/zh-cn/">Hexo</a> 是一个高效、快速简洁且高效的静态博客框架。Hexo使用<a href="https://daringfireball.net/projects/markdown/">Markdown</a>(或其他渲染引擎)解析文章，在几秒之内，即可利用酷炫的主题生成静态网页。</p>
-<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>安装参考中文官网的教程 <a href="https://hexo.io/zh-cn/。">https://hexo.io/zh-cn/。</a></p>
-<h1 id="themes"><a href="#themes" class="headerlink" title="themes"></a>themes</h1><p>本人常用的俩个主题为<a href="https://github.com/fi3ework/hexo-theme-archer">Archer</a>和<a href="https://github.com/theme-next/hexo-theme-next">next</a>，以下多数内容针对next主题为例。</p>
-<h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo new draft 文件名（新建草稿）</span><br><span class="line"></span><br><span class="line">hexo publish 文件名（把草稿发表到正式文档中）</span><br><span class="line"></span><br><span class="line">hexo server（启动hexo 服务）</span><br><span class="line"></span><br><span class="line">hexo clean（清除编译文件）</span><br><span class="line"></span><br><span class="line">hexo generate (编译静态文件)</span><br><span class="line"></span><br><span class="line">hexo deployer（上传github，需要安装hexo-deployer-git）</span><br></pre></td></tr></table></figure>
-<h1 id="上传github"><a href="#上传github" class="headerlink" title="上传github"></a>上传github</h1><p>（1）需要安装delpoyer插件</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-<p>（2）在根目录的_config.yml文件中添加<br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> Deployment</span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># Docs: https://hexo.io/docs/one-command-deployment</span></span></span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: http://github.com/smartbra/blog.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure><br><a href="https://nathaniel.blog/tutorials/make-hexo-support-math-again">LaTeX</a></p>
-]]></content>
-      <categories>
-        <category>HEXO教程</category>
-      </categories>
-      <tags>
-        <tag>next themes</tag>
-        <tag>markdown</tag>
-        <tag>hexo</tag>
-      </tags>
+    <title>test</title>
+    <url>/2020/11/09/test/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>Hello World</title>
     <url>/2020/08/05/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><a id="more"></a>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><span id="more"></span>
 <h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
@@ -38,31 +23,33 @@
 \binom{n}{k} = \frac{n!}{k!(n-k)!}</script>]]></content>
   </entry>
   <entry>
-    <title>工作心得（FileZilla）</title>
-    <url>/2020/08/16/log1/</url>
-    <content><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>在Hx观测、CE观测中观测中心都使用FTP的方式分发观测纲要、轨道文件等。而且管理的电脑使用的是氢钟状态监测和监管所在的电脑（windows系统），为了避开软件上的限制使用开源且免费的软件是必须的。其实FTP的可视化操作软件有很多比如：windows平台下的WinSCP、MobaXterm等，Mac上的Transmit、Yummy等，但是结合现有请况（因为台站中电脑的系统多样）最终选择使用支持全平台且开源免费的FileZilla软件。<br><a id="more"></a></p>
-<h1 id="实际操作"><a href="#实际操作" class="headerlink" title="实际操作"></a>实际操作</h1><p>在日常观测中FileZilla软件是用来把制做好的观测文件传送到指定计算机的。比如把Hx、CE观测纲要文件传入对应的Fs计算机上。如下图，非常直观的可以发现左侧是本机文件目录，右侧是远程计算机的文件目录。只需要把所需要的文件目录拖拽的固定的文件夹中即可。</p>
-<p><img src="/2020/08/16/log1/FX.PNG" title="FileZilla界面" style="zoom:60%"></p>
-<h1 id="文件目录及站点"><a href="#文件目录及站点" class="headerlink" title="文件目录及站点"></a>文件目录及站点</h1><p>在FileZilla软件中把远程计算机成为站点，通常VLBI任务（起码在Hx探测中使用的Fs计算机为Hx主和CE-5做备用来执行任务）所以就要把当天VLBI中心下发的纲要在执行观测前传到指定计算机的指定目录上。分别是filename.prc后缀的传到../../proc目录下，还有filename.snp后缀的文件传到../../sched目录下。</p>
-<p>补充：还需在任务文件中找到轨道文件放入轨道文件服务器的对应文件夹下</p>
-<p><strong>tips</strong></p>
-<p>1.其中在VLBI中心下发纲要时，不要提前下载。最好在VLBI中心通知后再下载，因为纲要在实际观测前可能还有最后的调整。</p>
-<p>2.在纲要文件夹中有各个站点的观测纲要和轨道文件，一定要看清楚是否是此时值班台站的文件。</p>
-<p>3.在纲要文件夹中有一个filename.sum文件可以打印出来，这个文件是在观测中可以用于核对所在时间是否是对应的目标源。做检查、提前规划和存档用。（其中当时的观测源可以从监管软件中看到）</p>
-<p><img src="/2020/08/16/log1/Supervision.jpg" title="监管界面" style="zoom:60%"></p>
+    <title>HEXO常用设置（next主题）</title>
+    <url>/2021/08/24/hexo01/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p><a href="https://hexo.io/zh-cn/">Hexo</a> 是一个高效、快速简洁且高效的静态博客框架。Hexo使用<a href="https://daringfireball.net/projects/markdown/">Markdown</a>(或其他渲染引擎)解析文章，在几秒之内，即可利用酷炫的主题生成静态网页。</p>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>安装参考中文官网的教程 <a href="https://hexo.io/zh-cn/。">https://hexo.io/zh-cn/。</a></p>
+<h1 id="themes"><a href="#themes" class="headerlink" title="themes"></a>themes</h1><p>本人常用的俩个主题为<a href="https://github.com/fi3ework/hexo-theme-archer">Archer</a>和<a href="https://github.com/theme-next/hexo-theme-next">next</a>，以下多数内容针对next主题为例。</p>
+<span id="more"></span>
+<h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo new draft 文件名（新建草稿）</span><br><span class="line"></span><br><span class="line">hexo publish 文件名（把草稿发表到正式文档中）</span><br><span class="line"></span><br><span class="line">hexo server（启动hexo 服务）</span><br><span class="line"></span><br><span class="line">hexo clean（清除编译文件）</span><br><span class="line"></span><br><span class="line">hexo generate (编译静态文件)</span><br><span class="line"></span><br><span class="line">hexo deployer（上传github，需要安装hexo-deployer-git）</span><br></pre></td></tr></table></figure>
+<h1 id="上传github"><a href="#上传github" class="headerlink" title="上传github"></a>上传github</h1><p>（1）在hexo目录下安装delpoyer插件</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>（2）在根目录的_config.yml文件中添加<br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> Deployment</span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># Docs: https://hexo.io/docs/one-command-deployment</span></span></span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: http://github.com/smartbra/blog.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure><br>（3）输入如下代码上传Github。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
+<h1 id="开启插入图片"><a href="#开启插入图片" class="headerlink" title="开启插入图片"></a>开启插入图片</h1><p>正常在hexo目录下安装hexo-asset-image —save 即可<br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo-asset-image --save</span><br></pre></td></tr></table></figure><br>并在根目录的_config.yml文件中开启如下<br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">post_asset_folder: true</span><br></pre></td></tr></table></figure><br>在markdown中使用如下语句添加图片。<br>其中图片放在使用hexo new 新建目录下的文件夹中中。<br><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;log3/HeliumPiping.jpg&quot;</span> <span class="attr">title</span>=<span class="string">&quot;氦气管路供回压力&quot;</span> <span class="attr">style</span>=<span class="string">&quot;zoom:60%&quot;</span> &gt;</span></span></span><br></pre></td></tr></table></figure><br><a href="https://nathaniel.blog/tutorials/make-hexo-support-math-again">LaTeX</a></p>
 ]]></content>
       <categories>
-        <category>观测工程师</category>
+        <category>HEXO教程</category>
       </categories>
       <tags>
-        <tag>观测工程师日记01</tag>
+        <tag>next themes</tag>
+        <tag>markdown</tag>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
     <title>工作心得（值班流程及注意事项）</title>
     <url>/2020/08/12/log0/</url>
     <content><![CDATA[<h1 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h1><h2 id="a-观测工程师主要职责"><a href="#a-观测工程师主要职责" class="headerlink" title="a.观测工程师主要职责"></a>a.观测工程师主要职责</h2><p>主要负责天马65米望远镜正常的运行和维保工作。日常主要工作是值班，每日交接班时间为早上8：00，值班时间为24小时。值班期间的任务是负责望远镜的馈源切换、65米射电望远镜指向调节、与PI的沟通提供所需的实验条件、每日对望远镜的运行状态巡查和对发生故障的简单处理与故障及时维修。</p>
-<h2 id="b-其它注意事项"><a href="#b-其它注意事项" class="headerlink" title="b.其它注意事项"></a>b.其它注意事项</h2><p>每日第一件事情需要同交接班的同事收集昨日天线故障、问题（接线的改动、设备的零时处理状态等）。在观测室内关注恒温空调与制冷系统的温度是否正常。上天线检查天线运行状态：观测楼一楼氢钟工作状态是否正常、天线一层平台恒温空调和冷水机组是否报警、天线电梯二层平台室外机是否工作正常（异响）、天线电梯4楼各波段压缩机是否工作正常及是否漏液、天线电梯5楼馈源舱内室内风机是否工作且空调管路是否有漏油（见图下位机）。<br><a id="more"></a></p>
+<h2 id="b-其它注意事项"><a href="#b-其它注意事项" class="headerlink" title="b.其它注意事项"></a>b.其它注意事项</h2><p>每日第一件事情需要同交接班的同事收集昨日天线故障、问题（接线的改动、设备的零时处理状态等）。在观测室内关注恒温空调与制冷系统的温度是否正常。上天线检查天线运行状态：观测楼一楼氢钟工作状态是否正常、天线一层平台恒温空调和冷水机组是否报警、天线电梯二层平台室外机是否工作正常（异响）、天线电梯4楼各波段压缩机是否工作正常及是否漏液、天线电梯5楼馈源舱内室内风机是否工作且空调管路是否有漏油（见图下位机）。<br><span id="more"></span></p>
 <h1 id="2-流程"><a href="#2-流程" class="headerlink" title="2.流程"></a>2.流程</h1><p>一次完整的观测包括观测前的设备状态检查（见b.其他注意事项），然后按照PI的要求在观测开始前切换到所需的馈源——下位机的检查及馈源的切换、接线的检查、微波开关的检查及切换、接收机状态的检查、指向模型的选择和指向的修正，如果有主动面和副面的要求也需要注意（一般ku以上的波段都默认打开主副面）。</p>
 <h2 id="2-1-检查天线下位机及馈源的切换"><a href="#2-1-检查天线下位机及馈源的切换" class="headerlink" title="2.1 检查天线下位机及馈源的切换"></a>2.1 检查天线下位机及馈源的切换</h2><p>检查天线下位机状态（图中右下角状态栏），并按需求给下位机设置。</p>
 <p><img src="/2020/08/12/log0/down_computer.jpg" title="下位机" style="zoom:60%"></p>
@@ -87,16 +74,39 @@
 ]]></content>
       <categories>
         <category>观测工程师</category>
+        <category>值班工作</category>
       </categories>
       <tags>
-        <tag>观测工程师日记00</tag>
+        <tag>心得</tag>
       </tags>
   </entry>
   <entry>
-    <title>数据分析（某小天线性能测试）</title>
+    <title>工作心得（FileZilla）</title>
+    <url>/2020/08/16/log1/</url>
+    <content><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>在Hx观测、CE观测中观测中心都使用FTP的方式分发观测纲要、轨道文件等。而且管理的电脑使用的是氢钟状态监测和监管所在的电脑（windows系统），为了避开软件上的限制使用开源且免费的软件是必须的。其实FTP的可视化操作软件有很多比如：windows平台下的WinSCP、MobaXterm等，Mac上的Transmit、Yummy等，但是结合现有请况（因为台站中电脑的系统多样）最终选择使用支持全平台且开源免费的FileZilla软件。<br><span id="more"></span></p>
+<h1 id="实际操作"><a href="#实际操作" class="headerlink" title="实际操作"></a>实际操作</h1><p>在日常观测中FileZilla软件是用来把制做好的观测文件传送到指定计算机的。比如把Hx、CE观测纲要文件传入对应的Fs计算机上。如下图，非常直观的可以发现左侧是本机文件目录，右侧是远程计算机的文件目录。只需要把所需要的文件目录拖拽的固定的文件夹中即可。</p>
+<p><img src="/2020/08/16/log1/FX.PNG" title="FileZilla界面" style="zoom:60%"></p>
+<h1 id="文件目录及站点"><a href="#文件目录及站点" class="headerlink" title="文件目录及站点"></a>文件目录及站点</h1><p>在FileZilla软件中把远程计算机成为站点，通常VLBI任务（起码在Hx探测中使用的Fs计算机为Hx主和CE-5做备用来执行任务）所以就要把当天VLBI中心下发的纲要在执行观测前传到指定计算机的指定目录上。分别是filename.prc后缀的传到../../proc目录下，还有filename.snp后缀的文件传到../../sched目录下。</p>
+<p>补充：还需在任务文件中找到轨道文件放入轨道文件服务器的对应文件夹下</p>
+<p><strong>tips</strong></p>
+<p>1.其中在VLBI中心下发纲要时，不要提前下载。最好在VLBI中心通知后再下载，因为纲要在实际观测前可能还有最后的调整。</p>
+<p>2.在纲要文件夹中有各个站点的观测纲要和轨道文件，一定要看清楚是否是此时值班台站的文件。</p>
+<p>3.在纲要文件夹中有一个filename.sum文件可以打印出来，这个文件是在观测中可以用于核对所在时间是否是对应的目标源。做检查、提前规划和存档用。（其中当时的观测源可以从监管软件中看到）</p>
+<p><img src="/2020/08/16/log1/Supervision.jpg" title="监管界面" style="zoom:60%"></p>
+]]></content>
+      <categories>
+        <category>观测工程师</category>
+        <category>值班工作</category>
+      </categories>
+      <tags>
+        <tag>心得</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>某小天线性能测试</title>
     <url>/2020/09/14/log10/</url>
-    <content><![CDATA[<h1 id="fits文件的头文件提取到excel"><a href="#fits文件的头文件提取到excel" class="headerlink" title="fits文件的头文件提取到excel"></a>fits文件的头文件提取到excel</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot  <span class="keyword">as</span> pl</span><br><span class="line"></span><br><span class="line"><span class="comment"># import pyfits</span></span><br><span class="line"><span class="comment"># from astropy.utils.data import get_pkg_data_filename</span></span><br><span class="line"><span class="keyword">from</span> astropy.table <span class="keyword">import</span> Table</span><br><span class="line"><span class="keyword">from</span> astropy.io <span class="keyword">import</span> fits</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span>  pd</span><br><span class="line"></span><br><span class="line">hdul=fits.open(<span class="string">&#x27;C:/Users/47459/Downloads/Dcr/2020_07_19_04_32_34.fits&#x27;</span>)</span><br><span class="line">events=Table.read(hdul,hdu=<span class="number">1</span>)</span><br><span class="line">df=events.to_pandas()</span><br><span class="line">df.to_excel(<span class="string">&#x27;C:/Users/47459/Downloads/Dcr/2020_07_19_04_32_34.excel&#x27;</span>)</span><br><span class="line">pd.read_excel(<span class="string">&#x27;C:/Users/47459/Downloads/Dcr/2020_07_19_04_32_34.xls&#x27;</span>,sheet_name=<span class="string">&quot;Sheet1&quot;</span>,index_col=<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
+    <content><![CDATA[<h1 id="fits文件的头文件提取到excel"><a href="#fits文件的头文件提取到excel" class="headerlink" title="fits文件的头文件提取到excel"></a>fits文件的头文件提取到excel</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot  <span class="keyword">as</span> pl</span><br><span class="line"></span><br><span class="line"><span class="comment"># import pyfits</span></span><br><span class="line"><span class="comment"># from astropy.utils.data import get_pkg_data_filename</span></span><br><span class="line"><span class="keyword">from</span> astropy.table <span class="keyword">import</span> Table</span><br><span class="line"><span class="keyword">from</span> astropy.io <span class="keyword">import</span> fits</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span>  pd</span><br><span class="line"></span><br><span class="line">hdul=fits.<span class="built_in">open</span>(<span class="string">&#x27;C:/Users/47459/Downloads/Dcr/2020_07_19_04_32_34.fits&#x27;</span>)</span><br><span class="line">events=Table.read(hdul,hdu=<span class="number">1</span>)</span><br><span class="line">df=events.to_pandas()</span><br><span class="line">df.to_excel(<span class="string">&#x27;C:/Users/47459/Downloads/Dcr/2020_07_19_04_32_34.excel&#x27;</span>)</span><br><span class="line">pd.read_excel(<span class="string">&#x27;C:/Users/47459/Downloads/Dcr/2020_07_19_04_32_34.xls&#x27;</span>,sheet_name=<span class="string">&quot;Sheet1&quot;</span>,index_col=<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
 <p>文件提取到excel后使用originlab软件进行画图和拟合操作，画出时间和方位/俯仰的平面图，后进行拟合。图例中给出拟合参数，对方位/俯仰做差与邻近时间做差进行相除，给出加速度图例图中使用Acc（acceleration）。<strong>其中要说明time（时间）是简化儒略日的数值给小数点前的取零，因为简化儒略日也是线性的对作图并不影响，所以没有进行转化。</strong></p>
 <h1 id="基本统计概念"><a href="#基本统计概念" class="headerlink" title="基本统计概念"></a>基本统计概念</h1><p>在展示数据之前提供的拟合参数做简略的解释：</p>
 <h2 id="残差（residual）"><a href="#残差（residual）" class="headerlink" title="残差（residual）"></a>残差（residual）</h2><p>   残差在数理统计中是指实际观察值与估计值（拟合值）之间的差。“残差”蕴含了有关模型基本假设的重要信息。如果回归模型正确的话， 我们可以将残差看作误差的观测值。</p>
@@ -171,15 +181,153 @@
 ]]></content>
       <categories>
         <category>观测工程师</category>
+        <category>杂事</category>
       </categories>
       <tags>
-        <tag>观测工程师日记10</tag>
+        <tag>数据分析</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>VLBI联测操作流程</title>
+    <url>/2020/11/09/log11/</url>
+    <content><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>（VLBI，very long baseline interferometry）缩写 甚长基线干涉测量技术。简单来说，VLBI就是把几个小望远镜联合起来，达到一架大望远镜的观测效果。这是因为，虽然射电望远镜能“看到”光学望远镜无法看到的电磁辐射，从而进行远距离和异常天体的观测，但如果要达到足够清晰的分辨率，就得把望远镜的天线做成几百公里，甚至地球那么大。</p>
+<h2 id="TMRT65M-VLBI"><a href="#TMRT65M-VLBI" class="headerlink" title="TMRT65M VLBI"></a>TMRT65M VLBI</h2><p>天马65米望远镜参加的VLBI观测除了承担国家深空探测任务（HX、CE等）以外，以欧南网和IVS测地等VLBI观测居多。</p>
+<h2 id="观测步骤"><a href="#观测步骤" class="headerlink" title="观测步骤"></a>观测步骤</h2><p>第一步 考虑要干啥！（编译snp文件了解观测内容、接线、开始结束时间）</p>
+<p>第二步 准备 （切换馈源、接线、指向）</p>
+<p>第三步 预观测及观测 （加载纲要、试观测、自相关）</p>
+<p>第四步 收尾（发送log、邮件）</p>
+<h2 id="第一步-考虑要干啥！"><a href="#第一步-考虑要干啥！" class="headerlink" title="第一步 考虑要干啥！"></a>第一步 考虑要干啥！</h2><h3 id="编译snp文件（了解观测内容、接线、开始结束时间等）"><a href="#编译snp文件（了解观测内容、接线、开始结束时间等）" class="headerlink" title="编译snp文件（了解观测内容、接线、开始结束时间等）"></a>编译snp文件（了解观测内容、接线、开始结束时间等）</h3><p><img src="/2020/11/09/log11/first.png" alt="编译snp文件" style="zoom:140%;"></p>
+<span id="more"></span>
+<h3 id="具体drudg过程如下"><a href="#具体drudg过程如下" class="headerlink" title="具体drudg过程如下"></a>具体drudg过程如下</h3><p><img src="/2020/11/09/log11/IMG_0777.jpeg" alt="IMG_0777"></p>
+<p><img src="/2020/11/09/log11/IMG_0778.jpeg" alt="IMG_0778"></p>
+<p><img src="/2020/11/09/log11/IMG_0779.jpeg" alt="IMG_0779"></p>
+<p><img src="/2020/11/09/log11/IMG_0780.jpeg" alt="IMG_0780" style="zoom:67%;"></p>
+<p><img src="/2020/11/09/log11/IMG_0781.jpeg" alt="IMG_0781" style="zoom:80%;"></p>
+<p><img src="/2020/11/09/log11/IMG_0782.jpeg" alt="IMG_0782"></p>
+<p><img src="/2020/11/09/log11/IMG_0783.jpeg" alt="IMG_0783"></p>
+<p><img src="/2020/11/09/log11/IMG_0784.jpeg" alt="IMG_0784" style="zoom:67%;"></p>
+<h2 id="第二步-准备"><a href="#第二步-准备" class="headerlink" title="第二步 准备"></a>第二步 准备</h2><h3 id="切换馈源、udc接线、做指向、设置udc中频频率"><a href="#切换馈源、udc接线、做指向、设置udc中频频率" class="headerlink" title="切换馈源、udc接线、做指向、设置udc中频频率"></a>切换馈源、udc接线、做指向、设置udc中频频率</h3><p>重要的是udc中频设置需要了解本振频率</p>
+<p>Qband：本振频率 可变 常用35Ghz</p>
+<p>kaband：本振频率 25Ghz</p>
+<p>Kband：本振频率 15Ghz</p>
+<p>kuband：本振频率 10Ghz</p>
+<h2 id="第三步-预观测及观测"><a href="#第三步-预观测及观测" class="headerlink" title="第三步 预观测及观测"></a>第三步 预观测及观测</h2><p>在准备工作完成后，进入预观测阶段。记录数据后，在flexbuffer计算机中进行自相关操作。验证后进入实验！</p>
+<p>其中在启动fs后，要开启多个监视窗口。</p>
+<ol>
+<li><p>fmset   查看FiLa10G 、Field system 、computer 系统是时间是否一致。若不一致进行对时操作！</p>
+</li>
+<li><p>monit3  任务状态、跟踪源监视窗口</p>
+</li>
+<li><p>monit2   bbc通道、频率、系统温度监视窗口</p>
+<h4 id="开启后的fmset"><a href="#开启后的fmset" class="headerlink" title="开启后的fmset"></a>开启后的fmset</h4><p><img src="/2020/11/09/log11/IMG_0907-4910593.jpeg" alt="IMG_0907"></p>
+</li>
+</ol>
+<h4 id="Monit2、monit3"><a href="#Monit2、monit3" class="headerlink" title="Monit2、monit3"></a>Monit2、monit3</h4><p>   <img src="/2020/11/09/log11/IMG_0906-4910624.jpeg" alt="IMG_0906"></p>
+<h4 id="开启后的monit2、monit3"><a href="#开启后的monit2、monit3" class="headerlink" title="开启后的monit2、monit3"></a>开启后的monit2、monit3</h4><p>   <img src="/2020/11/09/log11/IMG_0905.jpeg" alt="IMG_0905"></p>
+<h4 id="fs操作命令"><a href="#fs操作命令" class="headerlink" title="fs操作命令"></a>fs操作命令</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">proc=Task_namket6</span><br><span class="line"></span><br><span class="line">setup01</span><br><span class="line"></span><br><span class="line">bread1</span><br><span class="line"></span><br><span class="line">preob （系统温度）</span><br><span class="line"></span><br><span class="line">ifa（查看中频信号幅度在10-20左右为宜）</span><br><span class="line"></span><br><span class="line">ifb（查看中频信号幅度在10-20左右为宜）</span><br><span class="line"></span><br><span class="line">下为自相关存储步骤</span><br><span class="line">----------------------------------------</span><br><span class="line">mk5=record=on:Task_namet6 （开始记录）</span><br><span class="line"></span><br><span class="line">mk5=record=off  （停止记录）</span><br><span class="line"></span><br><span class="line">mk5=scna_check?  （监察是否有记录数据）</span><br><span class="line"></span><br><span class="line">mk5=disk2file=Task_namet6.vdif  （把记录在flexbuffer中离散的数据提取放入flexbuffer计算机中 ）</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">下为开始实验</span><br><span class="line">------------------------------------------</span><br><span class="line">schedule=Task_namet6,#1</span><br><span class="line">mk5relink/cont</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p> 在观测开始后需要监视flexbuffer中是否记录数据，所以要ssh到flexbuffer计算机。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh user@178.1.65.45 </span><br><span class="line">password:oper65m</span><br><span class="line"></span><br><span class="line">cd flexbuffer_program</span><br><span class="line"></span><br><span class="line">vbs_ls Task_namet6* 使用通配符查看所有存储下来的数据名字与现在观测源的序号是否相同！</span><br><span class="line"></span><br><span class="line">开启jive5ab接受后台（但是通常需要先查看进程是否开启）</span><br><span class="line">-------------------</span><br><span class="line">cd jive5ab-2.9.0/</span><br><span class="line"></span><br><span class="line">./jive5ab -m 3&amp;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">查看 计算机进程</span><br><span class="line">-------------------</span><br><span class="line">ps -ef |grep jive</span><br><span class="line"></span><br><span class="line">kill nmber   杀死进程 nmber 为进程号</span><br></pre></td></tr></table></figure>
+<p>查看进程 </p>
+<p><img src="/2020/11/09/log11/IMG_1192.jpeg" alt="IMG_1192"></p>
+]]></content>
+      <categories>
+        <category>观测工程师</category>
+        <category>值班工作</category>
+      </categories>
+      <tags>
+        <tag>心得</tag>
+        <tag>总结</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>服务器科普</title>
+    <url>/2021/08/24/log16/</url>
+    <content><![CDATA[<h2 id="一、常见服务器品牌"><a href="#一、常见服务器品牌" class="headerlink" title="一、常见服务器品牌"></a>一、常见服务器品牌</h2><p>戴尔、联想、惠普、华为、IBM……</p>
+<ul>
+<li><p>戴尔</p>
+<p><img src="/2021/08/24/log16/Dell_logo_2016.svg" alt="Dell_logo_2016" style="zoom: 200%;"></p>
+<p>公司由创始人麦克·戴尔的名字而来，世界上最大的科技公司之一，在美国和世界各地拥有超过16.5万人。该公司以供应链管理和电子商务方面的创新而闻名，<strong>特别是其直销模式及其“按订单构建”或“按订单配置”的制造方法——交付符合客户规格配置的单个PC</strong>。2015年，戴尔收购了企业技术公司EMC公司。<strong>收购完成后，戴尔和EMC成为戴尔科技的子公司。戴尔EMC作为戴尔技术的一部分，专注于数据存储、信息安全、虚拟化、分析、云计算和其他相关产品和服务。</strong>也就是现在戴尔服务器上常见的EMC logo的由来。</p>
+</li>
+<li><p>联想</p>
+<p><img src="/2021/08/24/log16/ThinkServer_(2008).svg" alt="ThinkServer_(2008)" style="zoom:10%;"></p>
+<p>Lenovo的ThinkServer命名约定反映了服务器是塔式服务器还是机架服务器。第一个字母“ T”用于表示塔式服务器，而“ R”用于机架式服务器，[3]和“ S”是存储机架式服务器。类似地，第二个字母“ S”表示单插槽，而“ D”表示双插槽。ThinkServer系列已于2019年停产，新的Intel服务器系列名为ThinkSystem。</p>
+</li>
+<li><p>惠普</p>
+<p><img src="/2021/08/24/log16/Hewlett_Packard_Enterprise_logo.svg" alt="Hewlett_Packard_Enterprise_logo" style="zoom: 25%;"></p>
+<p>惠普的服务器公司也叫慧与主营服务器，hp沿用惠普的名字主营pc和打印机。两家公司独立运行，公司位于总部位于美国加利福尼亚州帕洛阿尔托市。</p>
+</li>
+<li><p>华为</p>
+<p><img src="/2021/08/24/log16/Huawei_Standard_logo.svg" alt="Huawei_Standard_logo" style="zoom: 100%;"></p>
+<p>卖爱过扛把子，此公司最厉害的当属销售。服务器一般，不过作为成立于1987年的中国民营通信科技公司，对中国乃至世界的贡献也是显而易见的。其5G低成本的解决方案，为推广5G在中国的大面积使用起到重要所用。</p>
+</li>
+<li><p>IBM</p>
+<p><img src="/2021/08/24/log16/IBM_logo.svg" alt="IBM_logo" style="zoom: 25%;"></p>
+<p>蓝色巨人，美国的一家跨国技术与咨询公司，总部位于纽约阿蒙克。IBM的发明包括 软盘，硬盘驱动器，磁条卡，关系数据库，SQL编程语言，UPC条形码和动态随机存取存储器（DRAM）。在世界计算机史上都做出重大贡献的企业，不过服务器在中国比较少见。</p>
+</li>
+</ul>
+<p>除了以上公司还有其他公司如新华三、宝德、思科……等。</p>
+<h2 id="二、简单介绍"><a href="#二、简单介绍" class="headerlink" title="二、简单介绍"></a>二、简单介绍</h2><h3 id="1-服务器类型"><a href="#1-服务器类型" class="headerlink" title="1.服务器类型"></a>1.服务器类型</h3><ol>
+<li>塔式服务器</li>
+</ol>
+<p>   <img src="/2021/08/24/log16/u=69104099,65044114&fm=26&gp=0.jpg" style="zoom: 67%;"></p>
+<p>   <strong>Tower Server</strong>应该是贱的最多的也最容易理解的服务器结构类型，外形以及结构都与通常立式PC差不多，当然，由于服务器的主板和机箱结构的原因一般个头大、扩展性强使其主要区别于普通pc的。</p>
+<ol>
+<li><p>机架服务器</p>
+<p><img src="/2021/08/24/log16/security_super-micro_1003122870.jpg" alt="Supermicro Bug Could Let 'Virtual USBs' Take Over Corporate Servers | WIRED" style="zoom: 15%;"></p>
+<p><strong>Rack Server</strong>机架服务器是工业标准化下的产物，通常安装在标准的19英寸机柜里的，具有标准规格的服务器类型。参见<strong>2.服务器规格</strong>。</p>
+</li>
+<li><p>刀片服务器</p>
+<p><img src="/2021/08/24/log16/watermark,image_d2F0ZXIvYmFpa2U4MA==,g_7,xp_5,yp_5.jpeg" alt="img" style="zoom:50%;"></p>
+<p><strong>Blade Server</strong>是一种标准高度的机架式机箱内可以插装多个卡式的服务器单元，HAHD（High Availability High Density，高可用高密度）的低成本服务器形式。</p>
+</li>
+</ol>
+<h3 id="2-服务器规格"><a href="#2-服务器规格" class="headerlink" title="2.服务器规格"></a>2.服务器规格</h3><p>服务器高度一般由统一规格以U（1U=1.75英寸+4.445cm）为单位，常见规格有1U、2U、4U。宽度是标准的19英寸（48.26cm），长度有36、42、50英寸（91.44、106.68、127cm）。</p>
+<ul>
+<li><p>Server Rack Height</p>
+<p><img src="/2021/08/24/log16/Rack-Unit-Graphic-1.png" alt="Rack U Spacing" style="zoom:150%;"></p>
+</li>
+<li><p>Server Rack Depth</p>
+<p><img src="/2021/08/24/log16/Average-Rack-Depth-20201220215749439.png" alt="Rack Depth"></p>
+</li>
+<li><p>Server Rack Width</p>
+</li>
+</ul>
+<p><img src="/2021/08/24/log16/Define-19in-Rack-1.png" alt="Rack EIA-310 width standard"></p>
+<h3 id="3-服务器型号"><a href="#3-服务器型号" class="headerlink" title="3.服务器型号"></a>3.服务器型号</h3><p>以戴尔服务器为例，其他服务器厂商的服务器型号也可以参考如下：</p>
+<ul>
+<li><p>第一位字母，R代表的是机架式服务器，除了R之外还有</p>
+<p>R：Rack，机架式服务器</p>
+<p>T：Tower 塔式服务器</p>
+<p>M：Modular 模块化服务器</p>
+<p>另外还有一个比较特别的系列，这个系列是为数据中心等提出的高密度服务器，也称为为服务器就是C</p>
+</li>
+<li><p>第二位数字，这个数字代表此服务器在整个产品线中的位置</p>
+<p>1,2系列为基础入门级的单路CPU服务器，这个系列是中小型企业的首选</p>
+<p>3,4,5系列为中高端的单路CPU和入门级的双路CPU服务器，包含有可选的高级系统管理功能，适合远程站点和较大的公司使用</p>
+<p>6,7,8系列是主流的双路CPU和入门级四路CPU服务器，拥有强大的性能，能够满足大部分企业级应用需求</p>
+<p>9系列是最高端的四路CPU服务器，用用强大的计算能力，支持超大内存，适合需要最高性能，可靠性以及I/O可扩展的关键任务应用程序</p>
+</li>
+<li><p>第三位是数字，代表的是第几代产品</p>
+<p>目前戴尔最新的服务器是第十四代产品所以这个数字是4</p>
+<p>最后一位是数字</p>
+<p>0代表的是intel的CPU，5代表的是AMD的CPU</p>
+</li>
+</ul>
+<h2 id="三、机柜"><a href="#三、机柜" class="headerlink" title="三、机柜"></a>三、机柜</h2><p>机柜一般是冷轧钢板或合金制作的用来存放计算机和相关控制设备的物件，可以提供对存放设备的保护，屏蔽电磁干扰，有序、整齐地排列设备，方便以后维护设备。机柜一般分为服务器机柜、网络机柜、控制台机柜等。我们一服务器机会为例，服务器机柜在机柜的深度、高度、承重等方面均有要求。高度有2.2米、2.0米、1.8米、1.6米、1.4米、1.2米等高度；宽度为800mm、700mm或600mm三种；深度为800mm、900mm和1000mm三种对应的是22U、27U、32U、37U、42U、47U，可以配置：专用固定托盘、专用滑动托盘、电源支架、地脚轮、地脚钉、理线环、理线架、L支架、扩展横梁等。主体框架、前后门、左右侧门可以快速拆装。</p>
+<p><img src="/2021/08/24/log16/v2-a3720fdd78b9481d7853b1de635ba8d2_r.jpg" alt="preview" style="zoom:50%;"></p>
+]]></content>
+      <categories>
+        <category>活到老学到老</category>
+        <category>其他</category>
+      </categories>
+      <tags>
+        <tag>sever01</tag>
       </tags>
   </entry>
   <entry>
     <title>接收机测试（Qband）</title>
     <url>/2020/08/17/log2/</url>
-    <content><![CDATA[<h1 id="测试任务介绍"><a href="#测试任务介绍" class="headerlink" title="测试任务介绍"></a>测试任务介绍</h1><p>在2020年8月11日上午测试Qband接收机点噪功能是否正常。因为本次测试主要是对针对点噪功能能否在科学观测中正常开启，并不涉及流量校准、系统温度（后续会解释）、接收机性能评价等。所以在选源和制作纲要时就比较随意，选源时只要满足射电源在该波段上的流量够强（提高测试效率），处理后的结果与文献中信号源的视向速度对的上即可。<br><a id="more"></a></p>
+    <content><![CDATA[<h1 id="测试任务介绍"><a href="#测试任务介绍" class="headerlink" title="测试任务介绍"></a>测试任务介绍</h1><p>在2020年8月11日上午测试Qband接收机点噪功能是否正常。因为本次测试主要是对针对点噪功能能否在科学观测中正常开启，并不涉及流量校准、系统温度（后续会解释）、接收机性能评价等。所以在选源和制作纲要时就比较随意，选源时只要满足射电源在该波段上的流量够强（提高测试效率），处理后的结果与文献中信号源的视向速度对的上即可。<br><span id="more"></span></p>
 <h1 id="选源"><a href="#选源" class="headerlink" title="选源"></a>选源</h1><p>在Qband（ 35-50GHz）上的谱线信号常见的为 SiO maser、 NH_3、 36GHz -CH_3OH等，但是鉴于此次测试使用流量较强的源对测试成功、提高测试效率都有正向作用。所以选用SiO maser源作为观测目标，SiO maser的特性是示踪较为靠近晚型星中最靠经光球层的部分且与恒星脉动有强烈相关（对谱轮廓的对比有困难，脉动使得谱型轮廓会变化），但是因为SiO maser脉泽流量强度较强易于观测。所以此次测试选取了非常知名SiO maser信号源。源表如下：</p>
 <div class="table-container">
 <table>
@@ -263,7 +411,7 @@
 <h2 id="纲要"><a href="#纲要" class="headerlink" title="纲要"></a>纲要</h2><p>按照源在测试期间起落的顺序进行观测</p>
 <p>下图为目标源在观测时间内的最佳观测俯仰上的持续时间图。</p>
 <p><img src="/2020/08/17/log2/astro.png" title="观测顺序" style="zoom:60%"></p>
-<p>观测纲要如下：<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">from</span> aioslib.rpcpython.proc.Trace_new <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> aioslib.rpcpython.proc.Trace <span class="keyword">import</span> AZEL</span><br><span class="line"><span class="keyword">from</span> source_WISE_2degree <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> TcalCPeriod <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">import</span> time </span><br><span class="line"></span><br><span class="line">staticfreql=[<span class="number">43726.2</span>,<span class="number">43728.2</span>,<span class="number">43971.0</span>,<span class="number">43973.0</span>,<span class="number">44077.3</span>,<span class="number">44079.3</span>,<span class="number">44963.8</span>,<span class="number">44965.8</span>,</span><br><span class="line">             <span class="number">45746.3</span>,<span class="number">45851.6</span>,<span class="number">45853.6</span>,<span class="number">46255.6</span>,<span class="number">46372.3</span>,<span class="number">46390.7</span>,<span class="number">46566.0</span>,<span class="number">46568.0</span>,</span><br><span class="line">             <span class="number">47542.8</span>,<span class="number">48214.9</span>,<span class="number">48255.5</span>,<span class="number">48265.3</span>,<span class="number">48380.5</span>,<span class="number">48384.8</span>,<span class="number">48720.0</span>,<span class="number">48998.0</span>]</span><br><span class="line"></span><br><span class="line">Configure(observer=<span class="string">&quot;chenxi&quot;</span>,receiver=<span class="string">&#x27;rcvr_q&#x27;</span>,backend=<span class="string">&#x27;dibas&#x27;</span>,  </span><br><span class="line">          projectID=<span class="string">&#x27;zz_test_Qband_20200811&#x27;</span>,mode=<span class="string">&#x27;MODE20&#x27;</span>,</span><br><span class="line">          skyfre=staticfreql,noisecal=<span class="string">&#x27;hi_switch&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">off1=offset(<span class="string">&quot;J2000&quot;</span>,<span class="number">0</span>,<span class="number">-0.1</span>) </span><br><span class="line">Balance(<span class="string">&#x27;rcvr_q&#x27;</span>)</span><br><span class="line"></span><br><span class="line">sourcelist_1=[<span class="string">&quot;source_name1&quot;</span>,<span class="string">&quot;source_name1&quot;</span>]</span><br><span class="line"><span class="keyword">for</span> sourcename <span class="keyword">in</span> sourcelist_1:</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">8</span>):</span><br><span class="line">      <span class="keyword">print</span> i,sourcename</span><br><span class="line">      az,el = AZEL(findLocation(sourcename))</span><br><span class="line">      <span class="keyword">if</span> el &lt;<span class="number">12</span>:</span><br><span class="line">          <span class="keyword">print</span> <span class="string">&#x27;Warning El below 15&#x27;</span>,sourcename,<span class="string">&quot;pass it&quot;</span></span><br><span class="line">          <span class="keyword">continue</span>       </span><br><span class="line">      DIBAS_OnOff(sourcename,findLocation(sourcename),offset=off1,ontime=<span class="number">60.</span>,offtime=<span class="number">60.</span>)</span><br><span class="line">     </span><br><span class="line">StopTrack()</span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+<p>观测纲要如下：<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">from</span> aioslib.rpcpython.proc.Trace_new <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> aioslib.rpcpython.proc.Trace <span class="keyword">import</span> AZEL</span><br><span class="line"><span class="keyword">from</span> source_WISE_2degree <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> TcalCPeriod <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">import</span> time </span><br><span class="line"></span><br><span class="line">staticfreql=[<span class="number">43726.2</span>,<span class="number">43728.2</span>,<span class="number">43971.0</span>,<span class="number">43973.0</span>,<span class="number">44077.3</span>,<span class="number">44079.3</span>,<span class="number">44963.8</span>,<span class="number">44965.8</span>,</span><br><span class="line">             <span class="number">45746.3</span>,<span class="number">45851.6</span>,<span class="number">45853.6</span>,<span class="number">46255.6</span>,<span class="number">46372.3</span>,<span class="number">46390.7</span>,<span class="number">46566.0</span>,<span class="number">46568.0</span>,</span><br><span class="line">             <span class="number">47542.8</span>,<span class="number">48214.9</span>,<span class="number">48255.5</span>,<span class="number">48265.3</span>,<span class="number">48380.5</span>,<span class="number">48384.8</span>,<span class="number">48720.0</span>,<span class="number">48998.0</span>]</span><br><span class="line"></span><br><span class="line">Configure(observer=<span class="string">&quot;chenxi&quot;</span>,receiver=<span class="string">&#x27;rcvr_q&#x27;</span>,backend=<span class="string">&#x27;dibas&#x27;</span>,  </span><br><span class="line">          projectID=<span class="string">&#x27;zz_test_Qband_20200811&#x27;</span>,mode=<span class="string">&#x27;MODE20&#x27;</span>,</span><br><span class="line">          skyfre=staticfreql,noisecal=<span class="string">&#x27;hi_switch&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">off1=offset(<span class="string">&quot;J2000&quot;</span>,<span class="number">0</span>,-<span class="number">0.1</span>) </span><br><span class="line">Balance(<span class="string">&#x27;rcvr_q&#x27;</span>)</span><br><span class="line"></span><br><span class="line">sourcelist_1=[<span class="string">&quot;source_name1&quot;</span>,<span class="string">&quot;source_name1&quot;</span>]</span><br><span class="line"><span class="keyword">for</span> sourcename <span class="keyword">in</span> sourcelist_1:</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">8</span>):</span><br><span class="line">      <span class="built_in">print</span> i,sourcename</span><br><span class="line">      az,el = AZEL(findLocation(sourcename))</span><br><span class="line">      <span class="keyword">if</span> el &lt;<span class="number">12</span>:</span><br><span class="line">          <span class="built_in">print</span> <span class="string">&#x27;Warning El below 15&#x27;</span>,sourcename,<span class="string">&quot;pass it&quot;</span></span><br><span class="line">          <span class="keyword">continue</span>       </span><br><span class="line">      DIBAS_OnOff(sourcename,findLocation(sourcename),offset=off1,ontime=<span class="number">60.</span>,offtime=<span class="number">60.</span>)</span><br><span class="line">     </span><br><span class="line">StopTrack()</span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
 <h1 id="测试结果"><a href="#测试结果" class="headerlink" title="测试结果"></a>测试结果</h1><p>VYCMa晚型星上的 v=1  J=1-0 43.112GHz SiO maser信号如下图。</p>
 <p><img src="/2020/08/17/log2/VYCMA.png" title="VYMa" style="zoom:50%"></p>
 <p>文献中的VYMa信号（图中v=1的谱线轮廓）</p>
@@ -282,15 +430,166 @@
 ]]></content>
       <categories>
         <category>观测工程师</category>
+        <category>测试</category>
       </categories>
       <tags>
-        <tag>观测工程师日记02</tag>
+        <tag>测试</tag>
+        <tag>接收机</tag>
       </tags>
   </entry>
   <entry>
-    <title>工作心得（温度监测）</title>
+    <title>在Mac中添加快速ssh</title>
+    <url>/2021/08/24/log22_Mac01/</url>
+    <content><![CDATA[<p>每天一个小技巧——快乐高效干到老<br>在Mac自带的terminal中访问ssh的时候都需要打冗长的命令（如下），而且hostname一般不容易记忆。<br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">~$</span><span class="bash"> ssh root@192.168.5.100</span></span><br></pre></td></tr></table></figure><br>为了结局如下困扰，可以采取如下方法：</p>
+<ol>
+<li>创建或者访问 config<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">~$ vim ~/.ssh/config</span><br></pre></td></tr></table></figure></li>
+<li>编辑config<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 服务器1</span></span><br><span class="line">host zz</span><br><span class="line">    hostname IP地址</span><br><span class="line">    port 22</span><br><span class="line">    user 用户名</span><br><span class="line">    </span><br><span class="line"><span class="meta">#</span><span class="bash"> 服务器2</span></span><br><span class="line">host 别名</span><br><span class="line">    hostname IP地址</span><br><span class="line">    port 22</span><br><span class="line">    user 用户名</span><br></pre></td></tr></table></figure></li>
+<li>直接访问 别名 即可<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">~$</span><span class="bash"> ssh zz</span>	</span><br></pre></td></tr></table></figure>
+<img src="/2021/08/24/log22_Mac01/image-20201228105648592.png" alt="image-20201228105648592" style="zoom:50%;"></li>
+</ol>
+]]></content>
+      <categories>
+        <category>活到老学到老</category>
+        <category>Mac</category>
+      </categories>
+      <tags>
+        <tag>Mac01</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git学习</title>
+    <url>/2021/08/24/log26_git01/</url>
+    <content><![CDATA[<h2 id="版本控制"><a href="#版本控制" class="headerlink" title="版本控制"></a>版本控制</h2><blockquote>
+<p>什么是版本控制——版本迭代、新的版本！</p>
+</blockquote>
+<p>版本控制（revison control），为满足多人开发必须使用版本控制。</p>
+<p>主流版本控制工具</p>
+<ul>
+<li>git</li>
+<li>svn</li>
+<li>cvs</li>
+<li>vss</li>
+<li>tfs</li>
+</ul>
+<p>其实还有一堆，但是学最主流的就可以了。</p>
+<ol>
+<li><p>本地版本控制</p>
+</li>
+<li><p>集中版本控制 SVN</p>
+</li>
+<li><p>分布式版本控制 Git</p>
+<p>每个人都拥有全部代码！安全隐患！不会因为网络、服务器原因造成不能工作！</p>
+</li>
+</ol>
+<h2 id="Git与SVN的区别"><a href="#Git与SVN的区别" class="headerlink" title="Git与SVN的区别"></a>Git与SVN的区别</h2><p>Git 分布式，本地和云端都有全部代码。</p>
+<p>SVN集中式，每次都需要拉去和上传到集中服务器。</p>
+<h2 id="Git历史"><a href="#Git历史" class="headerlink" title="Git历史"></a>Git历史</h2><p>linux和Git之父（Linus Benedic Torvalds）1969</p>
+<p>东西来源于BitKeeper来管理和维护代码。后来开发Git替换BitKeeper这个收费软件。</p>
+<p>Git环境配置</p>
+<p>Git Bash： Unix与Linux风格的命令行，使用最多，推荐最多。 例如：清屏幕 clear</p>
+<p>Git CMD：Windows风格的命令行 例如：清屏幕 cls</p>
+<p>Git GUI：图形界面的Git，不建议初学者使用，尽力先熟悉常用命令。</p>
+<p>Git基本命令</p>
+<ol>
+<li>cd：改变目录</li>
+<li>cd ..：回到上一个目录，直接cd进入默认目录</li>
+<li>pwd：显示当前所在的路径。</li>
+<li>ls（ll）：都是列出当前目录中的所有文件，只不过ll列出的内容更为详细</li>
+<li>touch： 新建一个文件 如：touch index.js 就会在当前目录下新建一个index.js文件。</li>
+<li>rm：删除一个文件，rm index.js 就会把index.js删除</li>
+<li>mkdir：新建一个目录，就是新建一个文件夹</li>
+<li>rm -r：删除一个文件夹，rm -r src 删除src目录。 （<strong>rm -rf /） 牛逼！！！！</strong></li>
+<li>mv ：移动文件，mv index.html src ，index.html 是我们要移动的文件，src是目标文件夹，当然</li>
+<li>reset：重新初始化终端/清屏</li>
+<li>clear：清屏。 windows对应的为cls</li>
+<li>history：产看命令历史</li>
+<li>help：帮助</li>
+<li>exit：退出</li>
+<li><h1 id="表示注释"><a href="#表示注释" class="headerlink" title="表示注释"></a>表示注释</h1></li>
+</ol>
+<p>Git 配置</p>
+<p>所有的配置文件，其实都保存在本地。</p>
+<p>Git 相关配置文件：</p>
+<ol>
+<li>Git\etc\gitconfig :Git 安装目录下的 gitconfig — system 系统及</li>
+<li>C:\Users\Administrator\ .gitconfig 只适用于当前登陆用户的配置。—global 全局</li>
+</ol>
+<p>这里可以直接编辑配置文件，通过命令设置后回响应到这里。</p>
+<p>查看配置</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git config -l</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">查看系统config</span></span><br><span class="line">git config --system --list</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">查看当前用户（global）配置</span></span><br><span class="line">git config --global --list</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>GIt 设置</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">名称</span></span><br><span class="line"></span><br><span class="line">git config --global usr.name “name”</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">邮箱</span></span><br><span class="line"></span><br><span class="line">git config --global user.email  xxxxx@gmail.com  </span><br></pre></td></tr></table></figure>
+<h2 id="Git-基本理论（核心）"><a href="#Git-基本理论（核心）" class="headerlink" title="Git 基本理论（核心）"></a>Git 基本理论（核心）</h2><p>Git本地有三个工作区域：工作目录（Working Directory）、暂存区（Stage/Index）、资源库（Repository）或者叫（Git Directroy）。如果在加上远程git 仓库（Remote Directory）就可以分为四个工作区域。文件在这四个区域之间的转换关系如下：</p>
+<p><img src="/2021/08/24/log26_git01/image-20201103142705381.png" alt="image-20201103142705381" style="zoom:50%;"></p>
+<ul>
+<li>workspace：工作区，就是你平时存放项目代码的地方</li>
+<li>index/stage：暂存区，用于临时存放你的改动，事实上它只是一个文件，保存即将提交到文件列表的信息。</li>
+<li>Repository：仓库（或者叫本地仓库），就是安全存放数据的位置，这里面有你提交的所有版本的数据。其中HEAD指向最新放入仓库的版本。</li>
+<li>Remote：远程仓库，代码托管的服务器，可以简单的认为是你项目组中的一台电脑用于远程数据交换。</li>
+</ul>
+<p>本地的三个区域确切的说应该是git仓库中HEAD指向的版本：</p>
+<p><img src="/2021/08/24/log26_git01/94e1299487ed33b762c382fa560e4bd3.png" alt="94e1299487ed33b762c382fa560e4bd3" style="zoom:80%;"></p>
+<p>git的工作流程一般是这样：</p>
+<ol>
+<li>在工作目录中添加、修改文件；</li>
+<li>将需要进行版本管理的文件放入暂存区域；  git add</li>
+<li>将暂存区域的我文件提交到git 仓库； git commit</li>
+</ol>
+<p>因此，git 管理的文件有三种状态：已修改（modified）、已暂存（staged）、已提交（committed）。</p>
+<p><img src="/2021/08/24/log26_git01/809218-20160604213832164-1203726937.png" alt="809218-20160604213832164-1203726937" style="zoom:48%;"></p>
+<h2 id="Git项目搭建"><a href="#Git项目搭建" class="headerlink" title="Git项目搭建"></a>Git项目搭建</h2><p>工作目录（workspace）一般就是你希望Git 帮助你管理的文件夹，可以是你项目的目录，也可以是一个空目录，建议不要有中文。</p>
+<p>日常使用只要记住6个命令：</p>
+<p><img src="/2021/08/24/log26_git01/v2-e170c437b905730fa48be241609635d8_1440w.jpg" alt="v2-e170c437b905730fa48be241609635d8_1440w" style="zoom:80%;"></p>
+<p><strong>在本地搭建一个仓库</strong></p>
+<p>方法一：创建全新的仓库</p>
+<ol>
+<li>创建全新的仓库，需要用git 管理的项目的根目录执行：</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">当前目录新建一个Git代码库</span></span><br><span class="line"><span class="meta">~$</span><span class="bash"> git init</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li>执行后可以看到，仅仅在项目目录多出一个.git目录，关于版本等的所有信息都在这个目录里面。</li>
+</ol>
+<p>方法二：克隆远程仓库</p>
+<p>由远程服务器上的仓库完全镜像到本地一份</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">~$ git <span class="built_in">clone</span> [url]</span><br></pre></td></tr></table></figure>
+<h2 id="Git文件操作"><a href="#Git文件操作" class="headerlink" title="Git文件操作"></a>Git文件操作</h2><h3 id="文件的4种状态"><a href="#文件的4种状态" class="headerlink" title="文件的4种状态"></a>文件的4种状态</h3><p>版本控制就是对文件的版本进行控制，要对文件进行修改、提交等操作，首先要知道文件当前在什么状态，不然可能会提交下载还不想提交的文件，或者要提交的问价没提交上。</p>
+<ul>
+<li>Untracked：未跟踪，此文件在文件夹中，但没有加入到git 库，不参加版本控制，通过 <code>git add .</code>状态变为<code>stage</code>。</li>
+<li>Unmodify：文件已经入库，未修改，即版本库中的文件快照内容与文件夹中完全一致，这种类型的文件两种去处，如果它被修改，而变为<code>Modified</code>。如果使用<code>git rm</code>移出版本库，则成为<code>Untracked</code>文件。</li>
+<li>Modified：文件已经修改，仅仅是修改，并没有进行其他操作。这个文件也有两个去处，通过 <code>git add</code>可以进入暂存<code>staged状态</code>，使用<code>git checkout</code>则丢弃修改过，返回到<code>unmodify</code>状态，这个<code>git checkout</code>即从库中取出文件，覆盖当前修改！</li>
+<li>Staged：暂存状态，执行<code>git commit</code>则将修改同步到库中，这个时候库中的文件和本地的文件又变为一致，文件为<code>Unmodify</code>状态。执行<code>git reset HEAD filename</code>取消暂存，文件状态为<code>Modified</code>。</li>
+</ul>
+<h3 id="查看文件状态"><a href="#查看文件状态" class="headerlink" title="查看文件状态"></a>查看文件状态</h3><p>上面手文件有4中状态，通过一下命令可以查看到文件的状态：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment">#查看文件的状态</span></span><br><span class="line">~$ git status [filename]</span><br><span class="line"></span><br><span class="line"><span class="comment">#查看所有文件的状态</span></span><br><span class="line">~$ git status </span><br><span class="line"></span><br><span class="line"><span class="comment">#添加所有文件到暂存区</span></span><br><span class="line">~$ git add .</span><br><span class="line"></span><br><span class="line"><span class="comment">#提交暂存区中的内容到本地仓库 -m 提交信息</span></span><br><span class="line">~$ git commit -m “消息内容”</span><br><span class="line"> </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="忽略文件"><a href="#忽略文件" class="headerlink" title="忽略文件"></a>忽略文件</h3><p>有些时候我们不想把某些文件纳入版本控制中，比如数据库文件，临时文件，设计文件等</p>
+<p>在主目录下建立一个“.gitignore”文件，此文件有如下规则：</p>
+<ol>
+<li>忽略文件中的空行或以井号（#）开始的行将会被忽略。</li>
+<li>可以使用Linux通配符。例如：星号（*）代表任意多个字符，问好（？）代表一个字符，方括号（[abc]）代表可选字符范围，打括号（{string1,string2,……}）代表可选的字符</li>
+<li>如果名称前有一个感叹号（！），则表示例外，将不被忽略。</li>
+<li>如果名称的最前面有一个路径分隔符（/），表示要忽略的文件在此目录下，而子目录的文件不忽略。</li>
+<li>如果名称的最后面是一个路径分隔符（/），表示要忽略的是此目录下该名称的子目录，而非文件（默认文件或目录都忽略）。</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">为注释</span></span><br><span class="line">*.txt			#忽略所有 .txt结尾的文件</span><br><span class="line">!lib.txt	#但lib.txt除外</span><br><span class="line">/temp			#仅忽略项目根目录下的TODO文件，不包括其他目录temp</span><br><span class="line">build/    #忽略build/目录下的所有文件</span><br><span class="line">doc/*.txt #忽略 doc/notes.txt 但不包括 doc/server/arch.txt</span><br></pre></td></tr></table></figure>
+<h2 id="Git的分支"><a href="#Git的分支" class="headerlink" title="Git的分支"></a>Git的分支</h2><p>分支在git中国相对较难，分支就是科幻电影里的平行宇宙，如果俩个品行宇宙互不干扰，那对你现在也没啥影响。不过在某个时间点，俩个平行宇宙合并了，我们就需要处理一些问题了！</p>
+<p>git 分支中常用的命令：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">列出所有本地分支</span></span><br><span class="line"><span class="meta">~$</span><span class="bash"> git branch</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">列出所有远程分支</span></span><br><span class="line"><span class="meta">~$</span><span class="bash"> git branch -r</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">新建一个分支，但仍停留在当前分支</span></span><br><span class="line"><span class="meta">~$</span><span class="bash"> git branch [branch-name]</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">新建一个分支，并切换到该分支</span></span><br><span class="line"><span class="meta">~$</span><span class="bash"> git checkout -b [branch]</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">合并指定分支到当前分支</span></span><br><span class="line"><span class="meta">~$</span><span class="bash"> git merge [branch]</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">删除分支</span></span><br><span class="line"><span class="meta">~$</span><span class="bash"> git branch -d [branch-name]</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">删除分支</span></span><br><span class="line"><span class="meta">~$</span><span class="bash"> git push origin --delete [branch-name]</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">删除远程分支</span></span><br><span class="line"><span class="meta">~$</span><span class="bash"> git branch -dr [remote/branch]</span></span><br></pre></td></tr></table></figure>
+<p>多个分支如果并行，就会导致我们代码<strong>冲突</strong>，也就是同时存在多个版本！</p>
+<p>如果同一个文件在合并分支是都被修改了则会引起冲突：解决办法就是我们可以修改冲突文件重新提交！</p>
+<p>master 分支应该非常稳定，用来分布新版本，一般情况下不允许在上面工作，工作一个班情况下在新建的dev分支工作，工作完后，比如要发布，或者说dev分支代码稳定后可以合并到主分支master上来。</p>
+]]></content>
+      <categories>
+        <category>活到老学到老</category>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>git01</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>温度监测</title>
     <url>/2020/08/20/log3/</url>
-    <content><![CDATA[<h1 id="温度监测"><a href="#温度监测" class="headerlink" title="温度监测"></a>温度监测</h1><p>温度监测在CGLT电脑桌面，要检测的温度分别是氢钟房的温度湿度、馈源舱的温度湿度、还有氦气管路供回压力。<br><a id="more"></a></p>
+    <content><![CDATA[<h1 id="温度监测"><a href="#温度监测" class="headerlink" title="温度监测"></a>温度监测</h1><p>温度监测在CGLT电脑桌面，要检测的温度分别是氢钟房的温度湿度、馈源舱的温度湿度、还有氦气管路供回压力。<br><span id="more"></span></p>
 <h2 id="氢钟房温度湿度监测面板"><a href="#氢钟房温度湿度监测面板" class="headerlink" title="氢钟房温度湿度监测面板"></a>氢钟房温度湿度监测面板</h2><p>氢钟房温度湿度正常范围在23±0.5℃/45-70%<br><img src="/2020/08/20/log3/Hydrogen_Temp.jpg" title="氢钟房温度湿度" style="zoom:60%"></p>
 <h2 id="馈源舱温度湿度监测面板"><a href="#馈源舱温度湿度监测面板" class="headerlink" title="馈源舱温度湿度监测面板"></a>馈源舱温度湿度监测面板</h2><p>馈源舱温度较为特殊需要手动点击获取，点击如图的“连接TCP modbus”。馈源舱温度在23±1℃。<br><img src="/2020/08/20/log3/FeedBin.jpg" title="馈源舱温度湿度" style="zoom:60%"></p>
 <h2 id="氦气管路供回压力"><a href="#氦气管路供回压力" class="headerlink" title="氦气管路供回压力"></a>氦气管路供回压力</h2><p>正常供气压力范围为2.0-2.5Mpa，回气压力范围0.5-0.9Mpa。<br><img src="/2020/08/20/log3/HeliumPiping.jpg" title="氦气管路供回压力" style="zoom:60%"></p>
@@ -299,26 +598,114 @@
 ]]></content>
       <categories>
         <category>观测工程师</category>
+        <category>值班工作</category>
       </categories>
       <tags>
-        <tag>观测工程师日记03</tag>
+        <tag>心得</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>在Mac中ssh连接linux启用图新界面</title>
+    <url>/2021/08/24/log32_Mac02/</url>
+    <content><![CDATA[<h2 id="前情介绍"><a href="#前情介绍" class="headerlink" title="前情介绍"></a>前情介绍</h2><p>在windows使用MobaXterm，非常奥利给！界面如下：</p>
+<p><img src="/2021/08/24/log32_Mac02/image-20210118164200908.png" alt="image-20210118164200908" style="zoom:50%;"></p>
+<p>但是在mac下并没有集成环境需要安装x11客户端。</p>
+<p>这里提供一种可以在Mac中自带Terminal中打开图形界面的方法。</p>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ul>
+<li><p>安装Xquartz</p>
+<p>使用homebrew安装</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> brew install Xquartz</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p>配置Mac端的ssh用户设置</p>
+<p>使用root权限用vim打开/private/etc/ssh/ssh_config并编辑</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">       <span class="variable">$OpenBSD</span>: ssh_config,v 1.34 2019/02/04 02:39:42 dtucker Exp $</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> This is the ssh client system-wide configuration file.  See</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> ssh_config(5) <span class="keyword">for</span> more information.  This file provides defaults <span class="keyword">for</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> users, and the values can be changed <span class="keyword">in</span> per-user configuration files</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> or on the <span class="built_in">command</span> line.</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Configuration data is parsed as follows:</span></span><br><span class="line"><span class="meta">#</span><span class="bash">  1. <span class="built_in">command</span> line options</span></span><br><span class="line"><span class="meta">#</span><span class="bash">  2. user-specific file</span></span><br><span class="line"><span class="meta">#</span><span class="bash">  3. system-wide file</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Any configuration value is only changed the first time it is <span class="built_in">set</span>.</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Thus, host-specific definitions should be at the beginning of the</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> configuration file, and defaults at the end.</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Site-wide defaults <span class="keyword">for</span> some commonly used options.  For a comprehensive</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> list of available options, their meanings and defaults, please see the</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> ssh_config(5) man page.</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Host *</span></span><br><span class="line"><span class="meta">#</span><span class="bash">   ForwardAgent no</span></span><br><span class="line"><span class="meta">#</span><span class="bash">   ForwardX11 no</span></span><br><span class="line"><span class="meta">#</span><span class="bash">   PasswordAuthentication yes</span></span><br><span class="line"><span class="meta">#</span><span class="bash">   HostbasedAuthentication no</span></span><br><span class="line"><span class="meta">#</span><span class="bash">   GSSAPIAuthentication no</span></span><br><span class="line"><span class="meta">#</span><span class="bash">   GSSAPIDelegateCredentials no</span></span><br><span class="line"><span class="meta">#</span><span class="bash">   BatchMode no</span></span><br><span class="line"><span class="meta">#</span><span class="bash">   CheckHostIP yes</span></span><br><span class="line"><span class="meta">#</span><span class="bash">   AddressFamily any</span></span><br><span class="line"><span class="meta">#</span><span class="bash">   ConnectTimeout 0</span></span><br><span class="line"><span class="meta">#</span><span class="bash">   StrictHostKeyChecking ask</span></span><br><span class="line"><span class="meta">#</span><span class="bash">   IdentityFile ~/.ssh/id_rsa</span></span><br><span class="line"><span class="meta">#</span><span class="bash">   IdentityFile ~/.ssh/id_dsa</span></span><br><span class="line"><span class="meta">#</span><span class="bash">   IdentityFile ~/.ssh/id_ecdsa</span></span><br><span class="line"><span class="meta">#</span><span class="bash">   IdentityFile ~/.ssh/id_ed25519</span></span><br><span class="line"><span class="meta">#</span><span class="bash">   Port 22</span></span><br><span class="line"><span class="meta">#</span><span class="bash">   Ciphers aes128-ctr,aes192-ctr,aes256-ctr,aes128-cbc,3des-cbc</span></span><br><span class="line"><span class="meta">#</span><span class="bash">   MACs hmac-md5,hmac-sha1,umac-64@openssh.com</span></span><br><span class="line"><span class="meta">#</span><span class="bash">   EscapeChar ~</span></span><br><span class="line"><span class="meta">#</span><span class="bash">   Tunnel no</span></span><br><span class="line"><span class="meta">#</span><span class="bash">   TunnelDevice any:any</span></span><br><span class="line"><span class="meta">#</span><span class="bash">   PermitLocalCommand no</span></span><br><span class="line"><span class="meta">#</span><span class="bash">   VisualHostKey no</span></span><br><span class="line"><span class="meta">#</span><span class="bash">   ProxyCommand ssh -q -W %h:%p gateway.example.com</span></span><br><span class="line"><span class="meta">#</span><span class="bash">   RekeyLimit 1G 1h</span></span><br><span class="line"></span><br><span class="line">Host *</span><br><span class="line">        SendEnv LANG LC_*</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> XAuthLocation added by XQuartz (http://www.xquartz.org)</span></span><br><span class="line">Host *</span><br><span class="line">    XAuthLocation /opt/X11/bin/xauth</span><br><span class="line">    </span><br><span class="line">ForwardX11 yes 添加这一句</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p>配置linux端的ssh用户设置</p>
+<p>在linux端使用root权限vim编辑/etc/ssh/sshd_config</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">       <span class="variable">$OpenBSD</span>: sshd_config,v 1.101 2017/03/14 07:19:07 djm Exp $</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> This is the sshd server system-wide configuration file.  See</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> sshd_config(5) <span class="keyword">for</span> more information.</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> This sshd was compiled with PATH=/usr/bin:/bin:/usr/sbin:/sbin</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> The strategy used <span class="keyword">for</span> options <span class="keyword">in</span> the default sshd_config shipped with</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> OpenSSH is to specify options with their default value <span class="built_in">where</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> possible, but leave them commented.  Uncommented options override the</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> default value.</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">Port 22</span></span><br><span class="line"><span class="meta">#</span><span class="bash">AddressFamily any</span></span><br><span class="line"><span class="meta">#</span><span class="bash">ListenAddress 0.0.0.0</span></span><br><span class="line"><span class="meta">#</span><span class="bash">ListenAddress ::</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">HostKey /etc/ssh/ssh_host_rsa_key</span></span><br><span class="line"><span class="meta">#</span><span class="bash">HostKey /etc/ssh/ssh_host_ecdsa_key</span></span><br><span class="line"><span class="meta">#</span><span class="bash">HostKey /etc/ssh/ssh_host_ed25519_key</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Ciphers and keying</span></span><br><span class="line"><span class="meta">#</span><span class="bash">RekeyLimit default none</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Logging</span></span><br><span class="line"><span class="meta">#</span><span class="bash">SyslogFacility AUTH</span></span><br><span class="line"><span class="meta">#</span><span class="bash">LogLevel INFO</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Authentication:</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">LoginGraceTime 2m</span></span><br><span class="line"><span class="meta">#</span><span class="bash">PermitRootLogin prohibit-password</span></span><br><span class="line"><span class="meta">#</span><span class="bash">StrictModes yes</span></span><br><span class="line"><span class="meta">#</span><span class="bash">MaxAuthTries 6</span></span><br><span class="line"><span class="meta">#</span><span class="bash">MaxSessions 10</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">PubkeyAuthentication yes</span></span><br><span class="line"></span><br><span class="line"> Expect .ssh/authorized_keys2 to be disregarded by default in future.</span><br><span class="line"><span class="meta">#</span><span class="bash">AuthorizedKeysFile     .ssh/authorized_keys .ssh/authorized_keys2</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">AuthorizedPrincipalsFile none</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">AuthorizedKeysCommand none</span></span><br><span class="line"><span class="meta">#</span><span class="bash">AuthorizedKeysCommandUser nobody</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> For this to work you will also need host keys <span class="keyword">in</span> /etc/ssh/ssh_known_hosts</span></span><br><span class="line"><span class="meta">#</span><span class="bash">HostbasedAuthentication no</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Change to yes <span class="keyword">if</span> you don<span class="string">&#x27;t trust ~/.ssh/known_hosts for</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string"> HostbasedAuthentication</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string">IgnoreUserKnownHosts no</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string"> Don&#x27;</span>t <span class="built_in">read</span> the user<span class="string">&#x27;s ~/.rhosts and ~/.shosts files</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string">IgnoreRhosts yes</span></span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string"> To disable tunneled clear text passwords, change to no here!</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string">PasswordAuthentication yes</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string">PermitEmptyPasswords no</span></span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string"> Change to yes to enable challenge-response passwords (beware issues with</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string"> some PAM modules and threads)</span></span></span><br><span class="line">ChallengeResponseAuthentication no</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string"> Kerberos options</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string">KerberosAuthentication no</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string">KerberosOrLocalPasswd yes</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string">KerberosTicketCleanup yes</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string">KerberosGetAFSToken no</span></span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string"> GSSAPI options</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string">GSSAPIAuthentication no</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string">GSSAPICleanupCredentials yes</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string">GSSAPIKeyExchange no</span></span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string"> Set this to &#x27;</span>yes<span class="string">&#x27; to enable PAM authentication, account processing,</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string"> and session processing. If this is enabled, PAM authentication will</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string"> be allowed through the ChallengeResponseAuthentication and</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string"> PasswordAuthentication.  Depending on your PAM configuration,</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string"> PAM authentication via ChallengeResponseAuthentication may bypass</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string"> the setting of &quot;PermitRootLogin without-password&quot;.</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string"> If you just want the PAM account and session checks to run without</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string"> PAM authentication, then enable this but set PasswordAuthentication</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string"> and ChallengeResponseAuthentication to &#x27;</span>no<span class="string">&#x27;.</span></span></span><br><span class="line">UsePAM yes</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string">AllowAgentForwarding yes</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string">AllowTcpForwarding yes</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string">GatewayPorts no</span></span></span><br><span class="line">X11Forwarding yes     添加这一句</span><br><span class="line">X11DisplayOffset 10   添加这一句</span><br></pre></td></tr></table></figure>
+<p>重启ssh服务</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ service ssh restart</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="连接linux并验证"><a href="#连接linux并验证" class="headerlink" title="连接linux并验证"></a>连接linux并验证</h2><ol>
+<li><p>启动Xquartz</p>
+</li>
+<li><p>使用ssh加-X（注意大写）远程服务器</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ssh -X root@192.168.5.5</span>	</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用xclock验证</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">linux $ xclock</span><br></pre></td></tr></table></figure>
+<p><img src="/2021/08/24/log32_Mac02/image-20210118224511993.png" alt="image-20210118224511993" style="zoom:50%;"></p>
+</li>
+</ol>
+<h2 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h2><p>如果遇到</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">linux <span class="variable">$xauth</span> key data not generated</span><br></pre></td></tr></table></figure>
+<p>在mac下编辑～/.ssh/config，添加 ForwardX11Trusted yes</p>
+]]></content>
+      <categories>
+        <category>活到老学到老</category>
+        <category>Mac</category>
+      </categories>
+      <tags>
+        <tag>Mac02</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ubuntu安装ssh并开启服务</title>
+    <url>/2021/08/24/log36_linux01/</url>
+    <content><![CDATA[<h2 id="简介——啥是ssh"><a href="#简介——啥是ssh" class="headerlink" title="简介——啥是ssh"></a>简介——啥是ssh</h2><ul>
+<li>SSH是一种可以保证用户远程登录到系统的协议。实际上，SSH是一个网络协议，允许通过网络连接到Linux和Unix服务器。SSH使用公钥加密来认证远程的计算机。通常有多种途径使用SSH，自动连接或是使用密码认证登录。</li>
+<li>Windows用户应该都听说过Telnet，这也是一种命令行的远程登录工具，而且是系统自带的。SSH对Telnet的一个重要优势就是所有传输都是经过加密的，这样就增大了中间人攻击的难度。SSH中使用了MD5、RSA、DES等密码算法，保证数据的机密性、完整性、不可重放攻击。整个过程中包括密钥协商和交换，以及数据加密传送和解密等等。但也不是说就不能攻击，只是攻击的成本加大很多。</li>
+<li>OpenSSH是SSH的开源实现，因此用户可以免费使用到这种安全服务。</li>
+<li>一句话概括OpenSSH：使用加密的远程登录实现，可以有效保护登录及数据的安全。</li>
+<li>一般的使用需求就是：进行windows和linux虚拟机间文件交互等</li>
+<li></li>
+</ul>
+<p>通常位于/etc/ssh</p>
+<p>步骤</p>
+<ol>
+<li><p>更新源</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo apt-get update</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装ssh</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo apt install openssh-server <span class="comment">#可以Tab补全，如果想不起来得到话</span></span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看进程</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo ps -e | grep ssh</span></span><br></pre></td></tr></table></figure>
+<p>正常是啥也没有</p>
+</li>
+<li><p>开启ssh服务</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo service ssh start</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>活到老学到老</category>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>Linux01</tag>
       </tags>
   </entry>
   <entry>
     <title>工作心得（HX-VLBA观测）</title>
-    <url>/2020/08/28/log4/</url>
-    <content><![CDATA[<h1 id="HX-VLBA观测简介"><a href="#HX-VLBA观测简介" class="headerlink" title="HX-VLBA观测简介"></a>HX-VLBA观测简介</h1><p>观测使用S/X接收机、DBBC2终端<br><a id="more"></a></p>
+    <url>/2020/09/03/log4/</url>
+    <content><![CDATA[<h1 id="HX-VLBA观测简介"><a href="#HX-VLBA观测简介" class="headerlink" title="HX-VLBA观测简介"></a>HX-VLBA观测简介</h1><p>观测使用S/X接收机、DBBC2终端<br><span id="more"></span></p>
 <h1 id="观测准备步骤"><a href="#观测准备步骤" class="headerlink" title="观测准备步骤"></a>观测准备步骤</h1><h2 id="下载观测纲要"><a href="#下载观测纲要" class="headerlink" title="下载观测纲要"></a>下载观测纲要</h2><p>参考观测工程师日志01中FileZilla的使用。</p>
 <h2 id="观测前时间查看"><a href="#观测前时间查看" class="headerlink" title="观测前时间查看"></a>观测前时间查看</h2><p>每次HX任务准确的起始、结束时间可以参考监管计算机下载的纲要，在纲要文件中有一个“任务名”.sum文件，其中有详细的源名、观测时间、结束时间、参加台站等。通常打印以备观测时与天马台站监管采集的信息进行核对和任务结束后存档。</p>
 <p><strong>查看sum，了解任务的开始结束时间。为观测准备留足提前量。</strong></p>
 <p>纲要文件目录结构（红圈内为任务的概要文件）</p>
-<p><img src="/2020/08/28/log4/sum_position.png" title="HX纲要文件目录" style="zoom:80%"></p>
+<p><img src="/2020/09/03/log4/sum_position.png" title="HX纲要文件目录" style="zoom:80%"></p>
 <p>sum文件内容</p>
-<p><img src="/2020/08/28/log4/sum.png" title="sum文件" style="zoom:80%"></p>
+<p><img src="/2020/09/03/log4/sum.png" title="sum文件" style="zoom:80%"></p>
 <h2 id="观测前设备检查"><a href="#观测前设备检查" class="headerlink" title="观测前设备检查"></a>观测前设备检查</h2><p>通常提前一小时进入观测室，检查所有与观测相关的设备、线路是否正常。</p>
 <h3 id="1-接收机是否切换到位"><a href="#1-接收机是否切换到位" class="headerlink" title="(1)接收机是否切换到位"></a>(1)接收机是否切换到位</h3><h3 id="2-同轴线是否接线正常"><a href="#2-同轴线是否接线正常" class="headerlink" title="(2)同轴线是否接线正常"></a>(2)同轴线是否接线正常</h3><h3 id="3-微波开关是否切换到正确的位置"><a href="#3-微波开关是否切换到正确的位置" class="headerlink" title="(3)微波开关是否切换到正确的位置"></a>(3)微波开关是否切换到正确的位置</h3><h3 id="4-接收机工作状态是否正常"><a href="#4-接收机工作状态是否正常" class="headerlink" title="(4)接收机工作状态是否正常"></a>(4)接收机工作状态是否正常</h3><h3 id="5-指向模型是否切换到观测所需的模型（附面随动按观测要求开关）"><a href="#5-指向模型是否切换到观测所需的模型（附面随动按观测要求开关）" class="headerlink" title="(5)指向模型是否切换到观测所需的模型（附面随动按观测要求开关）"></a>(5)指向模型是否切换到观测所需的模型（附面随动按观测要求开关）</h3><h3 id="6-开始进行下指向操作"><a href="#6-开始进行下指向操作" class="headerlink" title="(6)开始进行下指向操作"></a>(6)开始进行下指向操作</h3><h2 id="指向"><a href="#指向" class="headerlink" title="指向"></a>指向</h2><p>因为S/X接收机俩个波段在同一个波导喇叭口后方，所以使用高频的X做指向的精度更高，而且Hx任务都使用Xband的左旋。指向纲要使用pinging_X，指向源可以选用sum文件中的第一个射电源做指向，之后观测可以节省天线移动俯仰和方位的时间，已达到顺利观测的目的。</p>
 <p>X指向纲要（当指向发现功率计谱型呈非高斯的致宽的形态时，可以尝试修改更大的offset值，使得可以偏开源顺利拟合指向参数。）</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#-*- coding: utf-8 -*-</span></span><br><span class="line"><span class="comment"># author Zhao Rongbing @2012 11 23</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> aioslib.rpcpython.proc.Trace <span class="keyword">import</span>  *</span><br><span class="line"><span class="keyword">from</span> aioslib.rpcpython.proc.Trace_sat <span class="keyword">import</span>  CrossSat</span><br><span class="line"><span class="keyword">from</span> aioslib.rpcpython.proc.Trace_holo <span class="keyword">import</span>  Holo</span><br><span class="line"><span class="keyword">from</span> aioslib.rpcpython.mc.Catalog <span class="keyword">import</span>  *</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="comment">#################################################### </span></span><br><span class="line">c =Catalog(<span class="string">&#x27;pointing.cat&#x27;</span>)</span><br><span class="line"><span class="comment">#############################################################################</span></span><br><span class="line">off1 = Offset(<span class="string">&quot;AZEL&quot;</span>,<span class="number">0.</span>,<span class="number">0.000</span>)</span><br><span class="line"><span class="comment">####</span></span><br><span class="line"><span class="comment">#sourcenamel=[&quot;NRAO530&quot;]    </span></span><br><span class="line">sourcenamel=[<span class="string">&quot;dr21&quot;</span>] </span><br><span class="line"><span class="comment">#####</span></span><br><span class="line">nobsnum=<span class="number">2</span>  </span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(nobsnum):</span><br><span class="line"><span class="comment">###   ourcename,c.Locate(sourcename),offset=0.15,cos v=True,period=50) :</span></span><br><span class="line">    <span class="keyword">for</span> sourcename <span class="keyword">in</span> sourcenamel:</span><br><span class="line"><span class="comment">##        Sweep(sourcename,c.Locate(sourcename),offset=0.12,cosv=True,period=50)</span></span><br><span class="line"><span class="comment">###         Track(sourcename,c.Locate(sourcename),off1,block=True,period=1500)  </span></span><br><span class="line">         SweepSingle(sourcename,c.Locate(sourcename),offset=<span class="number">0.2</span>,cosv=<span class="literal">True</span>,period=<span class="number">50</span>)</span><br><span class="line">StopTrack()</span><br><span class="line"><span class="comment">#</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#-*- coding: utf-8 -*-</span></span><br><span class="line"><span class="comment"># author Zhao Rongbing @2012 11 23</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> aioslib.rpcpython.proc.Trace <span class="keyword">import</span>  *</span><br><span class="line"><span class="keyword">from</span> aioslib.rpcpython.proc.Trace_sat <span class="keyword">import</span>  CrossSat</span><br><span class="line"><span class="keyword">from</span> aioslib.rpcpython.proc.Trace_holo <span class="keyword">import</span>  Holo</span><br><span class="line"><span class="keyword">from</span> aioslib.rpcpython.mc.Catalog <span class="keyword">import</span>  *</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="comment">#################################################### </span></span><br><span class="line">c =Catalog(<span class="string">&#x27;pointing.cat&#x27;</span>)</span><br><span class="line"><span class="comment">#############################################################################</span></span><br><span class="line">off1 = Offset(<span class="string">&quot;AZEL&quot;</span>,<span class="number">0.</span>,<span class="number">0.000</span>)</span><br><span class="line"><span class="comment">####</span></span><br><span class="line"><span class="comment">#sourcenamel=[&quot;NRAO530&quot;]    </span></span><br><span class="line">sourcenamel=[<span class="string">&quot;dr21&quot;</span>] </span><br><span class="line"><span class="comment">#####</span></span><br><span class="line">nobsnum=<span class="number">2</span>  </span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(nobsnum):</span><br><span class="line"><span class="comment">###   ourcename,c.Locate(sourcename),offset=0.15,cos v=True,period=50) :</span></span><br><span class="line">    <span class="keyword">for</span> sourcename <span class="keyword">in</span> sourcenamel:</span><br><span class="line"><span class="comment">##        Sweep(sourcename,c.Locate(sourcename),offset=0.12,cosv=True,period=50)</span></span><br><span class="line"><span class="comment">###         Track(sourcename,c.Locate(sourcename),off1,block=True,period=1500)  </span></span><br><span class="line">         SweepSingle(sourcename,c.Locate(sourcename),offset=<span class="number">0.2</span>,cosv=<span class="literal">True</span>,period=<span class="number">50</span>)</span><br><span class="line">StopTrack()</span><br><span class="line"><span class="comment">#</span></span><br></pre></td></tr></table></figure>
 <p><strong>方位俯仰的精确度</strong>：</p>
 <p>**Cband 10arc以内</p>
 <p>S/X 12~13arc以内</p>
@@ -330,20 +717,40 @@
 <p>偶有卫星、探测器信号较强需要调节衰减的，可以在CGLT中调节、也可以在fs中使用SXdb=aa,bb,cc,dd来调节。</p>
 <p>tips：</p>
 <p>在监管中当跟踪卫星、探测器时，跟踪源名会是红色POS是正常的</p>
-<p><img src="/2020/08/28/log4/supervise.jpg" title="sum文件" style="zoom:70%"></p>
+<p><img src="/2020/09/03/log4/supervise.jpg" title="sum文件" style="zoom:70%"></p>
 <h1 id="任务结束"><a href="#任务结束" class="headerlink" title="任务结束"></a>任务结束</h1><p><strong>需要注意fs会一直记录垃圾数据，在任务结束后需要手动关闭。使用mk5=record=off、terminate 来结束实验。</strong></p>
 ]]></content>
       <categories>
         <category>观测工程师</category>
+        <category>值班工作</category>
       </categories>
       <tags>
-        <tag>观测工程师日记04</tag>
+        <tag>心得</tag>
+        <tag>总结</tag>
       </tags>
   </entry>
   <entry>
-    <title>Booked使用说明（1）</title>
+    <title>网络学习之开头</title>
+    <url>/2021/08/24/log48_network01/</url>
+    <content><![CDATA[<h1 id="网络学习01"><a href="#网络学习01" class="headerlink" title="网络学习01"></a>网络学习01</h1><p>网络体系</p>
+<p><img src="/2021/08/24/log48_network01/image-20210401150019018.png" alt="image-20210401150019018" style="zoom:50%;"></p>
+<p><strong>交换机</strong>只有三层：网络层、数据链路层、物理层</p>
+<p><img src="/2021/08/24/log48_network01/image-20210401151048030.png" alt="image-20210401151048030"></p>
+<p><img src="/2021/08/24/log48_network01/image-20210403195944590.png" alt="image-20210403195944590" style="zoom:50%;"></p>
+<p><img src="/2021/08/24/log48_network01/image-20210403201928176.png" alt="image-20210403201928176" style="zoom:50%;"></p>
+]]></content>
+      <categories>
+        <category>活到老学到老</category>
+        <category>network</category>
+      </categories>
+      <tags>
+        <tag>network01</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Booked使用说明</title>
     <url>/2020/09/03/log5/</url>
-    <content><![CDATA[<h1 id="Booked简介"><a href="#Booked简介" class="headerlink" title="Booked简介"></a>Booked简介</h1><p>一个基于php语言的在线时间预约平台，使用<strong><em>开源代码构建</em></strong>。拥有多资源管理、<strong><em>时间审批</em></strong>、邮件提醒、时间表查看、历史查询和汇总报告生成等功能。现上线TMRT65M时间预约、SHESHAN25M时间预约、微波实验室时间预约。<br><a id="more"></a></p>
+    <content><![CDATA[<h1 id="Booked简介"><a href="#Booked简介" class="headerlink" title="Booked简介"></a>Booked简介</h1><p>一个基于php语言的在线时间预约平台，使用<strong><em>开源代码构建</em></strong>。拥有多资源管理、<strong><em>时间审批</em></strong>、邮件提醒、时间表查看、历史查询和汇总报告生成等功能。现上线TMRT65M时间预约、SHESHAN25M时间预约、微波实验室时间预约。<br><span id="more"></span></p>
 <h1 id="注册"><a href="#注册" class="headerlink" title="注册"></a>注册</h1><h2 id="Booked首页"><a href="#Booked首页" class="headerlink" title="Booked首页"></a>Booked首页</h2><p><img src="/2020/09/03/log5/start_page.png" title="Booked首页" style="zoom:70%"></p>
 <p>在图中右上角<font color="#fef31e">黄色椭圆框</font>内有可以跳转时间表和日历（无需注册、登录）的选项，<font color="red">红色方框点</font>击跳转注册页面。</p>
 <p><strong>Booked首页细节</strong><br><img src="/2020/09/03/log5/comb.png" title="Booked首页细节" style="zoom:70%"></p>
@@ -383,15 +790,61 @@
 ]]></content>
       <categories>
         <category>观测工程师</category>
+        <category>杂事</category>
       </categories>
       <tags>
-        <tag>观测工程师日记05</tag>
+        <tag>说明01</tag>
       </tags>
   </entry>
   <entry>
-    <title>OpManger使用（1）</title>
+    <title>在Mac中包管理器MacPorts的使用</title>
+    <url>/2021/08/24/log58_Mac03/</url>
+    <content><![CDATA[<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><p>MacPorts类似于Linux中apt-get和yum软件包管理工具,对于软件的集中管理、安装和卸载的功能，同时可以自动安装软件包的依赖。类似的还有Homebrew，但是由于工作所需软件多数对MacPorts包管理器的支持较好，所以在此对MacPorts的常用使用记录以便之后忘记来学习回顾。</p>
+<h2 id="下载安装"><a href="#下载安装" class="headerlink" title="下载安装"></a>下载安装</h2><p>官网：<a href="https://www.macports.org/install.php">https://www.macports.org/install.php</a> ，安装包为pkg格式安装非常便利。</p>
+<p><strong>不过MacPorts依赖Xcode需要安装<a href="https://developer.apple.com/technologies/tools/">Xcode </a>Developer Tools</strong></p>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><ol>
+<li><p>帮助手册</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> man prot</span></span><br></pre></td></tr></table></figure>
+<p>进入后使用q退出</p>
+</li>
+<li><p>安装、卸载</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo port install pkg_name</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo port uninstall pkg_name</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查询</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo port search pkg_name !查询软件包</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo port outdated  !查询有更新的软件版本</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo port upgrade outdated !升级可以更新的软件</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo port deps name !查看软件包的依赖</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo port info name !查看软件包的详细信息</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo port list installed !查询已经安装的软件包</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>升级</p>
+</li>
+</ol>
+<ol>
+<li><p>Tips</p>
+<ul>
+<li><p>在安装完成软件后可以进行安装过程中临时文件清理</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> port clean --all pkg_name</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在删除软件包之前最好看一下哪些软件包于此软件有依赖</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> port dependents pkg_name</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>卸载MacPorts</p>
+<p>参考官网地址：<a href="https://guide.macports.org/chunked/installing.macports.uninstalling.html">https://guide.macports.org/chunked/installing.macports.uninstalling.html</a></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">!删除所有安装包</span><br><span class="line">$ sudo port -fp uninstall installed</span><br><span class="line"></span><br><span class="line">!删除用户和组</span><br><span class="line">$ sudo dscl . -delete /Users/macports</span><br><span class="line">$ sudo dscl . -delete /Groups/macports</span><br><span class="line"></span><br><span class="line">!删除MacPorts</span><br><span class="line">$ sudo rm -rf \</span><br><span class="line">    /opt/local \</span><br><span class="line">    /Applications/DarwinPorts \</span><br><span class="line">    /Applications/MacPorts \</span><br><span class="line">    /Library/LaunchDaemons/org.macports.* \</span><br><span class="line">    /Library/Receipts/DarwinPorts*.pkg \</span><br><span class="line">    /Library/Receipts/MacPorts*.pkg \</span><br><span class="line">    /Library/StartupItems/DarwinPortsStartup \</span><br><span class="line">    /Library/Tcl/darwinports1.0 \</span><br><span class="line">    /Library/Tcl/macports1.0 \</span><br><span class="line">    ~/.macports</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>活到老学到老</category>
+        <category>Mac</category>
+      </categories>
+      <tags>
+        <tag>Mac03</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>OpManger使用</title>
     <url>/2020/09/05/log6/</url>
-    <content><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>OpManager是一个用于企业设备监控、管理企业网络的监控工具。同时较强的可扩展性为未来设备的扩容和更新留出较多的冗余。基于天马望远镜的多设备、多责任人的现实情况而选择的。<br><a id="more"></a></p>
+    <content><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>OpManager是一个用于企业设备监控、管理企业网络的监控工具。同时较强的可扩展性为未来设备的扩容和更新留出较多的冗余。基于天马望远镜的多设备、多责任人的现实情况而选择的。<br><span id="more"></span></p>
 <h1 id="添加设备"><a href="#添加设备" class="headerlink" title="添加设备"></a>添加设备</h1><p>OpManager使用的检测协议有俩种Snmp（Simple Network Management Protocol）和Wmi（Microsoft Windows Management Instrumentation）。从名字看就知道Wmi 对windows的支持要好一点！</p>
 <p>以下是俩种区别</p>
 <div class="table-container">
@@ -487,15 +940,74 @@
 ]]></content>
       <categories>
         <category>观测工程师</category>
+        <category>杂事</category>
       </categories>
       <tags>
-        <tag>观测工程师日记06</tag>
+        <tag>说明01</tag>
       </tags>
   </entry>
   <entry>
-    <title>零件保养（轨道轮减速器）</title>
+    <title>Mac中安装Wget</title>
+    <url>/2021/08/29/log69_mac05/</url>
+    <content><![CDATA[<h1 id="Mac中安排Wegt"><a href="#Mac中安排Wegt" class="headerlink" title="Mac中安排Wegt"></a>Mac中安排Wegt</h1><h2 id="本机环境"><a href="#本机环境" class="headerlink" title="本机环境"></a>本机环境</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>本机环境</th>
+<th>版本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>macOS</td>
+<td>macOS Big Sur 11.5.1</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>备注：系统版本不同，可能会有一些不同的问题。</p>
+<h2 id="Wget是什么？"><a href="#Wget是什么？" class="headerlink" title="Wget是什么？"></a>Wget是什么？</h2><p>GNU Wget是一个<a href="https://www.gnu.org/philosophy/free-sw">免费软件包</a>，用于使用最广泛的互联网协议HTTP、HTTPS、FTP和FTPS检索文件。它是一个非交互式命令行工具，因此可以很容易地从脚本、<code>cron</code>作业、不支持X-Windows的终端等调用。</p>
+<p>GNU Wget具有许多功能，可以轻松检索大文件或镜像整个Web或FTP网站，包括：</p>
+<ul>
+<li>可以恢复中止下载，使用REST和<code>RANGE</code></li>
+<li>可以使用文件名通配符和递归镜像目录</li>
+<li>基于NLS的消息文件适用于许多不同语言</li>
+<li>可选地将下载文档中的绝对链接转换为相对链接，以便下载的文档可以在本地链接</li>
+<li>在大多数类UNIX操作系统以及Microsoft Windows上运行</li>
+<li>支持HTTP代理</li>
+<li>支持HTTPcookie</li>
+<li>支持持久性HTTP连接</li>
+<li>无人值守/后台操作</li>
+<li>使用本地文件时间戳来确定镜像时是否需要重新下载文档</li>
+<li>GNU Wget在<a href="https://www.gnu.org/licenses/gpl.html">GNU通用公共许可证</a>下分发。</li>
+</ul>
+<h2 id="安装Wget"><a href="#安装Wget" class="headerlink" title="安装Wget"></a>安装Wget</h2><p>安装Wget使用有二，<a href="https://www.gnu.org/software/wget/">源码编译</a>（估计正常人不会这么干）和包管理器下载。下面针对包管理器来下载安装做介绍。</p>
+<h3 id="Homebrew"><a href="#Homebrew" class="headerlink" title="Homebrew"></a>Homebrew</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">%</span><span class="bash"> sudo brew install wget</span>	</span><br></pre></td></tr></table></figure>
+<h3 id="MacPorts"><a href="#MacPorts" class="headerlink" title="MacPorts"></a>MacPorts</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">%</span><span class="bash"> sudo port install wget</span></span><br></pre></td></tr></table></figure>
+<h3 id="源码包"><a href="#源码包" class="headerlink" title="源码包"></a>源码包</h3><p><a href="https://www.gnu.org/software/wget/">源码编译</a>先下载源码包。</p>
+<p>打开终端</p>
+<ul>
+<li>输入：tar zxvf wget-1.21.tar.gz</li>
+<li>cd 进入到解压的目录</li>
+<li>输入：./configure</li>
+<li>输入：make</li>
+<li>输入：sudo make install</li>
+</ul>
+<p>输入秘密 OK 安装完成！</p>
+<p>可以输入wget www.google.com 测试是否安装成功</p>
+]]></content>
+      <categories>
+        <category>活到老学到老</category>
+        <category>Mac</category>
+      </categories>
+      <tags>
+        <tag>Mac04</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>轨道轮减速器</title>
     <url>/2020/09/05/log7/</url>
-    <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>为保证HX任务期间天马望远镜的正常工作，准备了备用件。以备任务期间设备损坏可以及时维修替换，本人于2020年9月1日，对轨道轮组电机减速器进行了保养。使备件可以保存较长时间，以避免在存放过程中发生锈蚀损坏。<br><a id="more"></a></p>
+    <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>为保证HX任务期间天马望远镜的正常工作，准备了备用件。以备任务期间设备损坏可以及时维修替换，本人于2020年9月1日，对轨道轮组电机减速器进行了保养。使备件可以保存较长时间，以避免在存放过程中发生锈蚀损坏。<br><span id="more"></span></p>
 <h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><h2 id="材料：润滑脂-、润滑油"><a href="#材料：润滑脂-、润滑油" class="headerlink" title="材料：润滑脂 、润滑油"></a>材料：润滑脂 、润滑油</h2><h2 id="辅助设备：手摇抽油器、油桶、手推车、油漏斗、橡胶手套"><a href="#辅助设备：手摇抽油器、油桶、手推车、油漏斗、橡胶手套" class="headerlink" title="辅助设备：手摇抽油器、油桶、手推车、油漏斗、橡胶手套"></a>辅助设备：手摇抽油器、油桶、手推车、油漏斗、橡胶手套</h2><p><strong>tips：</strong></p>
 <ol>
 <li>辅助设备中的手摇抽油器和油桶位于望远镜底座中心轴承内的小门内，手推车在观测室一楼107或者106内。</li>
@@ -546,13 +1058,14 @@
 ]]></content>
       <categories>
         <category>观测工程师</category>
+        <category>维护保养</category>
       </categories>
       <tags>
-        <tag>观测工程师日记07</tag>
+        <tag>untagged</tag>
       </tags>
   </entry>
   <entry>
-    <title>工作汇报（25米观测室更换移门与加装纱门）</title>
+    <title>25米观测室更换移门与加装纱门</title>
     <url>/2020/09/13/log8/</url>
     <content><![CDATA[<h1 id="一-工作概况："><a href="#一-工作概况：" class="headerlink" title="一. 工作概况："></a>一. 工作概况：</h1><ol>
 <li><p>地点：佘山25米观测站观测室</p>
@@ -563,7 +1076,7 @@
 </li>
 <li><p>工作目的：</p>
 <p>25米观测室内压<strong>缩机房</strong>、<strong>氢钟房</strong>、<strong>终端室</strong>的移门因为老化原因气密性和保温性能（单层玻璃）下降，对设备要求的恒温环境造成不利影响，现进行更换保温（双层玻璃）气密性能更好的移门。针对25米台站周边自然环境较好，昆虫多的情况，增加<strong>控制室</strong>、<strong>操作间</strong>的纱门。为提高观测室整体气密性和保温性对<strong>入户大门</strong>也进行更换和加装沙门。共计4扇沙门、3组平移门、1组入户大门。</p>
-<a id="more"></a>
+<span id="more"></span>
 <h1 id="二-具体工作内容："><a href="#二-具体工作内容：" class="headerlink" title="二. 具体工作内容："></a>二. 具体工作内容：</h1></li>
 <li><p>首先是对老移门的拆除，拆除后的移门和垃圾在观测室外进行临时堆放。其中因为氢钟房对温度的恒定要求较为严格，采取了拆换同时进行的施工方式，并调低空调的温度（18℃）加大风量。整个氢钟房移门的拆除和安装时间在20分钟左右，如<strong>图1</strong>所示。基本所有沙门安装、移门的拆除和安装在上午11点左右完成，如<strong>图2</strong>所示。</p>
 </li>
@@ -591,31 +1104,10 @@
 <center>图5</center>]]></content>
       <categories>
         <category>观测工程师</category>
+        <category>工作汇报</category>
       </categories>
       <tags>
-        <tag>观测工程师日记08</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>夏令营</title>
-    <url>/2020/07/28/%E5%A4%8F%E5%88%A9%E8%90%A5/</url>
-    <content><![CDATA[<h1 id="广州夏令营——天马望远镜介绍"><a href="#广州夏令营——天马望远镜介绍" class="headerlink" title="广州夏令营——天马望远镜介绍"></a>广州夏令营——天马望远镜介绍</h1><h2 id="开场白"><a href="#开场白" class="headerlink" title="开场白"></a>开场白</h2><p>​    大家好，这里是广州大学驻上海天马望远镜记者赵漳为您带来的报道。我是今年毕业的广大学生赵漳，刚入职上海天文台。今天就由我给大家介绍一下天马望远镜。</p>
-<h2 id="天马介绍"><a href="#天马介绍" class="headerlink" title="天马介绍"></a>天马介绍</h2><h3 id="1-概述"><a href="#1-概述" class="headerlink" title="1.概述"></a>1.概述</h3><p>​    望远镜呢是座落在上海松江区天马山旁，其直径为65米而的名的。目前应该式亚洲最大 的单天线射电望远镜。这个望远镜在收纳状态下，高度为70米。总重量为2700吨，是一个拥有八波段的卡塞格林式的射电望远镜。这八个波段分别式L、S、C、X、Ku、K、Ka、Q。覆盖了从1.25GHz——50GHz的频率范围，主要承担了2012年嫦娥二号、2013年嫦娥五号飞行试验器的定轨侧轨任务。同时也成功展开了谱线、脉冲星和VLBI的射电天问观测。产出了一些重大的科研成果，比如我老师最近在自然科学杂志发表的关于在年轻大质量恒星中发现3种新的分子脉泽，有兴趣的可以去了解一下。这个时候各位手机电脑前的老铁们，就可以点波关注，双击666走一波了。</p>
-<h3 id="2-火星探测"><a href="#2-火星探测" class="headerlink" title="2.火星探测"></a>2.火星探测</h3><p>​    再讲讲最近天马望远镜在干的工作，大家都知道。在北京时间2020年7月23日，海南文昌航天发射场，使用长征五号遥四运载火箭将我国第一颗火星探测器“天问一号”发射升空。就发射到目前还是比较顺令，而在其中呢。天马望远镜、包括南山、昆明、密云的台站组成VLBI网，对天问火星探测器进行测轨，以确保探测器到达预定的轨道位置。之后“绕着巡”，及“环绕”、“着陆”、“巡视”火星这3项任务，提供准确的为位置保证。</p>
-<h3 id="3-谱线"><a href="#3-谱线" class="headerlink" title="3.谱线"></a>3.谱线</h3><p>​    在不执行任务的时候呢，因为天马望远镜式全年无休的，空余时间就会开放给国内的科研工作，用于做谱线观测、脉冲星的观测、还加入了EVN - european VLBI Network ，还参与一些VLBI的联测，其主要目的也是对谱线脉冲星大的观测。</p>
-<h3 id="4-环境介绍"><a href="#4-环境介绍" class="headerlink" title="4.环境介绍"></a>4.环境介绍</h3><p>​    左边的是终端室、右边的室观测室。左边这些机架上就是放着天马望远镜的一些终端，包括谱线和脉冲星的记录设备DIBAS、VLBI的记录设备、DBBC3、mak6、还有一些控制设备和主动面、水汽辐射计、全系测量、信息监控等设备。观测室呢，就是主要进行观测、天线控制、信息监控的地方。在执行任务，我就不进去了。</p>
-<h2 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h2><p>欢乐的时光总是短暂，我的天马望远镜介绍要告一段落了。此情此景，作为天文圈的灵魂诗人我准备赋诗一首。</p>
-<p>天问升空很成功，</p>
-<p>天马测轨进行中。</p>
-<p>师弟师妹勤努力，</p>
-<p>未来建设中国梦。</p>
-<p>好了，把话筒交还主持人。我就先撤了！</p>
-]]></content>
-      <categories>
-        <category>杂事</category>
-      </categories>
-      <tags>
-        <tag>演讲</tag>
+        <tag>工作汇报01</tag>
       </tags>
   </entry>
   <entry>
@@ -627,7 +1119,7 @@
 <p><img src="/2020/10/12/log9/1.png" alt="1" style="zoom:50%;"></p>
 <center>图1.主动面控制软件</center>
 
-<a id="more"></a>
+<span id="more"></span>
 <p>（2）点击界面左侧的“总线-促动器工作状态”标签页后，软件将会跳出”是否将最近一次软件推出时保存的促动器当前的位置写回到促动器？“对话框（图2），点击”是“后，软件将会进行连接，耗时为5分钟。</p>
 <p><img src="/2020/10/12/log9/2.png" alt="2" style="zoom:50%;"></p>
 <center>图2.主动面控制软件2</center>
@@ -667,9 +1159,33 @@
 <h1 id="3-2-未完待续！"><a href="#3-2-未完待续！" class="headerlink" title="3.2 未完待续！"></a>3.2 未完待续！</h1>]]></content>
       <categories>
         <category>观测工程师</category>
+        <category>值班工作</category>
       </categories>
       <tags>
-        <tag>观测工程师日记9</tag>
+        <tag>心得</tag>
+        <tag>总结</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>夏令营</title>
+    <url>/2020/07/28/%E5%A4%8F%E5%88%A9%E8%90%A5/</url>
+    <content><![CDATA[<h1 id="广州夏令营——天马望远镜介绍"><a href="#广州夏令营——天马望远镜介绍" class="headerlink" title="广州夏令营——天马望远镜介绍"></a>广州夏令营——天马望远镜介绍</h1><h2 id="开场白"><a href="#开场白" class="headerlink" title="开场白"></a>开场白</h2><p>​    大家好，这里是广州大学驻上海天马望远镜记者赵漳为您带来的报道。我是今年毕业的广大学生赵漳，刚入职上海天文台。今天就由我给大家介绍一下天马望远镜。</p>
+<h2 id="天马介绍"><a href="#天马介绍" class="headerlink" title="天马介绍"></a>天马介绍</h2><h3 id="1-概述"><a href="#1-概述" class="headerlink" title="1.概述"></a>1.概述</h3><p>​    望远镜呢是座落在上海松江区天马山旁，其直径为65米而的名的。目前应该式亚洲最大 的单天线射电望远镜。这个望远镜在收纳状态下，高度为70米。总重量为2700吨，是一个拥有八波段的卡塞格林式的射电望远镜。这八个波段分别式L、S、C、X、Ku、K、Ka、Q。覆盖了从1.25GHz——50GHz的频率范围，主要承担了2012年嫦娥二号、2013年嫦娥五号飞行试验器的定轨侧轨任务。同时也成功展开了谱线、脉冲星和VLBI的射电天问观测。产出了一些重大的科研成果，比如我老师最近在自然科学杂志发表的关于在年轻大质量恒星中发现3种新的分子脉泽，有兴趣的可以去了解一下。这个时候各位手机电脑前的老铁们，就可以点波关注，双击666走一波了。</p>
+<h3 id="2-火星探测"><a href="#2-火星探测" class="headerlink" title="2.火星探测"></a>2.火星探测</h3><p>​    再讲讲最近天马望远镜在干的工作，大家都知道。在北京时间2020年7月23日，海南文昌航天发射场，使用长征五号遥四运载火箭将我国第一颗火星探测器“天问一号”发射升空。就发射到目前还是比较顺令，而在其中呢。天马望远镜、包括南山、昆明、密云的台站组成VLBI网，对天问火星探测器进行测轨，以确保探测器到达预定的轨道位置。之后“绕着巡”，及“环绕”、“着陆”、“巡视”火星这3项任务，提供准确的为位置保证。</p>
+<h3 id="3-谱线"><a href="#3-谱线" class="headerlink" title="3.谱线"></a>3.谱线</h3><p>​    在不执行任务的时候呢，因为天马望远镜式全年无休的，空余时间就会开放给国内的科研工作，用于做谱线观测、脉冲星的观测、还加入了EVN - european VLBI Network ，还参与一些VLBI的联测，其主要目的也是对谱线脉冲星大的观测。</p>
+<h3 id="4-环境介绍"><a href="#4-环境介绍" class="headerlink" title="4.环境介绍"></a>4.环境介绍</h3><p>​    左边的是终端室、右边的室观测室。左边这些机架上就是放着天马望远镜的一些终端，包括谱线和脉冲星的记录设备DIBAS、VLBI的记录设备、DBBC3、mak6、还有一些控制设备和主动面、水汽辐射计、全系测量、信息监控等设备。观测室呢，就是主要进行观测、天线控制、信息监控的地方。在执行任务，我就不进去了。</p>
+<h2 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h2><p>欢乐的时光总是短暂，我的天马望远镜介绍要告一段落了。此情此景，作为天文圈的灵魂诗人我准备赋诗一首。</p>
+<p>天问升空很成功，</p>
+<p>天马测轨进行中。</p>
+<p>师弟师妹勤努力，</p>
+<p>未来建设中国梦。</p>
+<p>好了，把话筒交还主持人。我就先撤了！</p>
+]]></content>
+      <categories>
+        <category>杂事</category>
+      </categories>
+      <tags>
+        <tag>演讲</tag>
       </tags>
   </entry>
 </search>
