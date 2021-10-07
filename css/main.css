@@ -1290,7 +1290,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #0baa2e;
+  background: #fff9fc;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2881,4 +2881,23 @@ mjx-container + br {
   .pagination {
     margin: 8px 0 0;
   }
+}
+body {
+  background: url("/images/IMG_0921.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.content-wrap {
+  opacity: 0.9;
+}
+.sidebar {
+  opacity: 0.8;
+}
+.header-inner {
+  background: rgba(255,255,255,0.8);
+}
+.popup {
+  opacity: 0.5;
 }
